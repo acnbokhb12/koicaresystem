@@ -311,8 +311,9 @@
     background-color: transparent;
     border: 2px solid var(--bs-orange);
 }
-#content__latest-news{
+.content__latest-news{
     padding: 30px 0;
+    
 }
 .content__latest-news-title{
     margin-bottom: 3rem;
@@ -431,4 +432,88 @@
 
 .right-btn {
     right: 1.6rem;
+}
+.container__content__shop{
+    width: 96%;
+    margin: 0 auto;
+    padding: 7rem 0;
+}
+.row__content__shop{
+    /* justify-content: space-around; */
+}
+.contain__shop__intro-img > img{
+    object-fit: cover;
+    width: 100%;
+    height: 40rem;
+}
+.contain__shop-description-main{
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   
+}
+.contain__shop-description-main h4{
+    color: var(--bs-orange);
+}
+.contain__shop-description-main h1{
+    font-size: 4.8rem;
+}
+.contain__shop-description-main p{
+    font-size: 1.4rem;
+}
+.shop__link-to-intro {
+    margin-top: 2rem;
+}
+.shop__link-to-intro {
+    display: flex;
+    justify-content: center;
+}
+.shop__link-to-intro a{
+    font-size: 1.4rem;
+    padding: 1rem 1.6rem;
+    background-color: var(--bs-orange);
+    color: #fff;
+    display: block;
+    width: 50%;
+    min-width: 150px;
+    text-align: center;
+    border: 2px solid transparent;
+    font-weight: 600;
+}
+.shop__link-to-intro a:hover{
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--bs-orange);
+    border: 2px solid var(--bs-orange);
+}
+.sort__content__intro-page-img{
+    height: 50vh;
+    background: url('https://www.housedigest.com/img/gallery/30-koi-pond-ideas-that-will-help-you-find-inner-peace/l-intro-1652355268.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    background-attachment: fixed;
+    filter: brightness(0.9);
+}
+.sort__content__intro-page-script{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sort__content__intro-page-script h4{
+    color: var(--white-color);
+    margin-bottom: 2rem;
+
+}
+.sort__content__intro-page-script h1{
+    font-size: 4.6rem;
+    color: var(--white-color);
+
 }
