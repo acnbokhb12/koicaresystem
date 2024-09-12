@@ -141,7 +141,7 @@
                                         <span class="header__link-task-icon"><i class="fa-solid fa-bag-shopping"></i></span>
                                         <span class="text-label text-uppercase ">Cart</span>
                                     </a>
-                                    <a href="" class="header__link-task d-flex align-end">
+                                    <a href="login.html" class="header__link-task d-flex align-end">
                                         <span class="header__link-task-icon"><i class="fa-regular fa-user"></i></span>
                                         <span class="text-label text-uppercase">Sign in</span>
                                     </a>
@@ -196,12 +196,12 @@
             </p>
             </div>
             <div class="container__content__lates-news">
-                <button id="prev" class="carousel-btn left-btn">
+                <button id="prev" class="swiper-button-prev carousel-btn left-btn">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
-                <div class="latest__news-card-wrapper">
-                    <div class="news-card-list">
-                        <div class="news-card-item">
+                <div class="swiper latest__news-card-wrapper">
+                    <div class="swiper-wrapper news-card-list">
+                        <div class="swiper-slide news-card-item">
                             <a href="#" class="news-card-link">
                                 <img src="https://images.squarespace-cdn.com/content/v1/4f6c8d6ae4b08696a7443c8b/1548090687880-RY1LAPWKOHJI1CVZKQVN/koi-feeding.jpg" alt="" class="news-card-img">
                                 <div class="news-card-more-info">
@@ -213,7 +213,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="news-card-item">
+                        <div class="swiper-slide news-card-item">
                             <a href="#" class="news-card-link">
                                 <img src="https://wpmedia.japanesegarden.org/cb:An8z.2f0c8/w:788/h:525/q:mauto/ig:avif/https://japanesegarden.org/wp-content/uploads/2024/05/Koi-Release-2013-2013-08-28-RS11704_koi-release-2013-018.jpg" alt="" class="news-card-img">
                                 <div class="news-card-more-info">
@@ -225,7 +225,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="news-card-item">
+                        <div class="swiper-slide news-card-item">
                             <a href="#" class="news-card-link">
                                 <img src="https://d7fcfvvxwoz9e.cloudfront.net/dom43635/wp-content/uploads/2022/11/pond-cleaning.png" alt="" class="news-card-img">
                                 <div class="news-card-more-info">
@@ -237,7 +237,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="news-card-item">
+                        <div class="swiper-slide news-card-item">
                             <a href="#" class="news-card-link">
                                 <img src="https://japan-forward.com/wp-content/uploads/2017/05/%E5%A4%A7%E7%A9%BA%E6%B3%B3%E3%81%90%E9%9D%92%E3%81%84%E3%81%93%E3%81%84%E3%81%AE%E3%81%BC%E3%82%8A.jpg" alt="" class="news-card-img">
                                 <div class="news-card-more-info">
@@ -249,7 +249,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="news-card-item">
+                        <div class="swiper-slide news-card-item">
                             <a href="#" class="news-card-link">
                                 <img src="https://i.pinimg.com/736x/90/8b/01/908b014e638f285b536742fb416b7985.jpg" alt="" class="news-card-img">
                                 <div class="news-card-more-info">
@@ -261,7 +261,7 @@
                                 </div>
                             </a>
                         </div>                  
-                        <div class="news-card-item">
+                        <div class="swiper-slide news-card-item">
                             <a href="#" class="news-card-link">
                                 <img src="https://koithienduong.com/wp-content/uploads/2021/04/kham-pha-chi-tiet-cau-tao-va-loi-ich-cua-may-suc-oxy..jpg" alt="" class="news-card-img">
                                 <div class="news-card-more-info">
@@ -276,7 +276,7 @@
                     </div>
                     
                 </div>
-                <button id="next" class="carousel-btn right-btn">
+                <button id="next" class="swiper-button-next carousel-btn right-btn">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </div>
@@ -318,38 +318,91 @@
         <section style="height: 1000px;"></section>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 <script>
  
     
-    const container = document.querySelector('.news-card-list');
-    const items = document.querySelectorAll('.news-card-item');
-    let prev = document.getElementById('prev');
-    let next = document.getElementById('next');
+    // const container = document.querySelector('.news-card-list');
+    // const items = document.querySelectorAll('.news-card-item');
+    // let prev = document.getElementById('prev');
+    // let next = document.getElementById('next');
     
-    let active = 0;
-    let lengItems = items.length -1;
-    next.onclick = function(){
-        if(active +4 > lengItems){
-            active = 0;
-        }else{
-            active += 1;
-        }
-        reloadSlider();
-    }
-    prev.onclick = function(){
-        if(active - 1 <0 ){
-            active = lengItems-3;
-        }else{
-            active -= 1;
-        }
-        reloadSlider();
-    }
-    function reloadSlider() {
-        let checkLeft = items[active].offsetLeft; // Correctly get the left offset of the active item
-        container.style.transform = `translateX(${-checkLeft}px)`; // Use transform for smooth scrolling
-    }
+    // let active = 0;
+    // let lengItems = items.length -1;
+    // next.onclick = function(){
+    //     if(active +4 > lengItems){
+    //         active = 0;
+    //     }else{
+    //         active += 1;
+    //     }
+    //     reloadSlider();
+    // }
+    // prev.onclick = function(){
+    //     if(active - 1 <0 ){
+    //         active = lengItems-3;
+    //     }else{
+    //         active -= 1;
+    //     }
+    //     reloadSlider();
+    // }
+    // function reloadSlider() {
+        
+    //     let checkLeft = items[active].offsetLeft;  
+    //     container.style.transform = `translateX(${-checkLeft}px)`;  
+    // }
 
+    // let mainContainer = document.querySelector('.latest__news-card-wrapper');
+    // let listItems = document.querySelector('.news-card-list');
+    // let items = document.querySelectorAll('.news-card-item');
+    // let prev = document.getElementById('prev');
+    // let next = document.getElementById('next');
+    
+    // next.onclick =  function(){
+    //     showBlogs('next');
+    // }
+    // prev.onclick = function(){
+    //     showBlogs('prev')
+    // }
+    // function showBlogs(type){
+    //     let itemSlider = document.querySelectorAll('.news-card-item');
 
+    //      if(type === 'next'){
+    //         listItems.classList.add('sliding-next');
+    //         listItems.appendChild(itemSlider[0]);
+              
+    //      } else{
+    //         let positionLastItem = itemSlider.length - 1;
+    //         listItems.prepend(itemSlider[positionLastItem]); 
+    //      }
+    // }
+    var swiper = new Swiper(".latest__news-card-wrapper", {
+    spaceBetween: 10,
+    loop:true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 5500,
+        disableOnineraction:false,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        0:{
+            slidesPerView: 1,
+        },
+        450: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        1024: {
+            slidesPerView: 4,
+        },
+    },
+});
+     
 </script>
  
     

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- Font icon -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/SignInUp.css">
+</head>
+
+<body >
+    <div class="screen__info__user  ">
+         
+        <div class="container__screen__img_signup  " style="width: 40%;">
+            <div class="screen__img-detail_signup">
+                 <img class="img-detail-item_signup" src="https://i.pinimg.com/originals/26/db/71/26db713c96975fd76257800965c0b19f.jpg" alt="">
+                 <img class="img-detail-item_signup" src="https://i.pinimg.com/564x/d8/ad/50/d8ad5040b549e8dc49fe1aac3098f239.jpg" alt="">
+                 <img class="img-detail-item_signup" src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjczMy10YW5nLTEzYl8xLmpwZw.jpg" alt="" style="float: left;;">
+                 <img class="img-detail-item_signup" src="https://www.shutterstock.com/image-vector/asian-background-oriental-japanese-style-260nw-1978654823.jpg" alt="">
+            
+            </div>
+           
+             
+        </div>
+        <!-- SIGNIN -->
+        <div class="info__user-container-up  ">
+            <div id="sign-in-form" class="container__sigup-form form-container">
+                <div class="user-re-container">
+                    <header class="header__screen-log">
+                        <!-- <h1 class="signin-header-title">Welcome back!</h1> -->
+                        <div class="header__img-log">
+                            <img src="./assets/img/logo/logoSignin.jpg" alt="">
+                        </div>
+                        <p class="header-desc" style="font-size: 2.6rem; text-align: center;">Create an account</p>
+                    </header>
+                    <div class="signup-user-body">
+                        <form action="#" class="form" id="form2" method="post">
+                            <div class="group_together mb-2">  
+                                <!-- Email -->
+                                <div class="form-group together"  >
+                                    <i class="fa-solid fa-envelope  icon-signup"></i>
+                                    <input type="email" id="email-signup" name="txtemail" class="input__form"
+                                        placeholder="Email" required>
+                                    <span class="error-theory">Wrong format email : abc@gmail.com</span>
+                                </div>
+                             
+                                 <!-- UserName -->
+                                <div class="form-group together">
+                                <i class="fa-solid fa-user icon-signup"></i> 
+                                <input type="text" id="username-title-logup" name="txtusername"
+                                    class="input__form" placeholder="UserName" required />
+                                <span class="error-theory">username must be words</span>
+                                </div>
+                            </div>
+                            <div class="group_together mb-2"> 
+                                <div class="pw-together  "> 
+                                    <!-- password -->
+                                    <div class="form-group pw-together-sub together  ">
+                                         <i class="fa-solid fa-lock icon-signup"></i>  
+                                        <input type="password" id="password-title-signup" name="txtpassword"
+                                        class="input__form " placeholder="Password" required /> 
+                                        <span class="error-theory">Length from 8 to 20</span>
+                                    </div>
+                                     
+                                    <!-- pass wordd again -->
+                                    <div class="form-group ">
+                                        <i class="fa-solid fa-lock icon-signup"></i> 
+                                        <input type="password" id="password-title-signup" name="txtconfirmpassword"
+                                        class="input__form" placeholder="Confirm password" required />
+                                        <span class="error-theory">passwords are not the same</span>
+                                    </div>
+                                </div>
+                                <div class="select-toghether ">
+                                    <select name="" id="" class="input__form">
+                                        <option value="" selected>Man</option>
+                                        <option value="">Woman</option>
+                                        <option value="">Orther</option> 
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="group_together">
+
+                                <!-- Phone -->
+                                <div class="form-group together">
+                                    <i class="fa-solid fa-phone icon-signup"></i>
+                                    <input type="text" id="phonenumber-signup" name="txtphone" class="input__form"
+                                    placeholder="Phone number" required />
+                                    <span class="error-theory">Start number with 0 </span>
+                                </div>
+                            </div>
+                            <!-- Submit -->
+                            <button class="btn btn-info btn-signin-acc">Sign In</button><br>
+
+                        </form>
+                        <p class="footer__screen__acc_according">
+                            Already have an account?<a href="login.html" class="signup-btn-link" id="come-signup">Sign
+                                Up</a>
+                        </p>
+                    </div>
+                    <footer class="user-signup-footer">
+                         
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+         
+        
+    </div>
+  
+</body>
+
+</html>
