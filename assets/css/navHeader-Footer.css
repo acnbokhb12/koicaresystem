@@ -524,6 +524,9 @@
         padding-right: 48px;
         
     }
+    .row__sub_header_top{
+        margin: 0;
+    }
     
 }
 
@@ -562,13 +565,18 @@
     .row__iner-se{
         margin: 0 3rem;
     }
+    .left__content-infor-list{
+        padding-left: 0;
+        margin-left: 6px;
+    }
+
     .right__content-icon-list{
-        padding-left: 2rem;
+        padding: 0;
     }
     .right__content-icon-list{
-        padding-right: 2rem;
+        padding: 0;
+        margin-right: 0.6rem;
     }
-    .right__content-icon-item:nth-last-child(2),
     .right__content-icon-item:nth-last-child(1){
         display: none;
     }

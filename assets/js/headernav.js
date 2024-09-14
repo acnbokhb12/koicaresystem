@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <section class="sub__header-top">
                 <div class="container__header-top">
                     <div class="container__iner-fi">
-                        <div class="row">
+                        <div class="row row__sub_header_top">
                             <div class="col-6 padding__top-header">
                                 <div class="left__content">
                                     <!-- phone - email of web -->
