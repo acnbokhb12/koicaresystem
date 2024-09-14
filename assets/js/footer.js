@@ -85,4 +85,5 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
         </footer>`;
     document.body.insertAdjacentHTML('beforeend', footerHtml);
+    
 })

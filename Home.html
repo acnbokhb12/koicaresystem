@@ -23,6 +23,7 @@
 <body>
     <div id="main">
          <script src="./assets/js/headernav.js"></script>
+         
         <!-- content intro -->
         <section class="content__intro">
             <div class="content__intro-img-script">
@@ -375,164 +376,97 @@
         </section>
         
         <!-- footer -->
-         <script src="./assets/js/footer.js"></script>
+         <!-- <script src="./assets/js/footer.js"></script> -->
+         <footer>
+            <div class="container__img-footer-main">
+                <div class="container__img-pd">
+                    <div class="container">
+                        <div class="container__footer-desc-area row">
+                            <div class="footer-desc-item col-sm-6 col-md-4">
+                                <a href="#" class="footer-desc-item-img">
+                                    <img src="./assets/img/logo/Logo_Koi_Care.png" alt="">
+                                </a>
+                                <p class="desc-footer-infor">
+                                    <i class="fa-solid fa-location-dot"></i>  Student Culture House, 643 dien Bien Phu, Phuong 1, Quan 3, HCM
+                                </p>
+                                <p class="desc-footer-infor">
+                                    <i class="fa-solid fa-phone" style="margin-right: 0.4rem;"></i> +84 1234 567 890
+                                </p>
+                                <p class="desc-footer-infor">
+                                    <i class="fa-solid fa-envelope"style="margin-right: 0.4rem;"></i> acnbokhb12@gmail.com
+
+                                </p>
+                            </div>
+                            <div class="footer-desc-item col-sm-6 col-md-3">
+                                <h2>Opening time</h2>
+                                <div class="footer-desc-item-time">
+                                    Monday- Tuesday
+                                    <span>
+                                        <i>10:10</i> am - <i>11:00</i> pm
+                                    </span>
+                                </div>
+                                <div class="footer-desc-item-time">
+                                    <p class="">Monday- Tuesday</p>
+                                    <span>
+                                        <i>10:10</i> am - <i>11:00</i> pm
+                                    </span>
+                                </div>
+                                 
+                            </div>
+                            <div class="footer-desc-item col-sm-6 col-md-2">
+                                <h2>Menu</h2>
+                                <a href="" class="link__footer-nav">Home</a>
+                                <a href="" class="link__footer-nav">About</a>
+                                <a href="" class="link__footer-nav">Shop</a>
+                                <a href="" class="link__footer-nav">Contact</a>
+                            </div>
+                            <div class="footer-desc-item col-sm-6 col-md-3">
+                                <h2>Intagram feed</h2>
+                                <p>Don’t miss any updates all the astonishing offers we bring for you.</p>
+                                <div class="footer-desc-item-mess">
+                                    <form action="">
+                                        <input type="text" placeholder="E-mail" required>
+                                        <button type="submit">Subcribe</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container__footer-desc-bottom">
+                            <div class="footer-desc-bottom-left">
+                                <p>© 2024 Servicr is powered by <i>Koi Care System</i>. The property of their owners.</p>
+                            </div>
+                            <div class="footer-desc-bottom-right">
+                                <ul class="list__icon__footer">
+                                    <li class="item__con__footer">
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                       
+                                    </li>
+                                    <li class="item__con__footer">
+                                        <a href="#"><i class="fa-brands fa-google"></i></a>
+                                        
+                                    </li>
+                                    <li class="item__con__footer">
+                                        <a href="#"><i class="fa-brands fa-discord"></i></a>
+                                    </li>
+                                    <li class="item__con__footer">
+                                        <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                                    </li>
+                                    <li class="item__con__footer">
+                                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 <script>
-
-    // var listItemsNav = document.querySelectorAll('.contain__item-nav'); 
-    //     for(var i = 0 ; i<listItemsNav.length ; i++ ){ 
-    //         var navItem = listItemsNav[i];
-    //         navItem.onclick = function(event){
-    //             var isParentNav = this.querySelector('.contain__sub-item_nav-link');
-    //             if(isParentNav){
-    //                 event.preventDefault();
-    //                 isParentNav.style.display = (isParentNav.style.display === 'block') ? 'none' : 'block';
-    //             }
-    //         } 
-    //     }
-    function toggleSubMenuOnClick() {
-    var listItemsNav = document.querySelectorAll('.contain__item-nav');
-    for (var i = 0; i < listItemsNav.length; i++) {
-        var navItem = listItemsNav[i];
-        navItem.onclick = function(event) {
-            var isParentNav = this.querySelector('.contain__sub-item_nav-link');
-            if (isParentNav) {
-                event.preventDefault(); // Prevent default link behavior
-                // Toggle the submenu visibility on click
-                isParentNav.style.display = (isParentNav.style.display === 'block') ? 'none' : 'block';
-            }
-        };
-    }
-}
-    function handleResize() {
-    if (window.innerWidth < 1000) {
-        toggleSubMenuOnClick();
-    } else {
-        // Reset any inline styles to handle the hover behavior
-        var subMenus = document.querySelectorAll('.contain__sub-item_nav-link');
-        for (var i = 0; i < subMenus.length; i++) {
-            subMenus[i].style.display = '';
-        }
-    }
-}
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('load', handleResize);
-    // }
-
-    // console.log(windowWidth);
-    // const container = document.querySelector('.news-card-list');
-    // const items = document.querySelectorAll('.news-card-item');
-    // let prev = document.getElementById('prev');
-    // let next = document.getElementById('next');
-
-    // let active = 0;
-    // let lengItems = items.length -1;
-    // next.onclick = function(){
-    //     if(active +4 > lengItems){
-    //         active = 0;
-    //     }else{
-    //         active += 1;
-    //     }
-    //     reloadSlider();
-    // }
-    // prev.onclick = function(){
-    //     if(active - 1 <0 ){
-    //         active = lengItems-3;
-    //     }else{
-    //         active -= 1;
-    //     }
-    //     reloadSlider();
-    // }
-    // function reloadSlider() {
-
-    //     let checkLeft = items[active].offsetLeft;  
-    //     container.style.transform = `translateX(${-checkLeft}px)`;  
-    // }
-
-    // let mainContainer = document.querySelector('.latest__news-card-wrapper');
-    // let listItems = document.querySelector('.news-card-list');
-    // let items = document.querySelectorAll('.news-card-item');
-    // let prev = document.getElementById('prev');
-    // let next = document.getElementById('next');
-
-    // next.onclick =  function(){
-    //     showBlogs('next');
-    // }
-    // prev.onclick = function(){
-    //     showBlogs('prev')
-    // }
-    // function showBlogs(type){
-    //     let itemSlider = document.querySelectorAll('.news-card-item');
-
-    //      if(type === 'next'){
-    //         listItems.classList.add('sliding-next');
-    //         listItems.appendChild(itemSlider[0]);
-
-    //      } else{
-    //         let positionLastItem = itemSlider.length - 1;
-    //         listItems.prepend(itemSlider[positionLastItem]); 
-    //      }
-    // }
-    var swiper = new Swiper(".latest__news-card-wrapper", {
-        spaceBetween: 10,
-        loop: true,
-        centeredSlides: true,
-        autoplay: {
-            delay: 5500,
-            disableOnineraction: false,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            450: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 4,
-            },
-        },
-    });
-    var swiper2 = new Swiper(".intro__service-container-cart", {
-        spaceBetween: 10,
-        loop: true,
-        centeredSlides: true,
-        autoplay: {
-            delay: 5500,
-            disableOnineraction: false,
-        },
-        navigation: {
-            nextEl: ".move-next",
-            prevEl: ".move-prev",
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            450: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 4,
-            },
-            1240: {
-                slidesPerView: 5,
-            },
-
-        },
-    });
+     
 </script>
 
 

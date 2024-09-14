@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                         <li class="left__content-infor-item">
                                             <i class="fa-solid fa-phone"></i>0987654321
                                         </li>
-                                        <li class="left__content-infor-item ml-5">
+                                        <li class="left__content-infor-item ">
                                             <i class="fa-solid fa-envelope"></i>acnbokhb12@gmail.com
                                         </li>
                                     </ul>
@@ -136,4 +136,107 @@ document.addEventListener("DOMContentLoaded", function () {
             </section>
         </header>`;
     document.body.insertAdjacentHTML('afterbegin', headerHTML);
+
+    // btn nav bar
+    const btnHambuger = document.querySelector('.hamburger__icon-btn');
+    const navBarMobile = document.querySelector('.nav-bar-menu') ;
+    const btnCloseNavBar = document.querySelector('.close-navbar-icon-btn');
+    btnHambuger.onclick = function(){ 
+        navBarMobile.classList.add('open_navbar');
+        btnHambuger.classList.add('close-btn-hambuger');
+    };
+    btnCloseNavBar.onclick = function(){ 
+        navBarMobile.classList.remove('open_navbar');
+        btnHambuger.classList.remove('close-btn-hambuger');
+    };
+
+    // ddd
+    function toggleSubMenuOnClick() {
+        var listItemsNav = document.querySelectorAll('.contain__item-nav');
+        for (var i = 0; i < listItemsNav.length; i++) {
+            var navItem = listItemsNav[i];
+            navItem.onclick = function(event) {
+                var isParentNav = this.querySelector('.contain__sub-item_nav-link');
+                if (isParentNav) {
+                    event.preventDefault(); // Prevent default link behavior
+                    // Toggle the submenu visibility on click
+                    isParentNav.style.display = (isParentNav.style.display === 'block') ? 'none' : 'block';
+                }
+            };
+        }
+    }
+        function handleResize() {
+        if (window.innerWidth < 1000) {
+            toggleSubMenuOnClick();
+        } else {
+            // Reset any inline styles to handle the hover behavior
+            var subMenus = document.querySelectorAll('.contain__sub-item_nav-link');
+            for (var i = 0; i < subMenus.length; i++) {
+                subMenus[i].style.display = '';
+            }
+        }
+    }
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('load', handleResize);
+       
+        // ddsdddd
+         
+        var swiper = new Swiper(".latest__news-card-wrapper", {
+            spaceBetween: 10,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5500,
+                disableOnineraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                450: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+        var swiper2 = new Swiper(".intro__service-container-cart", {
+            spaceBetween: 10,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5500,
+                disableOnineraction: false,
+            },
+            navigation: {
+                nextEl: ".move-next",
+                prevEl: ".move-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                450: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4,
+                },
+                1240: {
+                    slidesPerView: 5,
+                },
+    
+            },
+        });
 })
