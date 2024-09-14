@@ -1,0 +1,139 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+    const headerHTML = `<header id="header__nav">
+            <!-- section-1 sub_header -->
+            <section class="sub__header-top">
+                <div class="container__header-top">
+                    <div class="container__iner-fi">
+                        <div class="row">
+                            <div class="col-6 padding__top-header">
+                                <div class="left__content">
+                                    <!-- phone - email of web -->
+                                    <ul class="left__content-infor-list">
+                                        <li class="left__content-infor-item">
+                                            <i class="fa-solid fa-phone"></i>0987654321
+                                        </li>
+                                        <li class="left__content-infor-item ml-5">
+                                            <i class="fa-solid fa-envelope"></i>acnbokhb12@gmail.com
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-6  padding__top-header">
+                                <div class="right-content">
+                                    <!-- List icon follow -->
+                                    <ul class="right__content-icon-list">
+                                        <li class="right__content-icon-item">
+                                            <p>
+                                                Folow us:
+                                            </p>
+                                        </li>
+                                        <li class="right__content-icon-item">
+                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="right__content-icon-item">
+                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                        </li>
+                                        <li class="right__content-icon-item">
+                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                        </li>
+                                        <li class="right__content-icon-item">
+                                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                                        </li>
+                                        <li class="right__content-icon-item">
+                                            <a href="#"><i class="fa-brands fa-discord"></i></a>
+                                        </li>
+                                        <li class="right__content-icon-item">
+                                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section-2 main_header -->
+            <section class="main__header-bottom">
+                <div class="containers  padding__top-header">
+                    <div class="container__iner-se">
+                        <div class="row row__iner-se">
+                            <!-- Logo -->
+                            <a href="" class="col-lg-2 link_logo-home">
+                                <img src="./assets/img/logo/Logo_Koi_Care.png" alt="Logo_System">
+                            </a>
+                            <!-- button for responsive -->
+                            <button class="hamburger__icon-btn">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                            <!-- task main common -->
+                            <div class="col-lg-10 header__right__task nav-bar-menu">
+                                <span class="close__navbar-header"><i class="fa-solid fa-xmark close-navbar-icon-btn"></i></span>
+                                <div class="contain__list-nav">
+                                    <ul class="contain__list-nav-detail">
+                                        <li class="contain__item-nav">
+                                            <a href="#" class="contain__item-nav-link">
+                                                <span>Home</span>
+                                            </a>
+                                        </li>
+                                        <li class="contain__item-nav">
+                                            <a href="#" class="contain__item-nav-link">
+                                                <span>About</span>
+                                            </a>
+                                        </li>
+                                        <li class="contain__item-nav">
+                                            <a href="#" class="contain__item-nav-link">
+                                                <span>Shop</span>
+                                            </a>
+                                        </li>
+                                        <li class="contain__item-nav contain__item-nav-open">
+                                            <a href="#" class="contain__item-nav-link">
+                                                <span>News <i class="fa-solid fa-chevron-down ml-1"></i></span>
+                                            </a>
+                                            <div class="contain__sub-item_nav-link">
+                                                <ul class="contain__sub-item_nav-list">
+                                                    <li class="contain__sub-item_nav-items">
+                                                        <a href="#">Blogs</a>
+                                                    </li>
+                                                    <li class="contain__sub-item_nav-items">
+                                                        <a href="#">Forum</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="contain__item-nav">
+                                            <a href="#" class="contain__item-nav-link">
+                                                <span>Contact</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- task user -->
+                                <div class="contain__task-user">
+                                    <div class="header__task-right">
+                                        <a href="" class="header__link-task d-flex align-end">
+                                            <span class="header__link-task-icon"><i
+                                                    class="fa-regular fa-bell"></i></span>
+                                            <span class="text-label text-uppercase">Alerts</span>
+                                        </a>
+                                        <a href="" class="header__link-task d-flex align-end">
+                                            <span class="header__link-task-icon"><i
+                                                    class="fa-solid fa-bag-shopping"></i></span>
+                                            <span class="text-label text-uppercase ">Cart</span>
+                                        </a>
+                                        <a href="login.html" class="header__link-task d-flex align-end">
+                                            <span class="header__link-task-icon"><i
+                                                    class="fa-regular fa-user"></i></span>
+                                            <span class="text-label text-uppercase">Sign in</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>`;
+    document.body.insertAdjacentHTML('afterbegin', headerHTML);
+})
