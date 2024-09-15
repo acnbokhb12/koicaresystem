@@ -403,6 +403,13 @@
     .contain__shop__intro-img > img{
         height: 30rem;
     }
+    .container__content__shop {
+        padding: 4rem 0;
+    }
+    .container__intro-service-main{
+        padding: 4rem 0;
+
+    }
 }
 
 @media screen and (max-width:550px) {
@@ -417,4 +424,8 @@
         /* font-size: 1.8rem; */
         font-weight: 500;
     }
+    .sort__content__intro-page-script h1{
+        font-size: 3rem;
+    }
 }
+ 

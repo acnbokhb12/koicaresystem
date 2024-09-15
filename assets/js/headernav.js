@@ -106,18 +106,19 @@ document.addEventListener("DOMContentLoaded", function () {
                                             <a href="#" class="contain__item-nav-link">
                                                 <span>Contact</span>
                                             </a>
-                                        </li>
+                                        </li> 
+                                        
                                     </ul>
                                 </div>
                                 <!-- task user -->
                                 <div class="contain__task-user">
                                     <div class="header__task-right">
-                                        <a href="" class="header__link-task d-flex align-end">
+                                        <a href="#" class="header__link-task d-flex align-end">
                                             <span class="header__link-task-icon"><i
                                                     class="fa-regular fa-bell"></i></span>
                                             <span class="text-label text-uppercase">Alerts</span>
                                         </a>
-                                        <a href="" class="header__link-task d-flex align-end">
+                                        <a href="#" class="header__link-task d-flex align-end">
                                             <span class="header__link-task-icon"><i
                                                     class="fa-solid fa-bag-shopping"></i></span>
                                             <span class="text-label text-uppercase ">Cart</span>
@@ -127,6 +128,52 @@ document.addEventListener("DOMContentLoaded", function () {
                                                     class="fa-regular fa-user"></i></span>
                                             <span class="text-label text-uppercase">Sign in</span>
                                         </a>
+                                        <div class="header__link-account d-flex align-end">
+                                            <div class="header__link-task-img-acc">
+                                                <img src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.6435-9/120846118_1393138717744114_5343318628172679837_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=s00All9Oy78Q7kNvgGgjhgI&_nc_ht=scontent.fsgn2-3.fna&_nc_gid=AncTZXupFrf-o0ojlYJ35Do&oh=00_AYDL1aMB6bRtX3F00r62cVpdpmDynHn-A5Zx_F1i3Jtl6g&oe=670DF320" alt="">
+                                            </div>
+                                            <div class="header__link-task-description">
+                                                <div class="header__link-task-container">
+                                                     <div class="welcome__acc-header">
+                                                        <p class="dddssd">Khanh Huynh</p>
+                                                         <!-- <h2>Khanh</h2> -->
+                                                        <a href="#" class="view__detail_acc">
+                                                            <i class="fa-solid fa-file-invoice"></i> My Account
+                                                        </a>
+                                                     </div>
+                                                     <div class="welcome__acc-body">
+                                                        <ul class="body__link-acount-list-item"> 
+                                                            <li class="body__link-acount-detail-item">
+                                                                <a href="#">
+                                                                    <i class="fa-solid fa-eye"></i> Order History
+                                                                </a>
+                                                            </li>
+                                                            <li class="body__link-acount-detail-item">
+                                                                <a href="#">
+                                                                    <i class="fa-solid fa-calendar-days"></i> My Meal Plan
+                                                                </a>
+                                                            </li> 
+                                                        </ul>
+                                                     </div>
+                                                     <div class="welcome__acc-footer">
+                                                        <ul class="footer__link-acount-list-item">
+                                                            <li class="footer__link-acount-detail-item">
+                                                                <a href="#">
+                                                                    <i class="fas fa-sign-out"></i> Log out
+                                                                </a>
+                                                            </li>
+                    
+                                                            <li class="footer__link-acount-detail-item">
+                                                                <a href="#">
+                                                                    <i class="fa-regular fa-circle-question"></i> Support
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -139,23 +186,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // btn nav bar
     const btnHambuger = document.querySelector('.hamburger__icon-btn');
-    const navBarMobile = document.querySelector('.nav-bar-menu') ;
+    const navBarMobile = document.querySelector('.nav-bar-menu');
     const btnCloseNavBar = document.querySelector('.close-navbar-icon-btn');
-    btnHambuger.onclick = function(){ 
+    btnHambuger.onclick = function (event) {
         navBarMobile.classList.add('open_navbar');
         btnHambuger.classList.add('close-btn-hambuger');
+        event.stopPropagation();
     };
-    btnCloseNavBar.onclick = function(){ 
+    navBarMobile.addEventListener('click', function (event) {
+        event.stopPropagation(); // Ngăn chặn sự kiện truyền lên document
+    });
+    btnCloseNavBar.onclick = function () {
         navBarMobile.classList.remove('open_navbar');
         btnHambuger.classList.remove('close-btn-hambuger');
     };
+    document.addEventListener('click', function () {
+        navBarMobile.classList.remove('open_navbar');
+        btnHambuger.classList.remove('close-btn-hambuger');
+    });
+
+    //  
+    const accImg = document.querySelector('.header__link-task-img-acc img');
+    const boardInforAcc = document.querySelector('.header__link-task-description');
+    // Bắt sự kiện click trên accImg để mở boardInforAcc
+    accImg.addEventListener('click', function (event) {
+        boardInforAcc.classList.add('open__boardAcc-detail');
+        event.stopPropagation(); // Ngăn chặn sự kiện truyền lên document
+    });
+
+    // Bắt sự kiện click trên boardInforAcc để ngăn đóng khi click bên trong
+    boardInforAcc.addEventListener('click', function (event) {
+        event.stopPropagation(); // Ngăn chặn sự kiện truyền lên document
+    });
+
+    // Bắt sự kiện click trên document để đóng boardInforAcc khi click bên ngoài
+    document.addEventListener('click', function () {
+        boardInforAcc.classList.remove('open__boardAcc-detail');
+    });
 
     // ddd
     function toggleSubMenuOnClick() {
         var listItemsNav = document.querySelectorAll('.contain__item-nav');
         for (var i = 0; i < listItemsNav.length; i++) {
             var navItem = listItemsNav[i];
-            navItem.onclick = function(event) {
+            navItem.onclick = function (event) {
                 var isParentNav = this.querySelector('.contain__sub-item_nav-link');
                 if (isParentNav) {
                     event.preventDefault(); // Prevent default link behavior
@@ -165,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
         }
     }
-        function handleResize() {
+    function handleResize() {
         if (window.innerWidth < 1000) {
             toggleSubMenuOnClick();
         } else {
@@ -176,67 +250,67 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
-        window.addEventListener('resize', handleResize);
-        window.addEventListener('load', handleResize);
-       
-        // ddsdddd
-         
-        var swiper = new Swiper(".latest__news-card-wrapper", {
-            spaceBetween: 10,
-            loop: true,
-            centeredSlides: true,
-            autoplay: {
-                delay: 5500,
-                disableOnineraction: false,
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('load', handleResize);
+
+    // ddsdddd
+
+    var swiper = new Swiper(".latest__news-card-wrapper", {
+        spaceBetween: 10,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+            delay: 5500,
+            disableOnineraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+            450: {
+                slidesPerView: 2,
             },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                },
-                450: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 3,
-                },
-                1024: {
-                    slidesPerView: 4,
-                },
+            768: {
+                slidesPerView: 3,
             },
-        });
-        var swiper2 = new Swiper(".intro__service-container-cart", {
-            spaceBetween: 10,
-            loop: true,
-            centeredSlides: true,
-            autoplay: {
-                delay: 5500,
-                disableOnineraction: false,
+            1024: {
+                slidesPerView: 4,
             },
-            navigation: {
-                nextEl: ".move-next",
-                prevEl: ".move-prev",
+        },
+    });
+    var swiper2 = new Swiper(".intro__service-container-cart", {
+        spaceBetween: 10,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+            delay: 5500,
+            disableOnineraction: false,
+        },
+        navigation: {
+            nextEl: ".move-next",
+            prevEl: ".move-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
             },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                },
-                450: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 3,
-                },
-                1024: {
-                    slidesPerView: 4,
-                },
-                1240: {
-                    slidesPerView: 5,
-                },
-    
+            450: {
+                slidesPerView: 2,
             },
-        });
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+            1240: {
+                slidesPerView: 5,
+            },
+
+        },
+    });
 })

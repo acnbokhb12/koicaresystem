@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div class="container__img-pd">
                     <div class="container">
                         <div class="container__footer-desc-area row">
-                            <div class="footer-desc-item col-lg-4">
+                            <div class="footer-desc-item col-sm-6 col-lg-4">
                                 <a href="#" class="footer-desc-item-img">
                                     <img src="./assets/img/logo/Logo_Koi_Care.png" alt="">
                                 </a>
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                                 </p>
                             </div>
-                            <div class="footer-desc-item col-lg-3">
+                            <div class="footer-desc-item col-sm-6 col-lg-3">
                                 <h2>Opening time</h2>
                                 <div class="footer-desc-item-time">
                                     Monday- Tuesday
@@ -35,14 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
                                 </div>
                                  
                             </div>
-                            <div class="footer-desc-item col-lg-2">
+                            <div class="footer-desc-item col-sm-6 col-lg-2">
                                 <h2>Menu</h2>
                                 <a href="" class="link__footer-nav">Home</a>
                                 <a href="" class="link__footer-nav">About</a>
                                 <a href="" class="link__footer-nav">Shop</a>
                                 <a href="" class="link__footer-nav">Contact</a>
                             </div>
-                            <div class="footer-desc-item col-lg-3">
+                            <div class="footer-desc-item col-sm-6 col-lg-3">
                                 <h2>Intagram feed</h2>
                                 <p>Don’t miss any updates all the astonishing offers we bring for you.</p>
                                 <div class="footer-desc-item-mess">
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         </div>
                         <div class="container__footer-desc-bottom">
                             <div class="footer-desc-bottom-left">
-                                <p>© 2024 Servicr is powered by <i>Koi Care System</i>. The property of their owners.</p>
+                                <p>© 2024 Service is powered by <i>Koi Care System</i>. The property of their owners.</p>
                             </div>
                             <div class="footer-desc-bottom-right">
                                 <ul class="list__icon__footer">
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                 </div>
             </div>
-        </footer>`;
+        </footer>   `;
     document.body.insertAdjacentHTML('beforeend', footerHtml);
     
 })
