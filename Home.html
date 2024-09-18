@@ -8,9 +8,7 @@
     <!-- Font gg family -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-
-    <!-- Font icon -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+    <!-- Font icon --> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
@@ -23,8 +21,8 @@
 <body>
     <div id="main">
         <!-- header -->
-         <script src="./assets/js/headernav.js"></script>
-          
+         <script src="./assets/js/headernav.js"></script> 
+         
         <!-- content intro -->
         <section class="content__intro">
             <div class="content__intro-img-script">
@@ -384,8 +382,65 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 <script>
-    
-</script>
+     var swiper = new Swiper(".latest__news-card-wrapper", {
+        spaceBetween: 10,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+            delay: 5500,
+            disableOnineraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            450: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        },
+    });
+    var swiper2 = new Swiper(".intro__service-container-cart", {
+        spaceBetween: 10,
+        loop: true,
+        centeredSlides: true, 
+        autoplay: {
+            delay: 5500,
+            disableOnineraction: false,
+        },
+        navigation: {
+            nextEl: ".move-next",
+            prevEl: ".move-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            450: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+            1240: {
+                slidesPerView: 5,
+            },
 
+        },
+    });
+</script>
+    
 
 </html>

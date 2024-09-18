@@ -62,6 +62,7 @@
     font-size: 1.4rem;
     font-weight: 500;
     opacity: 0.9;
+    margin-bottom: 0;
 }
 
  
@@ -222,12 +223,14 @@
     text-decoration: none;
     /* text-decoration: none; */
     color: var(--bs-orange);
-}   
-
+}    
 .text-label {
     position: relative;
     display: inline-block;
     /* margin-left: 10px;   */
+    font-size: 1.2rem;
+    /* font-family: ; */
+    font-weight: 500;
 }
 .text-label::after   {
     content: '';
@@ -248,9 +251,9 @@
 .header__link-task-icon{
     font-size: 1.6rem;
 }
-.text-label{
+/* .text-label{
     font-size: 1rem;
-}
+} */
 .header__link-account{
     position: relative;
     padding: 0 1rem;
@@ -623,6 +626,12 @@
         transform: translateX(50%);
         margin-top: -2.4rem;
     }
+    .view__detail_acc,
+    .footer__link-acount-detail-item a,
+    .body__link-acount-detail-item a{
+        line-height: 3.4rem;
+    }
+    
     @keyframes NavBarEffectOpen {
         0%{
             transform: translateX(100%);

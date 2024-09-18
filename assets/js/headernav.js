@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="container__iner-se">
                         <div class="row row__iner-se">
                             <!-- Logo -->
-                            <a href="" class="col-lg-2 link_logo-home">
+                            <a href="home.html" class="col-lg-2 link_logo-home">
                                 <img src="./assets/img/logo/Logo_Koi_Care.png" alt="Logo_System">
                             </a>
                             <!-- button for responsive -->
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <div class="contain__list-nav">
                                     <ul class="contain__list-nav-detail">
                                         <li class="contain__item-nav">
-                                            <a href="#" class="contain__item-nav-link">
+                                            <a href="home.html" class="contain__item-nav-link">
                                                 <span>Home</span>
                                             </a>
                                         </li>
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                             </a>
                                         </li>
                                         <li class="contain__item-nav">
-                                            <a href="#" class="contain__item-nav-link">
+                                            <a href="shop.html" class="contain__item-nav-link">
                                                 <span>Shop</span>
                                             </a>
                                         </li>
@@ -97,7 +97,10 @@ document.addEventListener("DOMContentLoaded", function () {
                                                         <a href="#">Blogs</a>
                                                     </li>
                                                     <li class="contain__sub-item_nav-items">
-                                                        <a href="#">Forum</a>
+                                                        <a href="news.html">News</a>
+                                                    </li>
+                                                    <li class="contain__sub-item_nav-items">
+                                                        <a href="#">Service</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -137,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                      <div class="welcome__acc-header">
                                                         <p class="dddssd">Khanh Huynh</p>
                                                          <!-- <h2>Khanh</h2> -->
-                                                        <a href="#" class="view__detail_acc">
+                                                        <a href="profilepage.html" class="view__detail_acc">
                                                             <i class="fa-solid fa-file-invoice"></i> My Account
                                                         </a>
                                                      </div>
@@ -145,12 +148,27 @@ document.addEventListener("DOMContentLoaded", function () {
                                                         <ul class="body__link-acount-list-item"> 
                                                             <li class="body__link-acount-detail-item">
                                                                 <a href="#">
-                                                                    <i class="fa-solid fa-eye"></i> Order History
+                                                                   <i class="fa-solid fa-fish"></i> My Koi
                                                                 </a>
                                                             </li>
                                                             <li class="body__link-acount-detail-item">
                                                                 <a href="#">
-                                                                    <i class="fa-solid fa-calendar-days"></i> My Meal Plan
+                                                                   <i class="fa-regular fa-circle"></i> My Pond
+                                                                </a>
+                                                            </li>
+                                                            <li class="body__link-acount-detail-item">
+                                                                <a href="#">
+                                                                   <i class="fa-solid fa-droplet"></i> Water Parameters
+                                                                </a>
+                                                            </li>
+                                                            <li class="body__link-acount-detail-item">
+                                                                <a href="#">
+                                                                    <i class="fa-solid fa-receipt"></i> Purchase History
+                                                                </a>
+                                                            </li>
+                                                            <li class="body__link-acount-detail-item">
+                                                                <a href="#">
+                                                                    <i class="fa-solid fa-person"></i> Service Purchase History
                                                                 </a>
                                                             </li> 
                                                         </ul>
@@ -203,6 +221,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener('click', function () {
         navBarMobile.classList.remove('open_navbar');
         btnHambuger.classList.remove('close-btn-hambuger');
+        boardInforAcc.classList.remove('open__boardAcc-detail'); // DUNG CHUNG CHO KHI CLICK NGOAI AVATA THI SE CLOSE
+
     });
 
     //  
@@ -213,13 +233,9 @@ document.addEventListener("DOMContentLoaded", function () {
         boardInforAcc.classList.add('open__boardAcc-detail');
         event.stopPropagation(); // Ngăn chặn sự kiện truyền lên document
     });
-
-    // Bắt sự kiện click trên boardInforAcc để ngăn đóng khi click bên trong
-    boardInforAcc.addEventListener('click', function (event) {
-        event.stopPropagation(); // Ngăn chặn sự kiện truyền lên document
-    });
-
-    // Bắt sự kiện click trên document để đóng boardInforAcc khi click bên ngoài
+    // boardInforAcc.addEventListener('click', function (event) {
+    //     event.stopPropagation(); // 
+    // });
     document.addEventListener('click', function () {
         boardInforAcc.classList.remove('open__boardAcc-detail');
     });
@@ -255,62 +271,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ddsdddd
 
-    var swiper = new Swiper(".latest__news-card-wrapper", {
-        spaceBetween: 10,
-        loop: true,
-        centeredSlides: true,
-        autoplay: {
-            delay: 5500,
-            disableOnineraction: false,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            450: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 4,
-            },
-        },
-    });
-    var swiper2 = new Swiper(".intro__service-container-cart", {
-        spaceBetween: 10,
-        loop: true,
-        centeredSlides: true,
-        autoplay: {
-            delay: 5500,
-            disableOnineraction: false,
-        },
-        navigation: {
-            nextEl: ".move-next",
-            prevEl: ".move-prev",
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            450: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 4,
-            },
-            1240: {
-                slidesPerView: 5,
-            },
-
-        },
-    });
+    
 })

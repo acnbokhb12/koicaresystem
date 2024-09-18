@@ -20,15 +20,20 @@
     --color-word:  #15a362;
     --bs-orange: #fd7e14;
     --bs-light-blue: #0dcaf0;
+    --color-font-header-main:#fff;
+    --color-font-sub-header-main:#ececec;
+    --background-color-boring:#82858b;
+    --orangr-hover-rgba:rgba(255, 97, 11, 0.7);
+    --main-background-color: #FBAB7E;
+    --main-background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     --line-height-header:7.8rem;
     --font-header-main: 5.8rem;
-    --color-font-header-main:#fff;
     --font-sub-header-main:1.6rem;
-    --color-font-sub-header-main:#ececec;
     --border-radius-useful: 8px;
     --font-title-main:3.4rem;
     --font-sub-title : 1.6rem;
-    --orangr-hover-rgba:rgba(255, 97, 11, 0.7);
+    --background-c:#9a9da2;
+    --color-for-cate:#FFCC00;
 }
 *{
     box-sizing: inherit;
