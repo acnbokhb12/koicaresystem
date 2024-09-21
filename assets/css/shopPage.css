@@ -258,10 +258,12 @@
     width: 100%;
 }
 .shop__product-category-item{
+    animation: marqueue 4s linear infinite;
     margin-bottom: 0;
     padding: 0.4rem 1rem; 
     font-size: 1.8rem;
     margin-bottom: 0; 
+    display: inline-block;
 }
 .create__blank{
     height: 1.2rem;
@@ -298,4 +300,13 @@
 } 
 .active__page{
     background-color: var(--bs-orange);
+}
+@keyframes marqueue {
+    0% {
+        transform: translateX(0);
+    }
+    
+    100% {
+        transform: translateX(-70%);
+    }
 }

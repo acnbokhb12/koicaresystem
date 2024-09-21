@@ -1,16 +1,16 @@
+#content-blogs,
 #content-news{
-    border-top:11.4rem solid  var(--bs-orange) ;
-    /* margin-top: 11.4rem; */
+    /* border-top:11.4rem solid  var(--bs-orange) ; */
+    margin-top: 11.4rem;
+     
 }
-.shop__intro-container{
-
+.shop__intro-container{ 
     width: 100%;
     overflow: hidden;
 }
 .shop__intro-list{
     display: flex;
-    width: 100%; 
-
+    /* width: 100%;   */
 }
 .shop__intro-item{
     position: relative;
@@ -476,4 +476,32 @@
     filter: brightness(0.8);
     color: #000000;
 
+}
+
+/* Blogs --------------------------------------- */
+.top__blogs-area{
+    padding: 2rem 0;
+}
+.top__blogs-main{
+    background-color: #FFFFFF;
+}
+
+
+/* Reponsive */
+@media screen and (max-width:1000px) {
+    .shop__intro-item-text h1{
+        font-size: 4rem;
+    }
+    .shop__intro-item-text p{
+        font-size: 1.6rem;
+    }
+    
+}
+@media screen and (max-width:768px) {
+    .shop__intro-item-text h1{
+        font-size: 3rem;
+    }
+    .shop__intro-item-text p{
+        font-size: 1.4rem;
+    }
 }

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link rel="icon" href="./assets/img/logo/logoSignin.jpg" type="image/x-icon" />
+
     <!-- Font family -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
@@ -18,19 +20,26 @@
     <link rel="stylesheet" href="./assets/css/signIn_Up.css">
 </head>
 
-<body >
+<body>
     <div class="screen__info__user  ">
-         
+
         <div class="container__screen__img_signup  " style="width: 40%;">
             <div class="screen__img-detail_signup">
-                 <img class="img-detail-item_signup" src="https://i.pinimg.com/originals/26/db/71/26db713c96975fd76257800965c0b19f.jpg" alt="">
-                 <img class="img-detail-item_signup" src="https://i.pinimg.com/564x/d8/ad/50/d8ad5040b549e8dc49fe1aac3098f239.jpg" alt="">
-                 <img class="img-detail-item_signup" src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjczMy10YW5nLTEzYl8xLmpwZw.jpg" alt="" style="float: left;;">
-                 <img class="img-detail-item_signup" src="https://www.shutterstock.com/image-vector/asian-background-oriental-japanese-style-260nw-1978654823.jpg" alt="">
-            
+                <img class="img-detail-item_signup"
+                    src="https://i.pinimg.com/originals/26/db/71/26db713c96975fd76257800965c0b19f.jpg" alt="">
+                <img class="img-detail-item_signup"
+                    src="https://i.pinimg.com/564x/d8/ad/50/d8ad5040b549e8dc49fe1aac3098f239.jpg" alt="">
+                <img class="img-detail-item_signup"
+                    src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjczMy10YW5nLTEzYl8xLmpwZw.jpg"
+                    alt="" style="float: left;;">
+                <img class="img-detail-item_signup"
+                    src="https://www.shutterstock.com/image-vector/asian-background-oriental-japanese-style-260nw-1978654823.jpg"
+                    alt="">
+                
+
             </div>
-           
-             
+
+
         </div>
         <!-- Sign up -->
         <div class="info__user-container-up  ">
@@ -44,63 +53,63 @@
                         <p class="header-desc" style="font-size: 2.6rem; text-align: center;">Create an account</p>
                     </header>
                     <div class="signup-user-body">
-                        <form action="#" class="form" id="form2" method="post">
-                            <div class="group_together mb-2">  
-                                <!-- Email -->
-                                <div class="form-group together"  >
-                                    <i class="fa-solid fa-envelope  icon-signup"></i>
-                                    <input type="email" id="email-signup" name="txtemail" class="input__form"
-                                        placeholder="Email" required>
-                                        <span class="error-theory">Wrong format email : abc@gmail.com</span>
-                                    </div>
-                             
-                                 <!-- UserName -->
-                                <div class="form-group together">
-                                <i class="fa-solid fa-user icon-signup"></i> 
-                                <input type="text" id="username-title-logup" name="txtusername"
-                                    class="input__form" placeholder="UserName" required />
-                                    <span class="error-theory">username must be words</span>
-                                </div>
+                        <form action="#" class="form" id="form-1" method="post">
+                            <div class="row row__form"> 
+                            <!-- Email -->
+                            <div class="form-group col-md-6 ">
+                                <label for="email" class="form-label"> <i class="fa-solid fa-envelope  icon-signup"></i>
+                                    Email</label>
+
+                                <input type="email" id="email" name="txtemail" class="input__form"
+                                    placeholder="email@domain.com" required>
+                                <span class="form-message"></span>
+                            </div> 
+                            <!-- UserName -->
+                            <div class="form-group col-md-6 ">
+                                <label for="fullname" class="form-label"><i class="fa-solid fa-user icon-signup"></i>
+                                    Name</label>
+
+                                <input type="text" id="fullname" name="txtusername" class="input__form"
+                                    placeholder="UserName" required />
+                                <span class="form-message"></span>
+                            </div> 
+                            <!-- password -->
+                            <div class="form-group col-md-6   "> 
+                                <label for="password" class="form-label"><i
+                                        class="fa-solid fa-lock icon-signup"></i> Password</label>
+                                <input type="password" id="password" name="txtpassword"
+                                    class="input__form " placeholder="Password" required />
+                                <span class="form-message"></span>
+                            </div> 
+                            <!-- pass wordd again -->
+                            <div class="form-group col-md-6 ">
+                                <label for="password_confirmation" class="form-label"><i class="fa-solid fa-lock icon-signup"></i> Confirm
+                                    password</label>
+                                <input type="password" id="password_confirmation" name="txtconfirmpassword" class="input__form"
+                                    placeholder="Confirm password" required />
+                                <span class="form-message"></span>
                             </div>
-                            <div class="group_together mb-2"> 
-                                <div class="pw-together  "> 
-                                    <!-- password -->
-                                    <div class="form-group pw-together-sub together  ">
-                                         <i class="fa-solid fa-lock icon-signup"></i>  
-                                        <input type="password" id="password-title-signup" name="txtpassword"
-                                        class="input__form " placeholder="Password" required /> 
-                                        <span class="error-theory">Length from 8 to 20</span>
-                                    </div>
-                                     
-                                    <!-- pass wordd again -->
-                                    <div class="form-group together">
-                                        <i class="fa-solid fa-lock icon-signup"></i> 
-                                        <input type="password" id="password-title-signup" name="txtconfirmpassword"
-                                        class="input__form" placeholder="Confirm password"  required />
-                                        <span class="error-theory">passwords are not the same</span>
-                                    </div>
-                                </div>
-                                <div class="select-toghether ">
-                                    <select name="" id="" class="input__form">
-                                        <option value="" >Man</option>
-                                        <option value="">Woman</option>
-                                        <option value="">Orther</option> 
-                                    </select>
-                                </div>
+                            <!-- Phone -->
+                            <div class="form-group col-md-6">
+                                <label for="phonenumber" class="form-label"> <i class="fa-solid fa-phone icon-signup"></i> Phone
+                                    number</label>
+                                <input type="text" id="phonenumber" name="txtphone" class="input__form"
+                                    placeholder="Phone number" required />
+                                <span class="form-message">Start number with 0 </span>
+                            </div>
+                            <!-- Gender -->
+                            <div class="form-group col-md-6">
+                                <label for="" class="form-label">Choose Gender:</label>
+                                <select name="" id="" class="input__form ">
+                                    <option value="">Man</option>
+                                    <option value="">Woman</option>
+                                    <option value="">Orther</option>
+                                </select>
                             </div>
                             
-                            <div class="group_together">
-
-                                <!-- Phone -->
-                                <div class="form-group together">
-                                    <i class="fa-solid fa-phone icon-signup"></i>
-                                    <input type="text" id="phonenumber-signup" name="txtphone" class="input__form"
-                                    placeholder="Phone number" required />
-                                    <span class="error-theory">Start number with 0 </span>
-                                </div>
-                            </div>
-                            <!-- Submit -->
                             <button class="btn btn-info btn-signin-acc">Sign Up</button><br>
+                          </div>
+                            <!-- Submit -->
 
                         </form>
                         <p class="footer__screen__acc_according">
@@ -109,16 +118,31 @@
                         </p>
                     </div>
                     <footer class="user-signup-footer">
-                         
+
                     </footer>
 
                 </div>
             </div>
         </div>
-         
-        
+
+
     </div>
-  
+
 </body>
+<script src="./assets/js/validator.js"></script>
+<script>
+    Validator({
+        form: '#form-1',
+        errorSelector:'.form-message',
+        rules: [
+            Validator.isEmail('#email'),
+            Validator.isRequired('#fullname'),
+            Validator.minLength('#password', 6),
+            Validator.isConfirmed('#password_confirmation',()=>{
+                return document.querySelector('#form-1 #password').value;
+            })
+        ]
+    });
+</script>
 
 </html>

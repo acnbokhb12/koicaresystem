@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                             <div class="contain__sub-item_nav-link">
                                                 <ul class="contain__sub-item_nav-list">
                                                     <li class="contain__sub-item_nav-items">
-                                                        <a href="#">Blogs</a>
+                                                        <a href="blogs.html">Blogs</a>
                                                     </li>
                                                     <li class="contain__sub-item_nav-items">
                                                         <a href="news.html">News</a>
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                                 </a>
                                                             </li>
                                                             <li class="body__link-acount-detail-item">
-                                                                <a href="#">
+                                                                <a href="orderhistoryCustomer.html">
                                                                     <i class="fa-solid fa-receipt"></i> Purchase History
                                                                 </a>
                                                             </li>

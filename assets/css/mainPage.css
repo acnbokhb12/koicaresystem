@@ -93,8 +93,7 @@
     position: relative;  
     box-sizing: border-box;
     flex-shrink: 0;
-    width: 25%;
-    padding: 0 0.6rem;
+    width: 25%; 
     overflow: hidden;
     flex: 1 0 auto; 
 }  

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="icon" href="./assets/img/logo/logoSignin.jpg" type="image/x-icon" /> 
     <!-- Font gg family -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
@@ -66,4 +67,120 @@
         </div>
     </div>
 </body>
+<script>
+    // const course = [{
+    //     name : "khanh",
+    //     age : 20
+    // },{
+    //     name : "khanh",
+    //     age : 20
+    // },{
+    //     name : "khanh",
+    //     age : 20
+    // }];
+    const classFpt = [ 
+        {
+            name: "hoang",
+            age:21,
+        },
+        {
+            name: "kanh",
+            age:20,
+        },
+        {
+            name: "thwe",
+            age:19,
+        },
+        {
+            name: "huy",
+            age:18,
+        }
+    ];
+    var ob = {};
+    const arr = [
+        ["name","khanh"],
+        ["age","18"] 
+    ]
+    function arrToObj(ar){
+    var obj = ar.reduce((a,b)=>{
+        return a[b[0]] = b[1]; 
+    },{});
+
+     return obj
+} 
+    function myCallBack(value){
+        console.log("value: ", value );
+
+    }
+    function myValue(param){
+        param("js");
+    }
+    myValue(myCallBack);
+    // console.log(Object.keys(course))
+    // for(var i of course){
+    //     console.log(i)
+    //     console.log(i.age)
+    // }
+    // Array.prototype.reduce2 = function (callback, init)
+    // var newStudent = classFpt.map(function(course, index,originArray){
+    //     return  `<h2>${course.name}</h2>`
+    // })
+    // console.log(newStudent.join(''));
+    // var i = 0;    
+    // var totalAge = classFpt.reduce(function(acculator, currentValue, curenIndex){
+    //     i++;
+    //     var total = acculator + currentValue.age;
+    //     console.table({
+    //         'Luot chayy : ': i,
+    //         'Bien tich trud':acculator,
+    //         'so tuoi': currentValue.age,
+    //         'tich tru duoc': total 
+    //     });
+    //     return  total;
+    // },0) ;
+        const numbers = [100,200,400,500];
+        // var total = numbers.reduce((a),0)
+        // var flatArray = numbers.reduce(function(flat, deptItem){
+        //     return flat.concat(deptItem)
+        // },[])
+        // console.log(flatArray)
+        // const result = numbers.reduce((total,number)=>{
+        //     return total + number
+        // })
+        // console.log(result)
+        Array.prototype.map2 = function(callback){
+            console.log(this);
+            var lengthArr = this.length;
+            for(var i = 0 ;i< lengthArr ; i++){
+                callback(this[i],i);
+            }
+        }
+        numbers.map2(function(course, index){
+            return `<h2>${course}</h2>`
+        }); 
+        var ship = new Array( 
+            {
+                name:  "khansh ",
+                age:18
+            }
+         )
+        ship.push("ssss") ;
+        console.log(ship)
+
+        // const sum = (a,b) => ({ a:a ,b:b})
+        const logger = log => console.log(log)
+        logger("Message");
+          const cour = {name: "js",
+            age : 18,
+            getName: () => {
+                return this.name;
+            }
+            }
+        const ships = function(name, type) {
+            this.name = name;
+            this.type = type;
+        }    
+        const aboutShip = new ships("Bellfast","Cvl");
+        console.log(aboutShip)
+</script>
 </html>
