@@ -61,7 +61,7 @@
                                     Email</label>
 
                                 <input type="email" id="email" name="txtemail" class="input__form"
-                                    placeholder="email@domain.com" required>
+                                    placeholder="email@domain.com">
                                 <span class="form-message"></span>
                             </div> 
                             <!-- UserName -->
@@ -70,7 +70,7 @@
                                     Name</label>
 
                                 <input type="text" id="fullname" name="txtusername" class="input__form"
-                                    placeholder="UserName" required />
+                                    placeholder="UserName" />
                                 <span class="form-message"></span>
                             </div> 
                             <!-- password -->
@@ -78,7 +78,7 @@
                                 <label for="password" class="form-label"><i
                                         class="fa-solid fa-lock icon-signup"></i> Password</label>
                                 <input type="password" id="password" name="txtpassword"
-                                    class="input__form " placeholder="Password" required />
+                                    class="input__form " placeholder="Password" />
                                 <span class="form-message"></span>
                             </div> 
                             <!-- pass wordd again -->
@@ -86,28 +86,28 @@
                                 <label for="password_confirmation" class="form-label"><i class="fa-solid fa-lock icon-signup"></i> Confirm
                                     password</label>
                                 <input type="password" id="password_confirmation" name="txtconfirmpassword" class="input__form"
-                                    placeholder="Confirm password" required />
+                                    placeholder="Confirm password" />
                                 <span class="form-message"></span>
                             </div>
                             <!-- Phone -->
                             <div class="form-group col-md-6">
-                                <label for="phonenumber" class="form-label"> <i class="fa-solid fa-phone icon-signup"></i> Phone
+                                <label for="phoneNumber" class="form-label"> <i class="fa-solid fa-phone icon-signup"></i> Phone
                                     number</label>
-                                <input type="text" id="phonenumber" name="txtphone" class="input__form"
-                                    placeholder="Phone number" required />
-                                <span class="form-message">Start number with 0 </span>
+                                <input type="text" id="phoneNumber" name="txtphone" class="input__form"
+                                    placeholder="Phone number" />
+                                <span class="form-message"> </span>
                             </div>
                             <!-- Gender -->
                             <div class="form-group col-md-6">
                                 <label for="" class="form-label">Choose Gender:</label>
-                                <select name="" id="" class="input__form ">
-                                    <option value="">Man</option>
-                                    <option value="">Woman</option>
-                                    <option value="">Orther</option>
+                                <select name="choice-gender" id="" class="input__form ">
+                                    <option value="Man">Man</option>
+                                    <option value="Woman">Woman</option>
+                                    <option value="Orther">Orther</option>
                                 </select>
                             </div>
                             
-                            <button class="btn btn-info btn-signin-acc">Sign Up</button><br>
+                            <button class="btn btn-info btn-signin-acc" type="submit">Sign Up</button><br>
                           </div>
                             <!-- Submit -->
 
@@ -135,13 +135,18 @@
         form: '#form-1',
         errorSelector:'.form-message',
         rules: [
-            Validator.isEmail('#email'),
-            Validator.isRequired('#fullname'),
+            Validator.isEmail('#email', 'Please fill true email'),
+            Validator.isRequired('#fullname', 'Please fill your full name'),
             Validator.minLength('#password', 6),
+            Validator.isRequired('#password_confirmation'),
             Validator.isConfirmed('#password_confirmation',()=>{
                 return document.querySelector('#form-1 #password').value;
-            })
-        ]
+            },'Password confirm not exactly'),
+            Validator.isPhoneNumber('#phoneNumber','Phone number at least 10 number'),
+        ],
+        // onSubmit: (data)=>{
+        //     console.log(data)
+        // }
     });
 </script>
 

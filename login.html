@@ -44,20 +44,18 @@
                     </header>
                     <div class="body__input-container">
                         <form action="#" class="form" id="form1" method="post">
-                            <!-- username -->
-                            <!-- <label for="email-log" class="label-title-infor"><i
-                                    class="fa-solid fa-envelope"></i></i>Email</label><br> -->
-                            <input type="email" id="email-log" name="txtemail" class="input__form"
-                                placeholder="E-mail address or koicare ID" required><br>
+                            <!-- username --> 
+                            <div class="form-group" style="margin-bottom: 0;">  
+                                <input type="email" id="email-log" name="txtemail" class="input__form"
+                                 placeholder="E-mail address or koicare ID" required><br>
+                             </div>
                             <!-- password -->
-                            <!-- <label for="password-title-signin" class="label-title-infor"><i
-                                    class="fa-solid fa-lock"></i>Password</label><br> -->
+                            <div class="form-group">
                             <input type="password" id="password-title-signin" name="txtpassword"
                                 class="input__form mt-4 last-child" placeholder=" Enter your password" required /><br>
-                            <!-- take error something -->
-                             
-                            
-                             <div class="wrong__acc mt-2" style="display: none;">
+                            </div>
+                                <!-- take error something --> 
+                             <div class="wrong__acc mt-2">
                                  <span id="wrongNameOrPass" class="">Wrong Email or Password !</span>
                              </div>
                              <div class="link-forgot-acc">
