@@ -147,12 +147,12 @@ document.addEventListener("DOMContentLoaded", function () {
                                                      <div class="welcome__acc-body">
                                                         <ul class="body__link-acount-list-item"> 
                                                             <li class="body__link-acount-detail-item">
-                                                                <a href="#">
+                                                                <a href="fish.html">
                                                                    <i class="fa-solid fa-fish"></i> My Koi
                                                                 </a>
                                                             </li>
                                                             <li class="body__link-acount-detail-item">
-                                                                <a href="#">
+                                                                <a href="pond.html">
                                                                    <i class="fa-regular fa-circle"></i> My Pond
                                                                 </a>
                                                             </li>

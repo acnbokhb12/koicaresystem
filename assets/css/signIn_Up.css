@@ -139,7 +139,11 @@
     margin: 0 auto;
 }
  
- 
+ .form-message-error-bk{
+    color: red;
+    font-size: 1.2rem;
+    margin: 0.4rem 0; 
+ }
 .form-message{
     display: block;
     color: red;

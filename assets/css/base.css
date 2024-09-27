@@ -34,6 +34,8 @@
     --font-sub-title : 1.6rem;
     --background-c:#9a9da2;
     --color-for-cate:#FFCC00;
+    --color-ngau-hung:#d29763;
+    --color-border-bt:#e1e2ef;
 }
 *{
     box-sizing: inherit;
