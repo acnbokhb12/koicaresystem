@@ -19,15 +19,18 @@
     <link rel="stylesheet" href="./assets/css/fishE.css">
   </head>
 
-  <body>
+  <body class=" body-fish">
     <script src="./assets/js/headernav.js"></script>
     <div class="container container_fish">
-      <h1>Fish Information</h1>
-      <div class="text-right">
-        <a href="Fish.html" class="back-btn">Back to List</a>
-        <button class="edit-btn-out">Edit Information</button>
+      <div class="tilte-fish"> 
+        <h1>Fish Information</h1>
+        <div class="text-right">
+          <a href="Fish.html" class="back-btn">Back to List</a>
+          <a href="#" class="delete-btn-fish">Delete</a>
+          <button class="edit-btn-out">Edit Information</button>
+        </div>
       </div>
-      <div class="row">
+      <div class="row mt-4">
         <div class="col-4 fish-img-info">
           <img
             src="https://www.thesprucepets.com/thmb/tucFN5e5O9-vbhr0jhbeL8zkFLY=/3572x0/filters:no_upscale():strip_icc()/GettyImages-1148621267-fbe7fcc9e0eb41078b0ee63bc3edc2b3.jpg"
@@ -78,8 +81,8 @@
         <p class="measurement">Weight: 3 kg</p>
       </div>
     </div>
-    <h1>The Pond Fish is living</h1>
-    <div class="container-full-pond">
+    <div class="container container-pond-fish ">
+      <h1>The Pond Fish is living</h1>
       <div class="pond-item">
         <div class="pond-item-img">
           <a href="#">
@@ -98,77 +101,82 @@
     </div>
     <!-- TABLE EDIT -->
     <div class="container__infor__fish">
-      <div class="infor__fish-detail">
-        <div class="row row-fish-detail">
-          <div class="col-4 fish-img-info" style="padding: 0">
-            <img
-              src="https://www.thesprucepets.com/thmb/tucFN5e5O9-vbhr0jhbeL8zkFLY=/3572x0/filters:no_upscale():strip_icc()/GettyImages-1148621267-fbe7fcc9e0eb41078b0ee63bc3edc2b3.jpg"
-              alt="Koi fish"
-              style="height: 100%"
-            />
-          </div>
-          <div class="col-8 edit-info">
-            <div class="text-right">
-              <button class="btn-close-fish">
-                <i class="fa-solid fa-xmark close-navbar-icon-btn-fish"></i>
-              </button>
+        <div class="infor__fish-detail">
+          <div class="row row-fish-detail">
+            <div class="col-4  " style="padding: 0">
+                <div class="img-edit-submit">
+                    <div class="fish-img-info-edit">
+                        <img src="https://www.thesprucepets.com/thmb/tucFN5e5O9-vbhr0jhbeL8zkFLY=/3572x0/filters:no_upscale():strip_icc()/GettyImages-1148621267-fbe7fcc9e0eb41078b0ee63bc3edc2b3.jpg" alt="Koi Pond" > 
+                    </div>
+                    <div class="fish-edit-img-detail">
+                        <form action="" class="form-edit-img-fish">
+                            <input type="file">
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <h2>New Information</h2>
-            <form>
-              <div class="row row-edit-info-detail">
-                <div class="col-md-6 edit-item-detail">
-                  <span>Fish Name </span>
-                  <input type="text" value="" placeholder="Enter fish name" />
-                </div>
-                <div class="col-md-6 edit-item-detail">
-                  <span>Body Shape </span>
-                  <input type="text" value="" placeholder="Enter body shape" />
-                </div>
-                <div class="col-md-6 edit-item-detail">
-                  <span>Age </span>
-                  <input type="number" value="" placeholder="Enter age" />
-                </div>
-                <div class="col-md-6 edit-item-detail">
-                  <span>Length (cm) </span>
-                  <input
-                    type="number"
-                    step="0.1"
-                    value=""
-                    placeholder="Enter length in cm"
-                  />
-                </div>
-                <div class="col-md-6 edit-item-detail">
-                  <span>Weight (kg) </span>
-                  <input
-                    type="number"
-                    step="0.1"
-                    value=""
-                    placeholder="Enter weight in kg"
-                  />
-                </div>
-                <div class="col-md-6 edit-item-detail">
-                  <span>Gender </span>
-                  <select>
-                    <option value="" disabled selected>Select gender</option>
-                    <option value="M">Male</option>
-                    <option value="F">Female</option>
-                  </select>
-                </div>
-                <div class="col-md-6 edit-item-detail">
-                  <span>Origin </span>
-                  <input type="text" value="" placeholder="Enter origin" />
-                </div>
-              </div>
-              <div class="text-center">
-                <button class="edit-btn" style="margin-top: 10px">
-                  Confirm
+            <div class="col-8 edit-info">
+              <div class="text-right">
+                <button class="btn-close-fish">
+                  <i class="fa-solid fa-xmark close-navbar-icon-btn-fish"></i>
                 </button>
               </div>
-            </form>
+              <h2>New Information</h2>
+              <form>
+                <div class="row row-edit-info-detail">
+                  <div class="col-md-6 edit-item-detail">
+                    <span>Fish Name </span>
+                    <input type="text" value="" placeholder="Enter fish name" />
+                  </div>
+                  <div class="col-md-6 edit-item-detail">
+                    <span>Body Shape </span>
+                    <input type="text" value="" placeholder="Enter body shape" />
+                  </div>
+                  <div class="col-md-6 edit-item-detail">
+                    <span>Age </span>
+                    <input type="number" value="" placeholder="Enter age" />
+                  </div>
+                  <div class="col-md-6 edit-item-detail">
+                    <span>Length (cm) </span>
+                    <input
+                      type="number"
+                      step="0.1"
+                      value=""
+                      placeholder="Enter length in cm"
+                    />
+                  </div>
+                  <div class="col-md-6 edit-item-detail">
+                    <span>Weight (kg) </span>
+                    <input
+                      type="number"
+                      step="0.1"
+                      value=""
+                      placeholder="Enter weight in kg"
+                    />
+                  </div>
+                  <div class="col-md-6 edit-item-detail">
+                    <span>Gender </span>
+                    <select> 
+                      <option selected value="M">Male</option>
+                      <option value="F">Female</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 edit-item-detail">
+                    <span>Origin </span>
+                    <input type="text" value="" placeholder="Enter origin" />
+                  </div>
+                </div>
+                <div class="text-center">
+                    <button class="edit-btn blue-btn" style="margin-top: 10px">
+                        Confirm
+                    </button>                    
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     <script src="./assets/js/footer.js"></script>
   </body>
   <script>

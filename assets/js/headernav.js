@@ -166,11 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                                     <i class="fa-solid fa-receipt"></i> Purchase History
                                                                 </a>
                                                             </li>
-                                                            <li class="body__link-acount-detail-item">
-                                                                <a href="#">
-                                                                    <i class="fa-solid fa-person"></i> Service Purchase History
-                                                                </a>
-                                                            </li> 
+                                                            
                                                         </ul>
                                                      </div>
                                                      <div class="welcome__acc-footer">
