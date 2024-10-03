@@ -1,0 +1,478 @@
+.img-aboutus{
+    /* padding-top: 116px; */
+    /* background-color: var(--subheader-color); */
+    /* width: 100%; */
+    position: relative;
+    /* display: flex; */
+    justify-content: center;
+}
+.container-img-aboutus{
+    /* position: absolute; */
+}
+.container-img-aboutus img{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+.container-intro-aboutus{
+    position: absolute;
+    top: 30% ;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.post-entry-aboutus h1{
+    font-size: 7rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.post-entry-aboutus p{
+    color: azure;
+    font-size: 1.6rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-bottom: 22px;
+}
+.btn-main-about a{
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+}
+.item-desc-intro{
+    display: flex;
+}
+.img-first{
+    width: 50%;
+}
+.img-first img{
+    width: 100%;
+    /* height: 400px; */
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    height: 100%;
+}
+.text-desc{
+    width: 50%;
+    /* display: flex; */
+    /* margin: auto; */
+    padding: 80px;
+}
+.text-desc h2{
+    font-size: 3.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.text-desc p{
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.img-first-secondchild{
+    order: 2;
+}
+.text-first-secondchild{
+    order: 1;
+}
+.btn{
+    padding: 15px 20px;
+    border-radius: 4px;
+    border-color: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    border-color: #000000;
+}
+.btn.btn-outline-primary {
+    color: #214252;
+}
+
+
+.sec-features{
+    background-color: #4f4f4f;
+}
+.section{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.icon-potential{
+    color: #fff;
+    /* font-size: 2.6rem; */
+    flex: 0 0 60px;
+    font-size: 40px;
+    position: relative;
+    margin-right: 10px;
+}
+.desc-potential{
+
+    color: #ffffff;
+}
+.desc-potential h3{
+    font-size: 1.8rem;
+}
+.desc-potential p{
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+.item-first{
+    justify-content: center;
+}
+.title-heading {
+   background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.title-heading h2{
+    font-size: 30px;
+    font-weight: 700;
+    color: #f5f5f5;
+}
+.title-heading p{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #f5f5f5;
+    opacity: 0.7;
+}
+.row-contain-team{
+    justify-content: space-evenly;
+}
+.space-betw{
+    display: none;
+}
+
+.main-contact{
+     
+    
+}
+.container-infor-contact{
+    
+    position: relative;
+
+}
+.img-contact-intro{ 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.img-contact-intro > img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+.contact-detail-dest{
+    margin: 0 auto;
+    width: 90%;
+}
+.contact-detail-dest > h2{
+    font-size: 5.6rem;
+    color: var(--white-color);
+    text-align: center;
+    position: relative;
+    
+}
+.contain-form-contact{
+  
+}
+.fill-description-map{
+    padding-top: 36px;
+    width: 100%;
+    padding-bottom: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.fill-infor-self {
+    color: #fff;
+}
+.fill-infor-self h2{
+    font-size: 3rem;
+    padding-bottom: 10px;
+}
+
+.fill-infor-self p{
+    filter: brightness(0.7);
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+
+}
+.item-contact{
+    margin-bottom: 6px;
+}
+.item-contact label{
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+}
+.item-contact textarea,
+.item-contact input{
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 5px 10px;
+    height: 40px;
+    border: none;
+    outline: none;
+}
+.item-contact textarea{
+    /* height: 10rem; */
+}
+
+.img-map-our{
+    width: 100%;
+}
+.img-map-our iframe{
+    width: 100%;
+}
+.btn-sub-contact{
+    font-size: 1.6rem;
+    border-radius: 4px;
+    margin: 16px 0 10px;
+    padding: 6px 20px;
+    border: none;
+    outline: none;
+    
+}
+
+/* orderhistory */
+.main-order {
+    padding-top: 116px;
+}
+
+.row-title-order h1 {
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+
+.container-order-history {
+    padding: 24px;
+}
+
+.card-body {
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.title-order-history>h4 {
+    font-size: 2.6rem;
+}
+
+.title-order-history>p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.name-order-date {
+    font-size: 1.8rem;
+}
+
+.name-order-date>h5 {
+    font-size: 1.8rem;
+    margin-right: 12px;
+    background-color: var(--orange-color);
+    padding: 2px 6px;
+    border-radius: 8px;
+}
+
+.cotain-img-order-detail img {
+    width: 16rem;
+    border-radius: 10px;
+}
+
+.contain-description-order-detail {
+    margin-left: 2rem;
+    font-size: 1.6rem;
+}
+
+.contain-description-order-detail>h5 {
+    font-size: 2rem;
+    /* font-weight: 700; */
+    text-transform: capitalize;
+}
+
+.contain-type-qty {
+    text-transform: capitalize;
+
+    padding: 1px 1px;
+
+}
+
+.contain-price-order-detail {
+    margin-top: 20px;
+}
+
+.contain-price-order-detail>h4 {
+    font-size: 2rem;
+}
+
+/* nut */
+.btn-buy-again {
+    background-color: #00BFA6;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px dashed #00BFA6;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+}
+
+.btn-buy-again>a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+}
+
+.btn-buy-again span:last-child {
+    display: none;
+}
+
+.btn-buy-again:hover {
+    transition: .4s;
+    border: 2px dashed #00BFA6;
+    background-color: #fff;
+    color: #00BFA6;
+}
+
+.btn-buy-again:hover a {
+    color: #00BFA6;
+
+}
+
+.btn-buy-again:active {
+    background-color: #87dbd0;
+}
+.card-info {
+    width: 17em;
+    height: 22.5em;
+    background: #171717;
+    transition: 1s ease-in-out;
+    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-info span {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+  }
+  
+  .card-info .info {
+    font-weight: 400;
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 0.72em;
+    margin: 1em;
+  }
+  
+  .card-info .img {
+    width: 4.8em;
+    height: 4.8em;
+    background: white;
+    border-radius: 15px;
+    margin: auto;
+  }
+  
+  .card-info .share {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+  
+  .card-info a {
+    color: white;
+    transition: .4s ease-in-out;
+  }
+  
+  .card-info a:hover {
+    color: red;
+  }
+  
+  .card-info button {
+    padding: 0.8em 1.7em;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: .4s ease-in-out;
+  }
+  
+  .card-info button:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+  }
+@media screen and (max-width:768px) {
+    .post-entry-aboutus h1{
+        font-size: 5rem;
+    }
+    .post-entry-aboutus p{
+        font-size: 1.4rem;
+    }
+    .item-desc-intro{
+        flex-direction: column;
+    }
+    .space-betw{
+        display: block;
+        width: 100%;
+        height: 30px;
+    }
+    .img-first{
+        width: 100%;
+        height: 450px;
+    }
+    .text-desc{
+        width: 100%;
+        padding: 30px;
+    }
+    .img-first-secondchild{
+        order: 1;
+    }
+    .text-first-secondchild{
+        order: 2;
+    }
+}
+@media screen and (max-width:575px) {
+    .post-entry-aboutus h1{
+        font-size: 4rem;
+    }
+    .post-entry-aboutus p{
+        /* font-size: 1.2rem; */
+    }
+}
+@media screen and (max-width:400px) {
+    .container-intro-aboutus{
+        width: 90%;
+    }
+    .img-first{
+
+        height: 300px;
+    }
+    .img-first img{
+    }
+    .text-desc{
+        padding: 10px;
+    }
+}

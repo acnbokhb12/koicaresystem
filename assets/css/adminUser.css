@@ -1,0 +1,274 @@
+.link_add-account{
+    font-size: 1.6rem;
+    display: block;
+    padding: 0.4rem 1.4rem;
+    background-color: #1abc9c;
+    color: var(--white-color);
+    border-radius: 4px;
+    border: 2px solid #1abc9c;
+    transition: background-color 0.4s ease;
+}
+.link_add-account:hover{
+    text-decoration: none;
+    border: 2px solid #1abc9c;
+    color: var(--black-color);
+    background-color: transparent;
+}
+.row-processing{
+    background: #fff;
+    padding: 0;
+    margin-bottom: 2.4rem;
+}
+.link-processing{
+    width: 20%;
+    color: #5d6778;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0.8rem 1.6rem;
+}
+.link-processing:hover{
+    color: var(--color-word);
+    background: #edfdf6;
+    text-decoration: none;
+}
+.link-processing.active{
+    color: var(--color-word);
+    border-bottom: 2px solid var(--color-word);
+}
+/* Search */
+.row-user-main{
+    align-items: center; 
+    margin-bottom: 2.4rem;
+}
+.search-order{
+    height:3.2rem;
+    padding: 1rem;
+    font-size: 1.6rem;    
+}
+.contain-btn-select-order{
+    padding: 0;
+
+}
+.contain-btn-select-search{
+    font-weight: 600;
+    padding: 0.4rem 4rem ;
+     height: 3.2rem;
+    font-size:1.4rem;
+    background: #fff;
+    color: #4a4f57;
+    border: 1px solid #525456; 
+}
+.btn-submit-search-order{
+    font-weight: 600;
+    padding: 0.4rem 2rem ;
+     height: 3.2rem;
+    font-size:1.4rem;
+    /* background: #fff; */
+    color: #4a4a4a;
+    border: 1px solid #525456; 
+    
+}
+ 
+/* End search */
+/* Content styling */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content .header h1 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.content .header .actions {
+    display: flex;
+    /* Use flexbox for action buttons */
+    align-items: center;
+    /* Center buttons vertically */
+}
+
+.content .header .actions button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.content .header .actions button:hover {
+    background-color: #0056b3;
+}
+
+/* Table container */
+.content .table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content .table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content .table-container th,
+.content .table-container td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 1.6rem;
+}
+
+.content .table-container th {
+    background-color: #1abc9c;
+    /* Updated header background color */
+    color: white;
+    /* Updated header text color */
+}
+
+.content .table-container img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.content .table-container button {
+    background-color: transparent;
+    border: none;
+    /* color: #007bff; */
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.content .table-container button:hover {
+    /* color: #0056b3;   */
+}
+ 
+/* New Account Form Styling */
+#newAccountForm {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    padding: 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    margin-top: 20px; 
+}
+    /* Button background color */
+.address__acc{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+#newAccountForm h3 {
+    margin-bottom: 20px;
+    /* Space below the header */
+    color: #0056b3;
+    /* Dark blue color for the header */
+}
+
+#newAccountForm label {
+    display: block;
+    /* Make labels block elements */
+    margin-bottom: 5px;
+    /* Space below labels */
+    font-weight: bold;
+    /* Bold font for labels */
+}
+
+#newAccountForm input,
+#newAccountForm select {
+    width: 100%;
+    /* Full width for inputs and select */
+    padding: 10px;
+    /* Padding inside inputs and select */
+    margin-bottom: 15px;
+    /* Space below inputs */
+    border: 1px solid #ddd;
+    /* Border for inputs and select */
+    border-radius: 4px;
+    /* Rounded corners for inputs and select */
+    box-sizing: border-box;
+    /* Include padding in the element's total width */
+}
+
+#newAccountForm button {
+    background-color: #0056b3; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 1em; 
+}
+
+#newAccountForm button:hover {
+    background-color: #004085; 
+}
+ 
+#toggleAccountTable {
+    margin-left: auto;
+    /* Push to the right */
+    padding: 10px 15px;
+    /* Padding for button */
+    background-color: #007bff;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    margin-top: 10px;
+    /* Khoảng cách phía trên */
+    margin-bottom: 10px;
+    /* Khoảng cách phía dưới */
+}
+
+#toggleAccountTable:hover {
+    background-color: #0056b3;
+    /* Darker color on hover */
+}
+
+/* Footer styling */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Pagination buttons */
+.pagination button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}

@@ -19,16 +19,21 @@
     <link rel="stylesheet" href="./assets/css/pondkoi.css">
 </head>
 
-<body>
+<body class="pond-background">
     <script src="./assets/js/headernav.js"></script>
     <div class="container container_pond">
-        <h1>Koi Fish Pond Information</h1>
-        <div class="text-right">
-            <button class="edit-btn-out">
-                Edit Information
-            </button>
+        <div class="tilte-ponds"> 
+            <h1>Koi Fish Pond Information</h1>
+            <div class="text-right">
+                <a href="Fish.html" class="back-btn">Back to List</a>
+                <a href="#" class="delete-btn-fish">Delete</a>
+                <button class="edit-btn-out">
+                    Edit Information
+                </button>
+            </div>
         </div>
-        <div class="row">
+         
+        <div class="row mt-4">
             <div class="col-4 pond-img-info">
                 
                 <img src="https://www.thesprucepets.com/thmb/tucFN5e5O9-vbhr0jhbeL8zkFLY=/3572x0/filters:no_upscale():strip_icc()/GettyImages-1148621267-fbe7fcc9e0eb41078b0ee63bc3edc2b3.jpg" alt="Koi Pond">
@@ -60,9 +65,7 @@
     <div class="container container-fish">
         <h1>List Of Koi Fishes</h1>
         <div class="container-list-arrow">
-        <div class="swiper container-list-fish">
-
-              
+        <div class="swiper container-list-fish">         
             <div class="swiper-wrapper row-list-fish">
                 <a href="#" class="fish-item swiper-slide">
                    <div class="fish-item-img">
@@ -245,8 +248,8 @@
             disableOnineraction: false,
         },
         navigation: {
-            nextEl: ".prev-btn",
-            prevEl: ".next-btn",
+            nextEl: ".next-btn",
+            prevEl: ".prev-btn",
         },
         breakpoints: {
             0: {

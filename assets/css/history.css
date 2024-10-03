@@ -1,3 +1,9 @@
+.body_history-order{
+  background: url(https://static.wikia.nocookie.net/0dfbc1cb-6311-45e0-8b74-fc965ca9afc7);
+  background-color: #e3e3e3;
+  background-position: center;
+}
+
 .dashboard-summary {
     margin-top: 10px;
   }
@@ -20,9 +26,13 @@
   .main-order {
     padding-top: 130px;
   }
-  
+  .row-title-order{
+    margin: 0;
+  }
   .row-title-order h1 {
     font-size: 3.4rem;
+    background-color: var(--white-color);
+    padding: 0.4rem 1.2rem;
   }
   
   .card-body {
@@ -81,7 +91,7 @@
   }
   
   .btn-buy-again {
-    background-color: #00d9fff6;
+    background-color: var(--bs-orange);
     letter-spacing: 2px;
     cursor: pointer;
     border-radius: 10px;

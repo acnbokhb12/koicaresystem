@@ -1,15 +1,39 @@
+.pond-background{
+    background: url(https://static.wikia.nocookie.net/0dfbc1cb-6311-45e0-8b74-fc965ca9afc7);
+    background-color: #e3e3e3;
+}
 .container_pond{
-    margin-top: 124px;
+    margin-top: 12.4rem;
     padding-bottom: 4rem;
 }
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
+.tilte-ponds{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid #848484;   
+}
+.tilte-ponds h1 {
+    text-align: center; 
     font-size: var(--font-title-main);
     color: #333;
+    margin-bottom: 0; 
+} 
+.tilte-ponds h1 {
+    /* text-align: center; */
+    /* margin-bottom: 20px; */
+    /* font-size: var(--font-title-main); */
+    /* color: #333; */
+    margin:0 ;
 }
-
+.button-container button{
+    font-size: 1.8rem;
+    font-weight: 600;
+    background-color: var(--bs-orange);
+    padding: 0.4rem 4rem;
+    color: var(--white-color);
+    border-radius: 99999px;
+}
 .pond-list {
      padding: 1rem 0;
 }
@@ -59,20 +83,63 @@ h1 {
     padding: 15px;
 }
 
-.pond-info h2 {
+.link__to-pond-detail{
     margin: 0 0 10px 0;
-    font-size: 1.5em;
-    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--black-color);
+    font-weight: 600;
+    line-height: 1.8rem;
+    height: 1.8rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis; 
+}
+.link__to-pond-detail:hover{
+    color: #000;
 }
 .pond-info p {
-    margin: 0 0 10px 0;
-    font-size: 1em;
-    color: #777;
+    margin: 0 0 10px 0; 
+    color: #575757;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--black-color);
+    font-weight: 600;
+    line-height: 1.4rem;
+    height: 3rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis; 
 }
 
 .pond-info .location {
     font-size: 0.9em;
     color: #555;
+}
+.link-delete-pond{
+    font-size: 1.6rem;
+    background-color: var(--bs-orange);
+    color: #000;
+    padding: 0.4rem 1.2rem;
+    display: inline-block;
+    border: 2px solid var(--bs-orange);
+    transition: background-color 0.3s ease ;
+    color: var(--white-color);
+    font-weight: 500;
+    border-radius: 8px;
+}
+.link-delete-pond:hover{
+    border: 2px solid var(--bs-orange);
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--black-color); 
+
 }
 .img-edit-submit{
     display: flex;
@@ -140,15 +207,53 @@ h1 {
 .value {
     color: #007BFF; /* Màu giá trị */
 }
-
-.edit-btn-out{
-    margin-bottom: 20px;
+.back-btn ,
+.delete-btn-fish,
+.edit-btn-out {
     font-size: 1.6rem;
-    padding: 0.4rem 1.2rem;
-    text-align: right;
+    font-weight: 500;
+    padding: 0.7rem 1.2rem;
+    transition: background-color 0.4s ease;
+    color: #fff;
+    border-radius: 8px;
+} 
+.delete-btn-fish{
+    background-color: #bd2525; 
+    text-decoration: none;
+    border: 1px solid #bd2525;
+    display: inline-block; 
+    margin: 0 1rem;
+}
+.delete-btn-fish:hover{
+    background-color: transparent;
+    color: #bd2525;
+    border: 1px solid #bd2525;
+    text-decoration: none;
+    color: #000;
+}
+.back-btn { 
+    background-color: #007bff; 
+    text-decoration: none;
+    border: 1px solid #007bff;
+    display: inline-block;  
+}
+.back-btn:hover {
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+    text-decoration: none;
+    color: #000;
+}
+.edit-btn-out{
     background-color: var(--bs-orange);
     color: var(--white-color);
     border: none;
+    border: 1px solid var(--bs-orange);
+}
+.edit-btn-out:hover {
+    background-color: transparent;
+    color: var(--black-color);
+    border: 1px solid var(--bs-orange);
 }
 .container__infor__pond{
     background-color: rgba(0, 0, 0, 0.6);
@@ -156,7 +261,7 @@ h1 {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 5;
+    z-index: 11;
     position: fixed;
     display: none;
     justify-content: center;
@@ -215,7 +320,12 @@ h1 {
 .container-fish{
     padding-bottom: 3rem;
 }
-
+.container-fish h1{
+    background-color: #fff;
+    display: inline-block;
+    padding: 0.2rem 1.6rem;
+    
+}
 .fish-item{
     display: block;
 }

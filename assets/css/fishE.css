@@ -1,17 +1,25 @@
 .body-fish{ 
     background: url(https://static.wikia.nocookie.net/0dfbc1cb-6311-45e0-8b74-fc965ca9afc7);
     background-color: #e3e3e3;
+    background-position: center;
+ 
 }
+.container-growth,
 .container_fish {
     margin-top: 12.4rem;
     padding-bottom: 4rem;
+}
+.row-infor-fist-detail{
+    margin-right: 0;
 }
 .tilte-fish{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #000000;
+    padding-bottom: 1rem; 
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
 }
 .tilte-fish h1 {
     text-align: center;
@@ -97,6 +105,7 @@
 }
 .link__to-fish-detail:hover{
     color: #000;
+    text-decoration: underline;
 }
 .fish-info p {
     margin: 0 0 10px 0; 
@@ -132,8 +141,9 @@
 
 .fish-img-info img {
     width: 100%;
-    height: 350px;
+    height: 100%;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .fish-img-info-edit {
@@ -203,9 +213,9 @@
 }
 
 .back-btn { 
-    background-color: #007bff; 
+    background-color: var( --color-back); 
     text-decoration: none;
-    border: 1px solid #007bff;
+    border: 1px solid var( --color-back);
     display: inline-block;  
 }
 .delete-btn-fish{
@@ -225,8 +235,8 @@
 
 .back-btn:hover {
     background-color: transparent;
-    color: #007bff;
-    border: 1px solid #007bff;
+    color: var( --color-back);
+    border: 1px solid var( --color-back);
     text-decoration: none;
     color: #000;
 }
@@ -262,7 +272,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 5;
+    z-index: 11;
     position: fixed;
     display: none;
     justify-content: center;
@@ -319,86 +329,65 @@
         transform: translateY(0);
     }
 }
-
-.growth-container {
-    width: 60%;
+.growth-container .row{
     background-color: #fff;
+    margin: 0;
     border-radius: 8px;
-    padding: 20px;
-    margin: 0 auto;
-    text-align: center;
 }
-
-.header-growth {
+.tilte-fish-growth{
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
+    padding: 1rem 0;
+    border-radius: 8px ;
 }
-
-.add-button {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 1.5em;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s;
+.tilte-fish-growth h1{
+    margin-bottom: 0;
+    margin-left: 2rem;
 }
-
-.growth-card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+.back-btn.grow__detail-btn{
+    margin-right: 2rem;
 }
-
-.date {
-    font-size: 2em;
-    font-weight: bold;
+.item_grow_fish{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
-
-.measurement {
-    font-size: 2rem;
-    font-weight: bold;
-}
+ 
 .container-pond-fish {
     padding: 4rem 0;
 
 } 
 
- .container-pond-fish h1{
-    /* text-align: center; */
-    /* margin-bottom: 20px; */
+ .container-pond-fish h1{ 
     font-size: var(--font-title-main);
-    color: #333;
-    /* margin-bottom: 0; */
+    color: #333; 
  }
 
 .pond-item {
     display: block;
     width: 100%;
-    height: 100%;
+    padding: 0 1.5rem;
 } 
 .pond-item-img { 
     width: 100%;  
+    display: flex;
 }
 
 .pond-item-img img {
-    width: 300px;
+    /* width: 300px; */
+    width: 100%;
     height: auto;
-    object-fit: cover;
-    border-radius: 20px;
+    object-fit: cover; 
 }
 
  
-
+.pond-item-desc {
+    padding: 2rem;
+    background-color: #fff;
+}
 .pond-item-desc p {
-    font-size: 3rem;
+    font-size: 1.8rem;
     color: #000;
     font-weight: bold;
     margin: 0;
@@ -437,4 +426,39 @@
     flex: 1;
     font-size: 2rem;
     text-align: center;
+}
+.row-growth_fish{
+    background-color: #fff;
+    margin: 0;
+    margin-bottom: 3rem;
+}
+.item_grow_fish-detail{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.item_grow_fish-detail h2{
+    font-size: 3rem;
+    margin-bottom: 1.4rem;
+
+}
+.form-date-input-growth{
+    margin-bottom: 1rem;
+}
+.lable_form-date{
+    display: block;
+    font-size: 2rem;
+}
+.input_form-date{
+    width: 100%;
+    padding: 0.4rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.btn-submit-search-date{
+    font-size: 1.6rem;
+    padding: 0.4rem 1.6rem;
+    border: none;
+    background-color: var(--bs-orange);
+    color: var(--white-color);
+    margin-top: 0.4rem;
 }

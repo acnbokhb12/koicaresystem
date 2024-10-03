@@ -36,6 +36,8 @@
     --color-for-cate:#FFCC00;
     --color-ngau-hung:#d29763;
     --color-border-bt:#e1e2ef;
+    --color-back: #007bff;
+    --color-sidebar-admin: #000;
 }
 *{
     box-sizing: inherit;

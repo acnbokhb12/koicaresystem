@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                             </a>
                                         </li>
                                         <li class="contain__item-nav">
-                                            <a href="#" class="contain__item-nav-link">
+                                            <a href="about.html" class="contain__item-nav-link">
                                                 <span>About</span>
                                             </a>
                                         </li>
@@ -99,9 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                     <li class="contain__sub-item_nav-items">
                                                         <a href="news.html">News</a>
                                                     </li>
-                                                    <li class="contain__sub-item_nav-items">
-                                                        <a href="#">Service</a>
-                                                    </li>
+                                                    
                                                 </ul>
                                             </div>
                                         </li>
@@ -119,9 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
                                         <a href="#" class="header__link-task d-flex align-end">
                                             <span class="header__link-task-icon"><i
                                                     class="fa-regular fa-bell"></i></span>
-                                            <span class="text-label text-uppercase">Alerts</span>
+                                            <span class="text-label text-uppercase">Alerts</span> 
                                         </a>
-                                        <a href="#" class="header__link-task d-flex align-end">
+                                        <a href="cart.html" class="header__link-task d-flex align-end">
                                             <span class="header__link-task-icon"><i
                                                     class="fa-solid fa-bag-shopping"></i></span>
                                             <span class="text-label text-uppercase ">Cart</span>

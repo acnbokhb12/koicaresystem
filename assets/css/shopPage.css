@@ -1,3 +1,8 @@
+.body__shop{
+    background: url(https://static.wikia.nocookie.net/0dfbc1cb-6311-45e0-8b74-fc965ca9afc7) ;
+    background-position: center;
+    background-color: #e3e3e3; 
+}
 #content__shop {
     border-top: 11.4rem solid var(--bs-orange);
     /* margin-top: 11.4rem; */
@@ -80,7 +85,7 @@
 }
 
 .grid-container-shop {
-    padding: 4rem 0;
+    padding: 1rem 0;
     margin: 0 auto;
 }
 
@@ -169,6 +174,7 @@
     padding-left: 0;
     list-style-type: none;
     margin: 0;
+    background-color: #fff;
 }
 
 .category-item {
@@ -401,8 +407,7 @@
 
 /* product ------------------------------ */
 .product__content__detail-main {
-    width: 100%;
-    background-color: var(--slider-color);
+    width: 100%; 
 }
 
 .product__content__detail-container {
