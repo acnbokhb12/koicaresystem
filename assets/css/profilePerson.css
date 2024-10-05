@@ -114,12 +114,18 @@ body{
 }
 .img-account-profile {
     height: 15rem;
+    width: 15rem;
     border: 1px solid #000;
+    object-fit: cover;
+     
 }
 .desc-img p{
     margin-top: 1rem;
     font-size: 1.6rem;
     color: red;
+}
+.choose-edit-img-profile{
+    font-size: 1.4rem;
 }
 .btn-edit-img-profile{
     padding: 0.6rem  1.6rem;
@@ -129,7 +135,7 @@ body{
     color: #fff;
 }
 .rounded-circle {
-    border-radius: 50% !important;
+    /* border-radius: 50% !important; */
 }
 .card {
     box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);

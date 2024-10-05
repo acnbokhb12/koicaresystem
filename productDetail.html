@@ -117,5 +117,9 @@
         quantityInput.value = currentValue + 1;
 
       });
+
+      let amount = parseInt(document.getElementById('product__detail-price-id').innerText);
+      let formattedAmount = amount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })
+      document.getElementById('product__detail-price-id').innerText = formattedAmount;
 </script>
 </html>

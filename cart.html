@@ -59,7 +59,7 @@
                                 <h3>Quantity: <span>10</span></h3>
                             </div>
                             <div class="cart__about__property-quantity ">
-                                <h3>Type: <span>ingredients</span></h3>
+                                <h3>Category: <span>ingredients</span></h3>
                             </div>
                             <div class="cart__about__property-update-delete">
                                 <button type="button" class="cart__property-update">Edit</button>    
@@ -204,10 +204,7 @@
             </div>
 
         </div>
-    </div>
-    
-   
-    
+    </div> 
      
     <!-- delete-->
     <div id="myModal" class="modal-confirm-delete" >
@@ -270,9 +267,10 @@
 
  
 </div>
-<!-- nhung footer -->
-<script src="./assets/js/footer.js"></script>
+ <!-- footer -->
+ <div id="footer"></div>
 </body>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const minusBtn = document.querySelector('.minus-btn-quantity');
@@ -362,5 +360,12 @@
             event.stopPropagation();
         })
     </script>
-
+<script>
+    $('#header').load('utils.html #header__nav', ()=>{
+        $.getScript('./assets/js/utilsCustomer.js')
+    });
+    $('#footer').load('utils.html #footer__nav', ()=>{
+        $.getScript('./assets/js/utilsCustomer.js')
+    });
+</script>
 </html>

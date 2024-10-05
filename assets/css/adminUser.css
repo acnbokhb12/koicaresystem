@@ -73,10 +73,7 @@
  
 /* End search */
 /* Content styling */
-.content {
-    flex: 1;
-    padding: 20px;
-}
+
 
 .content .header {
     display: flex;
@@ -272,3 +269,71 @@
 .pagination button:hover {
     background-color: #0056b3;
 }
+/* --------------------- */
+.container_main-add{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}  
+.contain_add-detail{
+  background-color: #fff;
+  width: 80%;
+}
+.row-add-detail{
+    padding: 2rem;
+    margin: 0;
+}
+.img-add-submit img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.add-item-detail{
+  margin-bottom: 2rem;
+}
+.add-item-detail > label{
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+}
+.add-item-detail > textarea,
+.add-item-detail > input{
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  width: 100%;
+}
+.add-item-detail-select{
+  display: block;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  width: 100%;
+}
+.add-btn-utils{
+    color: #fff;
+    background-color: #1abc9c;
+    padding: 0.6rem 1.2rem;
+  font-size: 1.6rem;
+  border: none;
+}
+.add-img-detail{
+  font-size: 1.6rem;
+}
+  .btn-close-add{
+    font-size: 2rem;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    background-color: #1abc9c;
+
+  }
+.container_main-add.open{
+  display: flex;
+}
+ 
