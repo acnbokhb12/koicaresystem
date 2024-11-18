@@ -1,0 +1,325 @@
+.body-water{
+    background: url(https://static.wikia.nocookie.net/0dfbc1cb-6311-45e0-8b74-fc965ca9afc7) no-repeat;
+    background-color: #e3e3e3;
+    /* background-position: center; */
+}
+.main_statistics,
+.container__waterparameter{
+    margin-top: 12.4rem;
+    padding-bottom: 2rem;
+}
+.row-infor-fist-detail{
+    margin-right: 0;
+}
+.tilte-water{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem; 
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+.tilte-water h1 {
+    text-align: center; 
+    font-size: var(--font-title-main);
+    color: #333;
+    margin-bottom: 0;
+} 
+.button-container button{
+    font-size: 1.8rem;
+    font-weight: 600;
+    background-color: var(--bs-orange);
+    padding: 0.4rem 2rem;
+    color: var(--white-color);
+    border-radius: 99999px;
+}
+.btn-lg {
+    padding: 9px 8px;
+    font-size: 1.3rem;
+}
+.water-item-detail {
+    background: #fff;
+    border-radius: 8px;
+    border: 3px solid #d88200;
+    overflow: hidden;
+    padding: 1rem;
+}
+.col_custom{
+    margin-bottom: 3rem;
+}
+.item__component{ 
+    margin-bottom: 0.4rem;
+}
+.item_s{
+    display: flex; 
+    justify-content: space-between;
+}
+.item_title{
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.namepond{ 
+    color: #575757;
+    font-size: 1.7rem;
+    width: 20rem; 
+    color: var(--black-color); 
+    line-height: 1.7rem;
+    height: 1.7rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis; 
+}
+.unit_value{
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+
+}
+.item_value,
+.item_name-value{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.item_note-desc{
+    margin-top: 1rem;
+}
+.item_note-desc >p{
+    color: #575757;
+    font-size: 1.4rem;  
+    color: var(--black-color); 
+    line-height: 1.5rem;
+    height: 3rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis; 
+}
+.container__infor__water-parameter{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 20;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.infor__water-parameter-detail{
+    width: 40%;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    border: 2px solid #000;
+    min-width: 400px;
+    overflow: auto; 
+    padding: 1rem;
+    animation:  fadeInModal 0.4s ease-in;
+    height: calc(100vh - 14.4rem);
+    -ms-overflow-style: none; /* Ẩn thanh cuộn trên Internet Explorer và Edge */
+    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+}
+
+.infor__water-parameter-detail::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trên Chrome, Safari và Opera */
+}
+.water-parameter-from{
+}
+.place_btn-r-a{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    margin-bottom: 1rem;
+}
+.btn-item-handle{
+    padding: 0;
+}
+.btn-item-handle> i{
+    font-size: 2rem; 
+    display: block;
+    border: 3px solid ;
+    padding: 0.4rem;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;  
+}
+.btn-close-modal>i{
+    border-color: var(--bs-orange);
+    color: var(--bs-orange);
+}
+.btn-accept-form> i {
+    border-color: var(--bs-green);
+    color: var(--bs-green);
+}
+.item_input-var{ 
+}
+.item_input-detail{
+    width: 48%;
+    margin-bottom: 0.4rem;
+    /* display: flex; */
+}
+.input-note_desc label,
+.item_input-detail label{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+
+}
+.item_input-detail input, .item_input-detail select{
+    width: 100%; 
+    font-size: 1.6rem;
+    padding: 0.4rem 8rem 0.4rem 0.4rem;
+    border-radius: 8px;
+    padding-left: 1rem;
+    border: 2px solid #000;
+    font-weight: 700;
+    outline: none;
+}
+.contain_input_a-infor{
+    position: relative;
+}
+.contain_input_a-infor .signal-input-detail { 
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+.signal-input-detail span {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.signal-input-detail > i{
+    font-size: 1.8rem;
+    margin-left: 0.6rem;
+    cursor: pointer;
+}
+.signal-input-detail > i:hover{
+    color: var(--bs-orange);
+}
+input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+/* Ẩn mũi tên tăng/giảm trên Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.input-note_desc textarea {
+    width: 100%; 
+    font-size: 1.6rem;
+    padding: 0.4rem ;
+    border-radius: 8px;
+    padding-left: 1rem; 
+    border: 1px solid #000;
+}
+.color-value{
+    color: var(--bs-orange);
+}
+.color-value-valid{
+    color: var(--bs-orange);
+}
+.container__infor__water-parameter.open{
+    display: flex;
+}
+.container__infor__description{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 20;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.infor__description-detail{
+    background-color: var(--white-color);
+    border-radius: 4px; 
+    max-width: 250px;
+    overflow: auto; 
+    padding: 2rem;
+    animation:  fadeInModal 0.4s ease-in;
+}
+.infor__description-range h3{
+    color: #595959;
+}
+.infor__description-body p{
+    color: #737373;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+.infor__description-footer h4{
+    color: var(--bs-orange); 
+    cursor: pointer;
+}
+.infor__description-footer h4:hover{
+    opacity: 0.8;
+}
+.container__infor__description.open{
+    display: flex;
+}
+
+@keyframes fadeInModal {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+.container_statistics-water{
+    background-color: #fff;
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+    
+}
+
+
+
+
+
+
+
+@media screen and (max-width:900px) {
+    .tilte-water h1{
+        font-size: 2.6rem;
+    }
+    .button-container button{
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .tilte-water h1{
+        font-size: 2rem;
+    }
+    .button-container button{
+        font-size: 1.4rem; 
+    }
+
+}
+@media screen and (max-width:400px) {
+    .item__component{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .namepond{
+        width: 100%;
+    }
+    .item_s{
+        margin-bottom: 0.4rem;
+    }
+}

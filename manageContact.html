@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Management</title>
+    <!-- link logo img page -->
+    <link rel="icon" href="./assets/img/logo/logoSignin.jpg" type="image/x-icon" />
+    <!-- Font gg family -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- Font icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/navHeader-Footer.css">
+    <link rel="stylesheet" href="./assets/css/adminUser.css">
+</head>
+
+<body>
+    <div class="container_admin">
+        <div id="db-wrapper">
+            <!-- start-sidebar -->
+            <div id="sidebar_admin"></div>
+            <!-- start header -->
+            <header id="header"></header>
+            <div class="right-navbar-admin-manage">
+                <div class="content">
+                    <div class="header d-flex ">
+                        <h1>Contact List</h1>
+                        <div>
+                            <button class="link_add-account">Add New Account</button>
+                        </div>
+                    </div>
+                    <div class="table-container" id="accountTableContainer"> 
+                        <table id="accountTable">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>FirstName</th>
+                                    <th>Email</th>
+                                    <th>Date</th>  
+                                    <th>Message</th> 
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--   <c:forEach var="account" items="${listAcc}"> -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>acnbo@gmail.com</td>
+                                    <td>Hồ Thị Thanh Ngân</td>
+                                    <td>20-01-2004</td>
+                                    <td class="address__acc">155-157 Đường Quốc Thảo, Quận 3, Hồ Chí Minh dsajhsdjf
+                                        jkdfkj ajkadsj dsafads fasd dsa jfsdkj sdfjgjfds jhhj dhjsdf hj</td> 
+                                    <td class="text-center">
+                                        <a href="manageViewContactDetail.html" style="text-decoration: none;">
+                                            <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        </a>
+
+                                        <a href="#" id="btn-delete-acc" class="btn-delete-acc text-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="footer">
+                            <p>Showing 1 of 1 entry</p>
+                            <div class="pagination">
+                                <button>Previous</button>
+                                <button>1</button>
+                                <button>Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#header').load('utils.html #header_admin', () => {
+            $.getScript('./assets/js/utilsAdmin.js');
+        });
+        $('#sidebar_admin').load('utils.html  #sidebar_admin');
+    </script>
+</body>
+
+</html>

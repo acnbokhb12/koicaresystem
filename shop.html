@@ -66,35 +66,33 @@
     <!-- Product here -->
     <div id="container__page_shop" class="container__shop_product ">
       <div class="shop_product-title ">
-        <h1>Shop</h1> 
+        <h1>Shop</h1>
         <div class="shop__ultities-sort">
           <div class="shop__ultities-sort-dertail">
-            <form action="">
-              <select name="" id="" class="shop__ultities-sort-select-list">
-                <option value="" selected>Default Sorting</option>
-                <option value="">Sort by popularity</option>
-                <option value="">Sort by latest</option>
-                <option value="">Sort by price: low to high</option>
-                <option value="">Sort by price: high to low</option>
-              </select>
-            </form>
+
+            <select name="" id="sortPrice" class="shop__ultities-sort-select-list" onchange="sortProductsByPrice()">
+              <option value="" selected>Default Sorting</option>
+              <option value="asc">Sort by price: low to high</option>
+              <option value="desc">Sort by price: high to low</option>
+            </select>
+
             <p><i class="fa-solid fa-chevron-down"></i></p>
           </div>
         </div>
       </div>
       <div class="container__shop_utilities container">
-         
+
       </div>
       <div class="grid grid-container-shop">
         <div class="row row__shop">
           <!-- row categories -->
-          <div class="col-sm-3 col-cate">  
+          <div class="col-sm-3 col-cate">
             <div class="shop__ultiliites-search">
               <form action="" method="post" class="shop__product_form">
                 <input type="text" class="shop__product_search-input" placeholder="Search">
                 <button type="submit" class="shop__product_search-submit"><i class="fas fa-search"></i> </button>
               </form>
-            </div> 
+            </div>
             <nav class="category__shop">
               <h3 class="category__shop-heading">
                 <a href="">
@@ -134,7 +132,7 @@
           <div class="col-sm-9 ">
             <div class="shop__product__lists">
               <!-- row chua element  -->
-              <div class=" row "> 
+              <div class=" row row_product_list ">
                 <div class="col-lg-3 col-md-4   col-6 product-item">
                   <a href="productDetail.html" class="home-product-item__link">
                     <div class="shop__product_item-desc">
@@ -187,7 +185,7 @@
                         </p>
                         <!-- price- category -->
                         <div class="contain-cat-price  ">
-                          <h5 class="shop__product-price ">100000</h5>
+                          <h5 class="shop__product-price ">120000</h5>
                           <h5 class="shop__product-category-list ">
                             <p class="shop__product-category-item">
                               Medicine
@@ -200,7 +198,7 @@
                     </div>
 
                   </a>
-                </div>              
+                </div>
                 <div class="col-lg-3 col-md-4   col-6 product-item">
                   <a href="productDetail.html" class="home-product-item__link">
                     <div class="shop__product_item-desc">
@@ -219,7 +217,7 @@
                         </p>
                         <!-- price- category -->
                         <div class="contain-cat-price  ">
-                          <h5 class="shop__product-price  ">100000</h5>
+                          <h5 class="shop__product-price  ">80000</h5>
                           <h5 class="shop__product-category-list ">
                             <p class="shop__product-category-item">
                               Food
@@ -251,7 +249,7 @@
                         </p>
                         <!-- price- category -->
                         <div class="contain-cat-price">
-                          <h5 class="shop__product-price">100000</h5>
+                          <h5 class="shop__product-price">40000</h5>
                           <h5 class="shop__product-category-list">
                             <p class="shop__product-category-item">
                               Food
@@ -283,7 +281,7 @@
                         </p>
                         <!-- price- category -->
                         <div class="contain-cat-price">
-                          <h5 class="shop__product-price">100000</h5>
+                          <h5 class="shop__product-price">300000</h5>
                           <h5 class="shop__product-category-list">
                             <p class="shop__product-category-item">
                               Food
@@ -303,7 +301,9 @@
                       <div class="create__blank"></div>
                       <!-- product item -->
                       <div class="shop__product__img">
-                        <img src="https://ultimateaquasg.com/cdn/shop/files/1_1829d3bc-c0f1-41b2-bd7e-044f93053123.jpg?v=1690961809&width=1946" alt="">
+                        <img
+                          src="https://ultimateaquasg.com/cdn/shop/files/1_1829d3bc-c0f1-41b2-bd7e-044f93053123.jpg?v=1690961809&width=1946"
+                          alt="">
                       </div>
                       <div class="shop__product__des-detail">
                         <!-- title -->
@@ -315,7 +315,7 @@
                         </p>
                         <!-- price- category -->
                         <div class="contain-cat-price">
-                          <h5 class="shop__product-price">100000</h5>
+                          <h5 class="shop__product-price">500000</h5>
                           <h5 class="shop__product-category-list">
                             <p class="shop__product-category-item">
                               Food
@@ -335,7 +335,9 @@
                       <div class="create__blank"></div>
                       <!-- product item -->
                       <div class="shop__product__img">
-                        <img src="https://koithienduong.com/wp-content/uploads/2023/11/thuc-an-ca-koi-jpd-fujizakura.jpg" alt="">
+                        <img
+                          src="https://koithienduong.com/wp-content/uploads/2023/11/thuc-an-ca-koi-jpd-fujizakura.jpg"
+                          alt="">
                       </div>
                       <div class="shop__product__des-detail">
                         <!-- title -->
@@ -347,7 +349,7 @@
                         </p>
                         <!-- price- category -->
                         <div class="contain-cat-price">
-                          <h5 class="shop__product-price">100000</h5>
+                          <h5 class="shop__product-price">180000</h5>
                           <h5 class="shop__product-category-list">
                             <p class="shop__product-category-item">
                               Food
@@ -361,23 +363,21 @@
 
                   </a>
                 </div>
-
-
               </div>
             </div>
-            <div class="pagincontainer"> 
+            <div class="pagincontainer">
               <nav aria-label="Page navigation example">
-              <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
-                <li class="page-item"><a class="page-link active__page" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">...</a></li>
-                <li class="page-item"><a class="page-link" href="#">9</a></li>
-                <li class="page-item"><a class="page-link" href="#">10</a></li>
-                <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
-              </ul>
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
+                  <li class="page-item"><a class="page-link active__page" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">...</a></li>
+                  <li class="page-item"><a class="page-link" href="#">9</a></li>
+                  <li class="page-item"><a class="page-link" href="#">10</a></li>
+                  <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+                </ul>
               </nav>
             </div>
           </div>
@@ -420,6 +420,40 @@
 
 </script>
 <script>
+  // Lưu trữ thứ tự ban đầu của các sản phẩm
+let originalOrder = []; 
+  let productsContainer = document.querySelector(".row_product_list");
+  let products = Array.from(productsContainer.querySelectorAll(".product-item"));
+
+  // First Array
+  originalOrder = products.map(product => product);
+ 
+
+function sortProductsByPrice() {
+  const sortOrder = document.getElementById("sortPrice").value;
+
+  let productsContainer = document.querySelector(".row_product_list");
+  let products = Array.from(productsContainer.querySelectorAll(".product-item"));
+
+  if (sortOrder === "") {
+    // Sắp xếp theo thứ tự ban đầu (default)
+    originalOrder.forEach(product => productsContainer.appendChild(product));
+  } else {
+    // Sắp xếp theo giá
+    products.sort((a, b) => {
+      let priceA = parseInt(a.querySelector(".shop__product-price").innerText.replace(/[₫,.]/g, ''));
+      let priceB = parseInt(b.querySelector(".shop__product-price").innerText.replace(/[₫,.]/g, ''));
+
+      if (sortOrder === "asc") {
+        return priceA - priceB;
+      } else {
+        return priceB - priceA;
+      }
+    });
+    products.forEach(product => productsContainer.appendChild(product));
+  }
+}
+
 
 </script>
 

@@ -21,6 +21,25 @@ document.addEventListener('click', function () {
 
 });
 
+const btnLogout = document.getElementById('btn-logout');
+const modalConfirmLogout = document.getElementById('modal-logout-confirm_nav');
+const modalContainerConfirmLogout = document.querySelector('.modal_container_confirm-logout');
+btnLogout.addEventListener('click',()=>{
+    modalConfirmLogout.classList.add('open'); 
+})
+const btnCloseLogout = document.querySelector('.btn-close-logout');
+btnCloseLogout.addEventListener('click',()=>{
+    modalConfirmLogout.classList.remove('open');
+})
+
+modalConfirmLogout.addEventListener('click',()=>{
+    modalConfirmLogout.classList.remove('open');
+})
+modalContainerConfirmLogout.addEventListener('click',(e)=>{
+    e.stopPropagation();
+})
+
+
 //  
 const accImg = document.querySelector('.header__link-task-img-acc img');
 const boardInforAcc = document.querySelector('.header__link-task-description');

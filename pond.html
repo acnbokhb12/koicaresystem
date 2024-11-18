@@ -9,8 +9,9 @@
      <!-- Font gg family -->
      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
          rel="stylesheet">
-     <!-- Font icon --> 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+         <!-- Font icon --> 
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
      <!-- bootstrap -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -84,9 +85,57 @@
                         </div>
                     </div>
                 </div>
-            </div>
-             
+            </div> 
         </div>
+        <div id="myModal" class="modal-confirm-delete">
+            <div class="  modal-confirm">
+                <div class="modal-content">
+                    <div class="modal-header flex-column">
+                        <div class="icon-box">
+                            <i class="material-icons">&#xE5CD;</i>
+                        </div>						
+                        <h4 class="modal-title w-100">Are you sure?</h4>	
+                        <button type="button" class="close-confirm-delete close " data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Do you really want to delete these records? This process cannot be undone.</p>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn-cancel-delete btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <form action="" method="post">
+        
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="toast">
+        <div class="toast_main row toast--success">
+            <div class="toast__icon  ">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast_body  ">
+                <h3 class="toast__title">Sucess</h3>
+                <p class="toast__msg">Create New pond Successfully!</p>
+            </div>
+            <div class="toast__close ">
+                <i class="fas fa-times"></i>
+            </div>
+        </div> 
+            <div class="toast_main row toast--error">
+                <div class="toast__icon">
+                    <i class="fa-solid fa-times-circle"></i>
+                </div>
+                <div class="toast_body">
+                    <h3 class="toast__title">Error</h3>
+                    <p class="toast__msg">Create New pond Faild!</p>
+                </div>
+                <div class="toast__close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+         </div>
     </div>
     <!-- TABLE EDIT -->
     <div class="container__infor__pond">
@@ -148,8 +197,110 @@
             </form>
         </div>
     </div>
-    <script src="./assets/js/footer.js"></script>
 
+
+    <script src="./assets/js/footer.js"></script>
+    <style>
+        .modal-confirm-delete{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+  }
+  .modal-confirm-delete-open{
+    display: flex;
+  }
+
+  .modal-confirm {		
+    color: #636363;
+    width: 400px;
+     animation: expandCard 0.4s ease-in;
+}
+.modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+.modal-confirm .modal-header {
+    border-bottom: none;   
+    position: relative;
+}
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -10px;
+}
+.modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    /* right: -2px; */
+}
+.modal-confirm .modal-body {
+    color: #999;
+}
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;		
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+}
+.modal-confirm .modal-footer a {
+    color: #999;
+}		
+.modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    text-align: center;
+    border: 3px solid #f15e5e;
+}
+.modal-confirm .icon-box i {
+    color: #f15e5e;
+    font-size: 46px;
+    display: inline-block;
+    margin-top: 13px;
+}
+.modal-confirm .btn, .modal-confirm .btn:active {
+    color: #fff;
+    border-radius: 4px;
+    background: #60c7c1;
+    text-decoration: none;
+    /* transition: all 0.4s; */
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+.modal-confirm .btn-secondary {
+    background: #c1c1c1;
+}
+.modal-confirm .btn-secondary:hover, .modal-confirm .btn-secondary:focus {
+    background: #a8a8a8;
+}
+.modal-confirm .btn-danger {
+    background: #f15e5e;
+}
+.modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+    background: #ee3535;
+}
+.trigger-btn {
+    display: inline-block;
+    margin: auto;
+}
+    </style>
 </body>
  
 <script>
@@ -172,6 +323,23 @@
        
             tableEdit.classList.remove('open'); 
     }) 
+    const closeToast = document.querySelector('.toast__close');
+    const toastBig = document.getElementById('toast');
+    closeToast.onclick = () =>{
+        toastBig.classList.add('close_toast');
+    }
+</script>
+<script>
+    // Tự động ẩn toast sau 3 giây (3000ms)
+    setTimeout(function() {
+        var toast = document.getElementById('toast');
+        if (toast) {
+            toast.style.opacity = '0'; // Tạo hiệu ứng mờ dần
+            setTimeout(function() {
+                toast.style.display = 'none'; // Ẩn hoàn toàn sau khi mờ
+            }, 500); // Chờ 0.5 giây để hiệu ứng mờ hoàn thành trước khi ẩn
+        }
+    }, 3000);
 </script>
 <script src="./assets/js/utils.js"></script>
 </html>

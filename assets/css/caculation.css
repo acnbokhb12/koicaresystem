@@ -1,0 +1,138 @@
+.body-cacaulation{
+    background: url(https://static.wikia.nocookie.net/0dfbc1cb-6311-45e0-8b74-fc965ca9afc7) no-repeat;
+    background-color: #e3e3e3; 
+} 
+.main_caculation-food{
+    margin-top: 12.4rem;
+    padding-bottom: 2rem;
+}  
+.tilte-caculation{
+    display: flex;  
+    padding-bottom: 1rem; 
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+.select_option-pond h3,
+.select_option-fish h3{
+    color: var(--bs-orange);
+}
+.select_option-pond select,
+.select_option-fish select {
+    padding: 0.4rem 1rem;   
+    color: var(--bs-orange);
+    font-size: 1.6rem;
+}
+
+.tilte-caculation h1 {
+    text-align: center; 
+    font-size: var(--font-title-main);
+    color: #333;
+    margin-bottom: 0;
+} 
+.container_caculation{
+    background-color: #fff;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+}
+.selection-group-radio{ 
+}
+.selection-group-radio h2{
+  
+}
+
+.row_radio-btn{  
+  border-radius: 8px;
+  padding: 0.6rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.row_radio-btn label{
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.radio-item{
+  transition: background-color 0.3s ease;
+    border-radius: 8px;
+    text-align: center;
+}
+.body-desc-infor-caculator p{
+    font-size: 1.6rem;
+    /* font-weight: 500; */
+}
+.radio-item p i{
+  font-size: 0.6rem;
+  padding: 1rem 0.2rem 0; 
+} 
+
+/* Ẩn input */
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + .radio-item {
+  background-color: var(--bs-orange);  
+}
+.contain-btn-confirm button{
+  font-size: 1.6rem;
+  border: none;
+  background-color: var(--bs-orange);
+  padding: 0.8rem 1.2rem;
+  width: 200px;
+  border-radius: 8px;
+}
+.row-recommened{
+  width: 50%;
+  margin: 0 auto;
+  background-color: #333;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+.item-recommened h1, .item-recommened p,
+.item-recommened h2{
+  color: #fff;
+}
+.item-recommened p{
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+
+/* salt calculator */
+.select_option-pond-detail{
+  width: 80%;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.slider-container {
+  position: relative; 
+}
+.slider-container input{
+}
+#waterChange,
+#desiredConcentration,
+#currentConcentration{
+  color: var(--bs-orange);
+  width: 80%;
+} 
+
+input[type=range] {
+  -webkit-appearance: none; /* Ẩn thiết kế mặc định trên trình duyệt */
+  width: 100%; /* Chiều rộng của thanh */
+  height: 4px; /* Chiều cao của thanh */
+  background: rgb(255, 218, 163); /* Màu nền của thanh */
+  border-radius: 4px; /* Bo tròn các góc */
+}
+
+/* Định dạng cho thanh kéo (thumb) */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Ẩn thiết kế mặc định */
+  appearance: none;
+  width: 14px; /* Chiều rộng của thumb */
+  height: 14px; /* Chiều cao của thumb */
+  background: var(--bs-orange); /* Màu của thumb */
+  border-radius: 50%;  
+  cursor: pointer;  
+}
+ 
+ 

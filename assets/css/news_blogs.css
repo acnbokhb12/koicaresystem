@@ -462,6 +462,7 @@
 .form__email input{
     padding: 0.5rem 1.2rem;
     width: 80%;
+    font-size: 1.4rem;
 }
 .form__email button{
     background-color: var(--color-for-cate);
@@ -469,7 +470,7 @@
     color: #000000;
     width: 20%;
     border-radius: 0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 .form__email button:hover{
     background-color: var(--color-for-cate);
@@ -479,12 +480,206 @@
 }
 
 /* Blogs --------------------------------------- */
-.top__blogs-area{
-    padding: 2rem 0;
+.container-blog{
+    margin-top: 124px;
 }
-.top__blogs-main{
-    background-color: #FFFFFF;
+.main-content, .sidebar {
+    /* background: #fff; */
+    border-radius: 10px;
+    border: none; 
+    background-color: #fff;
+
 }
+.main-content h2{
+    font-size: var(--font-title-main);
+    text-align: center;
+}
+.create-sidebar{
+    padding: 2rem; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    z-index: 1;
+    color: #000;
+    width: auto; 
+    background-color: #fff;
+    
+}
+.create-sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+
+.main-content { 
+}
+.sidebar { 
+    background-color: #EDEFF4;
+    padding-left: 4rem;
+}
+.post {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.post:last-child {
+    border-bottom: none;
+}
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+.post-header img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+.post-header div {
+    display: flex;
+    flex-direction: column;
+}
+.post-header div span {
+    font-size: 14px;
+    color: #666;
+}
+.post-header form {
+    position: absolute;
+    right: 0;
+    top: 0; 
+}
+
+.post-header form button {
+    background-color: var(--orange-color);
+    border: none;
+    color: #000;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.post-header form button:hover {
+    background-color: var(--btn-pay);
+}
+.post-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.post-body {
+    margin: 10px 0;
+}
+.post-body p{
+    font-size: var(--font-sub-title);
+}
+.post-image img{
+    width: 100%;
+    border-radius: var(--border-radius-useful);
+    height: 400px;
+}
+.post-footer {
+    display: flex;
+    color: #666;
+    font-size: 14px;
+}
+.post-footer div {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.post-footer div i {
+    margin-right: 5px;
+}
+.create-post {
+    margin-bottom: 20px;
+}
+.create-post input, .create-post textarea, .create-post select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+.upload-image {
+    border: 2px dashed #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+}
+.img_to_upload{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+}
+.create-post button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--orange-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.categories {
+    margin-top: 20px;
+}
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+.categories ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 1.4rem;
+}
+.categories a{
+    color: var(--orange-color);
+}
+.categories h5{
+    font-size: 1.6rem;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.pagination-list li {
+    margin: 0 5px;
+}
+
+.pagination-list li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.pagination-list li a.active {
+    background-color: var(--orange-color);
+    color: white;
+    border-color: var(--orange-color);
+}
+
+.pagination-list li a:hover {
+    background-color: var(--btn-pay);
+    color: white;
+}
+ 
 
 
 /* Reponsive */

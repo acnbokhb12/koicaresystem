@@ -22,9 +22,10 @@
             </div> 
                 </div>
                 <ul class="menu">
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li> 
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li> 
                     <li><a href="userList.html"><i class="fas fa-users"></i> Account Management</a></li> 
                     <li><a href="manageNews.html"><i class="fa-solid fa-newspaper"></i>News Management</a></li>   
+                    <li><a href="manageContact.html"><i class="fa-solid fa-clipboard"></i>Contact Management</a></li>  
                 </ul>
             </div>
         </div>
@@ -102,12 +103,11 @@
             </div> 
                 </div>
                 <ul class="menu">
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li> 
+                    <li><a href="dashboardManager.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li> 
                     <li><a href="manageProduct.html"><i class="fa-solid fa-warehouse"></i> Producy Manager</a></li> 
                     <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Order Manager</a></li>  
-                    <li><a href="#"><i class="fa-solid fa-fish"></i>Fist Management</a></li>   
-                    <li><a href="#"><i class="fa-solid fa-water"></i>Water Management</a></li>   
-                    <li><a href="manageNews.html"><i class="fa-solid fa-newspaper"></i>News Manager</a></li>   
+                    <li><a href="manageFishCustomer.html"><i class="fa-solid fa-fish"></i>Fist of Customer Management</a></li>   
+                    <li><a href="#"><i class="fa-solid fa-water"></i>Water Management</a></li>    
                 </ul>
             </div>
         </div>
@@ -238,14 +238,16 @@
                                                 class="fa-solid fa-bag-shopping"></i></span>
                                         <span class="text-label text-uppercase ">Cart</span>
                                     </a>
+                                    <!-- Sign IN -->
                                     <a href="login.html" class="header__link-task d-flex align-end">
                                         <span class="header__link-task-icon"><i
                                                 class="fa-regular fa-user"></i></span>
                                         <span class="text-label text-uppercase">Sign in</span>
                                     </a>
+                                    <!-- Hinh shưo -->
                                     <div class="header__link-account d-flex align-end">
                                         <div class="header__link-task-img-acc">
-                                            <img src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.6435-9/120846118_1393138717744114_5343318628172679837_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=s00All9Oy78Q7kNvgGgjhgI&_nc_ht=scontent.fsgn2-3.fna&_nc_gid=AncTZXupFrf-o0ojlYJ35Do&oh=00_AYDL1aMB6bRtX3F00r62cVpdpmDynHn-A5Zx_F1i3Jtl6g&oe=670DF320" alt="">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVo7zYmqXLs6t9gO3A938RbP3JQBeAkrU_xePnsmAOj7xa9dfgRx_JFD0PKJ67MLSieds&usqp=CAU" alt="">
                                         </div>
                                         <div class="header__link-task-description">
                                             <div class="header__link-task-container">
@@ -269,13 +271,28 @@
                                                             </a>
                                                         </li>
                                                         <li class="body__link-acount-detail-item">
-                                                            <a href="#">
+                                                            <a href="waterParameter.html">
                                                                <i class="fa-solid fa-droplet"></i> Water Parameters
+                                                            </a>
+                                                        </li>
+                                                        <li class="body__link-acount-detail-item">
+                                                            <a href="statistics.html">
+                                                                <i class="fa-solid fa-chart-simple"></i> Statistic
                                                             </a>
                                                         </li>
                                                         <li class="body__link-acount-detail-item">
                                                             <a href="orderhistoryCustomer.html">
                                                                 <i class="fa-solid fa-receipt"></i> Purchase History
+                                                            </a>
+                                                        </li>
+                                                        <li class="body__link-acount-detail-item">
+                                                            <a href="foodCaculation.html">
+                                                                <i class="fa-solid fa-calculator"></i> Food Caculator
+                                                            </a>
+                                                        </li>
+                                                        <li class="body__link-acount-detail-item">
+                                                            <a href="saltCalculator.html">
+                                                                <i class="fa-solid fa-calculator"></i> Salt Caculator
                                                             </a>
                                                         </li>
                                                         
@@ -284,7 +301,7 @@
                                                  <div class="welcome__acc-footer">
                                                     <ul class="footer__link-acount-list-item">
                                                         <li class="footer__link-acount-detail-item">
-                                                            <a href="#">
+                                                            <a id="btn-logout">
                                                                 <i class="fas fa-sign-out"></i> Log out
                                                             </a>
                                                         </li>
@@ -300,6 +317,8 @@
                                         </div>
                                        
                                     </div>
+
+                                    
                                 </div>
                             </div>
                         </div>
@@ -395,6 +414,22 @@
         </div>
     </footer>
     <!-- End Customer -->
-
+    <!-- confirm logout -->
+    <div id="modal-logout-confirm_nav" class="modal_confirm-logout justify-content-center align-items-center"  >
+        <div class="modal_container_confirm-logout  ">
+            <div class="modal-content ">
+                <div class="modal-header d-flex justify-content-between align-items-center">
+                    <h4 class="font-weight-bold m-0">Please confirm</h4>
+                    <button class="btn-close-logout"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                     <h4>Are you sure you want to LOGOUT?</h4>
+                </div>
+                <div class="modal-footer"> 
+                    <button class="btn-confirm-logout" type=""><a href="">CONFIRM</a></button>
+                </div>
+            </div>
+        </div>
+    </div>  
 </body>     
 </html>

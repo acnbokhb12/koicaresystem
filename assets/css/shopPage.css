@@ -130,7 +130,7 @@
 
 .shop__ultities-sort-dertail {
     margin-bottom: 0;
-    width: 200px;
+    width: 300px;
     position: relative;
 }
 
@@ -663,4 +663,9 @@ input[type=number]:focus {
     color: #000000;
     filter: brightness(0.9);
 }
- 
+ .title_cate_pd{
+    background-color: var(--bs-orange);
+    padding: 0.4rem 1.2rem;
+    color: var(--white-color);
+    border-radius: 8px;
+ }

@@ -24,7 +24,67 @@
     <div class="container container-edit-profile">
  
         <hr class="mt-0 mb-4">
-        <div class="row row-edit-profile">
+        <div class="row row-edit-profile"> 
+            <div class="col-xl-8">
+                <!-- Account details card-->
+                <div class="card mb-4">
+                    <div class="card-header">Account Details</div>
+                    <div class="card-body">
+                        <form action="#" class="form" id="form-1" method="post">
+                            <div class="row row-form-edit">
+
+                                <!-- Form Group (email address)-->
+                                <div class="col-md-6">
+                                    <label class="label-profile-edit" for="email">Email address</label>
+                                    <input class="form-control" id="email" type="email" value="name@example.com" readonly>
+                                   <!-- dung co ma cham vo form-message , cai nay do js lam roi -->                                 
+                                    <span class="form-message"></span>   
+                                </div>
+                                <!-- Form Group (username)-->
+                                <div class="col-md-6 ">
+                                    <label class="label-profile-edit" for="inputUsername">KoiCareId</label>
+                                    <input class="form-control" id="KoiCareId" type="text" placeholder="Enter your username" value="username">
+                                   <!-- dung co ma cham vo form-message , cai nay do js lam roi -->
+                                   <span class="form-message"></span>
+                                    <!-- <span class="error__bk">KoiCareId is exist</span>   -->
+                                    
+                                </div>
+                            </div>
+                            <div class="row  row-form-edit ">
+                                <!-- Form Group (username)-->
+                                <div class="col-md-6 ">
+                                    <label class="label-profile-edit" for="inputUsername">Name</label>
+                                    <input class="form-control" id="fullname" type="text" placeholder="Enter your username" value="username" required>
+                                   <!-- dung co ma cham vo form-message , cai nay do js lam roi --> 
+                                    <span class="form-message"></span> 
+                                </div> 
+                                 <!-- Form Group (phone number)-->
+                                 <div class="col-md-6">
+                                    <label class="label-profile-edit" for="inputPhone">Phone number</label>
+                                    <input class="form-control" id="phoneNumber" type="tel" placeholder="Enter your phone number" value="555-123-4567" required>
+                                   <!-- dung co ma cham vo form-message , cai nay do js lam roi -->                                   
+                                    <span class="form-message"></span> <!-- dont touch --> 
+                                    
+                                </div>
+                            </div> 
+                            <!-- Form Row-->
+                            <div class="row  "> 
+                                <!-- Form Group (birthday)-->
+                                <div class="col-md-6">
+                                    <label class="label-profile-edit" for="inputBirthday">Gender</label>
+                                    <select name="choice-gender" id="" class="input__form ">
+                                        <option value="Man">Man</option>
+                                        <option value="Woman">Woman</option>
+                                        <option value="Orther">Orther</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Save changes button-->
+                            <button class="btn btn-edit-img-profile" type="submit">Save changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div class="col-xl-4">
                 <!-- Profile picture card-->
                 <div class="card mb-4 mb-xl-0">
@@ -49,33 +109,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-8">
+                <div class="col-xl-8">
                 <!-- Account details card-->
                 <div class="card mb-4">
-                    <div class="card-header">Account Details</div>
+                    <div class="card-header">Edit Password</div>
                     <div class="card-body">
-                        <form action="#" class="form" id="form-1" method="post">
-                            <div class="row row-form-edit">
-
-                                <!-- Form Group (email address)-->
-                                <div class="col-md-6">
-                                    <label class="label-profile-edit" for="email">Email address</label>
-                                    <input class="form-control" id="email" type="email" placeholder="Enter your email address" value="name@example.com">
-                                   <!-- dung co ma cham vo form-message , cai nay do js lam roi -->                                 
-                                    <span class="form-message"></span>
-                                     <span class="error__bk">Email is exist</span>   
-
-                                </div>
-                                <!-- Form Group (username)-->
-                                <div class="col-md-6 ">
-                                    <label class="label-profile-edit" for="inputUsername">Name</label>
-                                    <input class="form-control" id="fullname" type="text" placeholder="Enter your username" value="username">
-                                   <!-- dung co ma cham vo form-message , cai nay do js lam roi -->
-                                 
-                                    <span class="form-message"></span>
-                                    
-                                </div>
-                            </div>
+                        <form action="#" class="form" id="form-2" method="post"> 
                             <!-- Form Row-->
                             <div class="row  row-form-edit ">
                                 <!-- Form Group (old pw)-->
@@ -95,33 +134,13 @@
                                    <!-- dung co ma cham vo form-message , cai nay do js lam roi -->                                    
                                     <span class="form-message"></span>
                                 </div>
-                            </div>    
-                            <!-- Form Row-->
-                            <div class="row  ">
-                                <!-- Form Group (phone number)-->
-                                <div class="col-md-6">
-                                    <label class="label-profile-edit" for="inputPhone">Phone number</label>
-                                    <input class="form-control" id="phoneNumber" type="tel" placeholder="Enter your phone number" value="555-123-4567">
-                                   <!-- dung co ma cham vo form-message , cai nay do js lam roi -->                                   
-                                    <span class="form-message"></span> <!-- dont touch --> 
-                                    
-                                </div>
-                                <!-- Form Group (birthday)-->
-                                <div class="col-md-6">
-                                    <label class="label-profile-edit" for="inputBirthday">Birthday</label>
-                                    <select name="choice-gender" id="" class="input__form ">
-                                        <option value="Man">Man</option>
-                                        <option value="Woman">Woman</option>
-                                        <option value="Orther">Orther</option>
-                                    </select>
-                                </div>
-                            </div>
+                            </div>     
                             <!-- Save changes button-->
                             <button class="btn btn-edit-img-profile" type="submit">Save changes</button>
                         </form>
                     </div>
                 </div>
-            </div>
+                </div>
         </div>
     </div>
     <script src="./assets/js/footer.js" ></script>
@@ -131,12 +150,15 @@
     Validator({
         form: '#form-1',
         errorSelector:'.form-message',
-        rules: [
-            Validator.isEmail('#email', 'Please fill true email'),
-            Validator.isRequired('#fullname', 'Please fill your full name'),
-            Validator.isRequired('#password_old', 'Please fill your old password'),
-            Validator.minLength('#password_new', 6),
+        rules: [ 
             Validator.isPhoneNumber('#phoneNumber','Phone number at least 10 number'), 
+        ]
+    })
+    Validator({
+        form: '#form-2',
+        errorSelector:'.form-message',
+        rules: [ 
+            Validator.minLength('#password_new',6), 
         ]
     })
     const imageInput = document.getElementById('imageInput');

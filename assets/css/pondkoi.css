@@ -331,8 +331,8 @@
 }
 
 .container-list-fish{
-    width: 100%;
-    overflow: hidden;
+    /* width: 100%; */
+    /* overflow: hidden; */
 }
 .container-list-arrow{
     position: relative;
@@ -345,9 +345,9 @@
     position: relative;
 }
 .fish-item-img img{
-    object-fit: cover;
+    /* object-fit: cover; */
     height: 150px;
-    /* width: 100%; */
+    width: 100%;
     border-radius: 8px;
 }
 .fish-item-desc{
@@ -398,3 +398,90 @@
 }
 
 /* --------------fff */
+#toast{
+    position: fixed;
+    top: 12.2rem;
+    right: 3.2rem;
+    transition: opacity 0.5s ease;
+    /* opacity: 1; */
+}
+
+.toast_main{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    min-width: 40rem;
+    max-width: 45rem;
+    padding: 1.4rem 0;
+    border-left: 4px solid;
+    box-shadow: 0 5px  8px rgba(0, 0, 0, 0.08);
+    /* justify-content: space-between; */
+    animation: slideInfeltToast ease 0.3s  ;
+    /* transition: opacity 0.5s ease; */
+}
+
+@keyframes slideInfeltToast {
+    from{
+        opacity: 0;
+        transform: translateX(calc(100% + 32px ));
+    }
+    to{
+        opacity: 1; 
+        transform: translateX( 0); 
+    }
+}
+/* @keyframes fadeOut {
+    to{
+        opacity: 0;
+    }
+} */
+.toast_main+ .toast_main{
+    margin-top: 2.4rem;
+}
+.toast--success {
+    border-color: #47d864;
+} 
+.toast--success .toast__icon{
+    color: #47d864;
+}
+.toast--error{
+    border-color:#ff623d ;
+}
+.toast--error .toast__icon{
+    color:#ff623d ;
+}
+
+.toast__icon{
+    font-size: 2.4rem;
+}
+
+.toast__icon,
+.toast__close{
+    padding: 0 1.6rem ;
+    /* margin: 0 1rem; */
+}
+.toast_body{
+    flex-grow: 1;
+}
+.toast__title{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+}
+.toast__msg{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #888;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+.toast__close{
+    font-size: 2.4rem;
+    color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    /* margin-left: auto; */
+}
+.close_toast{
+    display: none;
+}

@@ -773,6 +773,67 @@
 .content {
     flex: 1;
     padding: 20px;
+    background-color: #f1f5f9;
+}
+/* logout */
+
+.modal_confirm-logout{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 20;
+    display: none;
+  }
+.modal_confirm-logout.open{
+    display: flex;
+}
+  .modal_container_confirm-logout{ 
+    padding: 2rem; 
+    border-radius: 4px;
+    background-color: #fff;
+    animation: showConfirmLogout ease-in 0.3s;
+  }
+  .modal-footer,
+  .modal-body,
+  .modal-header{
+    padding: 1rem 1.6rem;
+  }
+  .btn-close-logout{
+    border: none; 
+  } 
+  .btn-close-logout:hover{ 
+    opacity: 0.8;
+  }
+  .btn-close-logout i{
+    padding: 0.8rem;
+    font-size: 1.4rem;
+  }
+  .btn-confirm-logout,
+  .btn-close-confirm-logout{
+    border: none;
+    padding: 0.6rem 1.4rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+  
+  }
+  .btn-confirm-logout {
+    background-color: var(--green-color);
+  }
+  .btn-confirm-logout a{
+    color: var(--white-color);
+    text-decoration: none; 
+  }
+
+@keyframes showConfirmLogout {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
 }
 
 @media screen and (max-width: 1000px) {

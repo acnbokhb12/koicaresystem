@@ -38,6 +38,8 @@
     --color-border-bt:#e1e2ef;
     --color-back: #007bff;
     --color-sidebar-admin: #000;
+    --bs-green:#048155;
+    --bs-red:#f34747;
 }
 *{
     box-sizing: inherit;
