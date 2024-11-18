@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <div class="contain__list-nav">
                                     <ul class="contain__list-nav-detail">
                                         <li class="contain__item-nav">
-                                            <a href="home.html" class="contain__item-nav-link">
+                                            <a href="Home.html" class="contain__item-nav-link">
                                                 <span>Home</span>
                                             </a>
                                         </li>
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                             </div>
                                         </li>
                                         <li class="contain__item-nav">
-                                            <a href="#" class="contain__item-nav-link">
+                                            <a href="contact.html" class="contain__item-nav-link">
                                                 <span>Contact</span>
                                             </a>
                                         </li> 
