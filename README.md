@@ -16,6 +16,13 @@ The **Koi Care System at Home** is a frontend user interface designed to assist 
 
 ---
 
+## **Preview**  
+
+### **Home Page**  
+![Home Page](./assets/img/content/homepage.jpg "Home Page Interface") 
+
+---
+
 ## **Main UI Components**  
 1. **Home Page**  
    - A welcoming interface that introduces the system and its purpose.  
@@ -33,6 +40,8 @@ The **Koi Care System at Home** is a frontend user interface designed to assist 
    - Features articles or tips about koi fish care.
 
 ---
+
+
 
 ## **How to Run the Project**  
 1. **Clone the Repository**:  
