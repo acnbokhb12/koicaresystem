@@ -142,6 +142,8 @@
             </div>
         </div>
     </div>
+    <div id="modal-logout-confirm"></div>
+
     <div id="footer"></div>
 
 </body>
@@ -153,7 +155,9 @@
     $('#footer').load('utils.html #footer__nav', ()=>{
         $.getScript('./assets/js/utilsCustomer.js');
     });
-
+    $('#modal-logout-confirm').load('utils.html #modal-logout-confirm_nav', () => {
+        $.getScript('./assets/js/utilsCustomer.js')
+    });
     const imageInput = document.getElementById('imageInput');
     const imagePreview = document.getElementById('imagePreview');
 

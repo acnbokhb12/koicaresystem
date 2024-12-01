@@ -37,8 +37,8 @@
         </div>
         <div class="water__parameter-list row  mt-4">
             <!-- Foreach water parameter -->
-             <!-- foreach -->
-              <!-- <c:foreach item="listPara" var="parItem" -->
+            <!-- foreach -->
+            <!-- <c:foreach item="listPara" var="parItem" -->
             <div class="waterParameter_item_stand col_custom  col-md-6  ">
                 <div class="water-parameter-item">
                     <div class="water-item-detail">
@@ -52,18 +52,18 @@
                         </div>
                         <div class="row m-0">
                             <!-- Foreach list waterParameterDetail -->
-                                <!-- Foreach Water Parameter Description -->
-                                 <!-- <c:foreach items="${parItem.ListParaDetail}" var="itemDetail"  > -->
-                                    <div class="item_s col-6 p-0">
+                            <!-- Foreach Water Parameter Description -->
+                            <!-- <c:foreach items="${parItem.ListParaDetail}" var="itemDetail"  > -->
+                            <div class="item_s col-6 p-0">
                                 <div class="item_name-value pr-2"><!--${itemDetail.watDesc.name}--> (NO2):</div>
                                 <div class="item_value">
                                     <span class="value_water-parameter" data-param="NO2">-</span>
                                     <span class="unit_value">mg/l</span>
                                 </div>
-                                    </div> 
-                                <!-- <c:/> -->
+                            </div>
+                            <!-- <c:/> -->
                             <!--  -->
-                        </div> 
+                        </div>
                         <div class="item_note-desc">
                             <p> </p>
                         </div>
@@ -83,18 +83,18 @@
                         </div>
                         <div class="row m-0">
                             <!-- Foreach list waterParameterDetail -->
-                                <!-- Foreach Water Parameter Description -->
-                                 <!-- <c:foreach items="${parItem.ListParaDetail}" var="itemDetail"  > -->
-                                    <div class="item_s col-6 p-0">
+                            <!-- Foreach Water Parameter Description -->
+                            <!-- <c:foreach items="${parItem.ListParaDetail}" var="itemDetail"  > -->
+                            <div class="item_s col-6 p-0">
                                 <div class="item_name-value pr-2"><!--${itemDetail.watDesc.name}--> (NO2):</div>
                                 <div class="item_value">
                                     <span class="value_water-parameter" data-param="NO2">0.21</span>
                                     <span class="unit_value">mg/l</span>
                                 </div>
-                                    </div> 
-                                <!-- <c:/> -->
+                            </div>
+                            <!-- <c:/> -->
                             <!--  -->
-                        </div> 
+                        </div>
                         <div class="item_note-desc">
                             <p> About the nhiet di thi can dc thay doi, phai mua them dung cu cho ho nhu thuoc , toy ,
                                 basuc music, and some thdsfkjádkf ksdhfhádhf sdhkfk hádhf sadhk fh sdh sdkjfjadsb hj ádf
@@ -117,166 +117,153 @@
                     <button type="submit" class="btn btn-item-handle btn-accept-form"><i
                             class="fa-solid fa-check"></i></button>
                 </div>
-                <div class="water-parameter-from row m-0"> 
-                        <div class="item_input-detail col-6 p-1">
-                            <label class="color-value" for="">Pond:</label>
-                            <select name="" id="">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                            </select>
-                        </div>
-                        <div class="item_input-detail col-6 p-1">
-                            <label class="color-value" for="">Date & time</label>
-                            <input type="datetime-local" id="datetime">
-                        </div> 
-                        <div class="item_input-detail col-6 p-1">
-                            <label for="">Nitrite(NO<sub>2</sub>):</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" data-param="NO2" type="number" step="0.1" min="0">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">mg/l</span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item_input-detail col-6 p-1">
-                            <label for="">Oxygen(O<sub>2</sub>):</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">mg/l</span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
-                            </div>
-                        </div>
-                     
-                    <div class="item_input-var d-flex justify-content-between">
-                        <div class="item_input-detail">
-                            <label for="">Nitrate(NO<sub>3</sub>):</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" type="number" step="0.1" min="0">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">mg/l</span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item_input-detail">
-                            <label for="">Temperature:</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" type="number">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">°C </span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
+                <div class="water-parameter-from row m-0">
+                    <div class="item_input-detail col-6 p-1">
+                        <label class="color-value" for="">Pond:</label>
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select>
+                    </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label class="color-value" for="">Date & time</label>
+                        <input type="datetime-local" id="datetime">
+                    </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">Nitrite(NO<sub>2</sub>):</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="NO2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">mg/l</span>
+                                <i class="fa-solid fa-circle-info"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="item_input-var d-flex justify-content-between">
-                        <div class="item_input-detail">
-                            <label for="">Phosphate(PO<sub>4</sub>):</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" type="number" step="0.1" min="0">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">mg/l</span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item_input-detail">
-                            <label for="">pH-Value:</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" type="number" step="0.1" min="0">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block"> </span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">Oxygen(O<sub>2</sub>):</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">mg/l</span>
+                                <i class="fa-solid fa-circle-info"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="item_input-var d-flex justify-content-between">
-                        <div class="item_input-detail">
-                            <label for="">Ammonium(NH<sub>4</sub>):</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" type="number" min="0">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">mg/l</span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item_input-detail">
-                            <label for="">Carbon. hardn. (KH):</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" type="number" step="0.1" min="0">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">°dH</span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">Nitrate(NO<sub>3</sub>):</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">mg/l</span>
+                                <i class="fa-solid fa-circle-info"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="item_input-var d-flex justify-content-between">
-                        <div class="item_input-detail">
-                            <label for="">Hardness: (GH)</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" type="number" step="0.1" min="0">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">°dH</span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item_input-detail">
-                            <label for="">CO<sub>2</sub>:</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" type="number" min="0">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">mg/l</span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">Temperature:</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">°C</span>
+                                <i class="fa-solid fa-circle-info"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="item_input-var d-flex justify-content-between">
-                        <div class="item_input-detail">
-                            <label for="">Salt:</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" type="number" min="0">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">%</span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item_input-detail">
-                            <label for="">Amount fed:</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" type="number" min="0">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">g</span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">Phosphate(PO<sub>4</sub>):</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">mg/l</span>
+                                <i class="fa-solid fa-circle-info"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="item_input-var d-flex justify-content-between">
-                        <div class="item_input-detail">
-                            <label for="">Outdoor temp:</label>
-                            <div class="contain_input_a-infor">
-                                <input class="input_value-parameter" type="number">
-                                <div class="signal-input-detail d-flex align-items-center">
-                                    <span class="d-block">°C</span>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">pH-Value:</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block"></span>
+                                <i class="fa-solid fa-circle-info"></i>
                             </div>
                         </div>
+                    </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">Ammonium(NH<sub>4</sub>):</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">mg/l</span>
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">Carbon. hardn. (KH):</label>
 
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">°dH</span>
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div class="input-note_desc">
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">Hardness: (GH)</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">°dH</span>
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">CO<sub>2</sub>:</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">mg/l</span>
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">Salt:</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">%</span>
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">Amount fed:</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">g</span>
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_input-detail col-6 p-1">
+                        <label for="">Outdoor temp:</label>
+                        <div class="contain_input_a-infor">
+                            <input class="input_value-parameter" data-param="O2" type="number" step="0.1" min="0">
+                            <div class="signal-input-detail d-flex align-items-center">
+                                <span class="d-block">°C</span>
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-note_desc col-12 p-1">
                         <label for="">Note:</label>
-                        <textarea name="" id=""></textarea>
+                        <textarea name="noteNew" id=""></textarea>
                     </div>
                 </div>
             </form>
@@ -305,16 +292,10 @@
             </div>
         </div>
     </div>
+    <div id="modal-logout-confirm"></div>
+
     <!-- footer -->
     <div id="footer"></div>
-    <div >
-        <span class="value-batngo">
-            -
-        </span>
-        <div>
-            <input type="datetime-local" id="datetimeMeas">
-        </div>
-    </div>
     <style>
         .item_s:nth-child(odd) .item_value {
             justify-content: flex-end;
@@ -327,6 +308,9 @@
             $.getScript('./assets/js/utilsCustomer.js')
         });
         $('#footer').load('utils.html #footer__nav', () => {
+            $.getScript('./assets/js/utilsCustomer.js')
+        });
+        $('#modal-logout-confirm').load('utils.html #modal-logout-confirm_nav', () => {
             $.getScript('./assets/js/utilsCustomer.js')
         });
         function setCurrentDateTime() {
@@ -456,7 +440,7 @@
             if (item) {
                 const textValue = item.textContent.trim();
                 const parentItem = item.closest('.item_s');
-                
+
                 if (textValue === "-") {
                     console.log(parentItem)
                     parentItem.style.color = '#000';
@@ -473,14 +457,14 @@
 
     </script>
     <script>
-        const valueBatngo = document.querySelector('.value-batngo'); 
+        const valueBatngo = document.querySelector('.value-batngo');
         console.log(valueBatngo)
         const textValue = valueBatngo.textContent.trim();
         // const valueParameter = parseFloat(textValue); // Lấy giá trị số từ nội dung text của item
         // console.log(valueParameter)
-        if(textValue === "-"){
+        if (textValue === "-") {
             valueBatngo.style.color = 'red';
-        }else{
+        } else {
             console.log(false)
         }
 
@@ -489,20 +473,22 @@
         .input_value:focus {
             border-color: inherit;
         }
-        .item_s{
+
+        .item_s {
             justify-content: inherit;
         }
-        .item_s:nth-child(even)  {
+
+        .item_s:nth-child(even) {
             justify-content: flex-end;
             /* display: flex; */
             /* Đảm bảo .item_value là flex container */
         }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             setCurrentDateTimedatetimeMeas();
         });
-    
+
         function setCurrentDateTimedatetimeMeas() {
             const now = new Date();
             const year = now.getFullYear();
@@ -511,7 +497,7 @@
             const hours = String(now.getHours()).padStart(2, '0');
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const formattedDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
-            
+
             document.getElementById('datetimeMeas').value = formattedDateTime;
         }
     </script>

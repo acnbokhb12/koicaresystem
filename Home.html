@@ -10,7 +10,7 @@
     <!-- Font gg family -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <!-- Font icon --> 
+    <!-- Font icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
@@ -26,9 +26,9 @@
 <body>
     <div id="main">
         <!-- start header -->
-         <div id="header"></div>
+        <div id="header"></div>
         <!-- end header -->
-         
+
         <!-- content intro -->
         <section class="content__intro">
             <div class="content__intro-img-script">
@@ -361,7 +361,7 @@
                                     <a href="">View More</a>
                                 </div>
                             </div>
-                        </div>  
+                        </div>
                         <button class="move-next btn-move-next-service" style="right: 1rem;">
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
@@ -371,33 +371,37 @@
             </div>
         </section>
         <!-- sort conent intro web -->
-        <section class="sort__content__intro-page-img text-center" style="background: url('https://images2.alphacoders.com/128/1288731.jpg') no-repeat; object-fit: cover; background-attachment: fixed;">
-            <div class="sort__content__intro-page-script" >
+        <section class="sort__content__intro-page-img text-center"
+            style="background: url('https://images2.alphacoders.com/128/1288731.jpg') no-repeat; object-fit: cover; background-attachment: fixed;">
+            <div class="sort__content__intro-page-script">
                 <h4 class="text-uppercase"><i class="fa-solid fa-minus"></i> DISCOVER THE BEST <i
                         class="fa-solid fa-minus"></i></h4>
-                <h1>Comprehensive Koi Care System at Home</h1>
-                
+                <h1>Comprehensive Koi Care System at Home</h1> 
             </div>
         </section>
-        
+        <div id="modal-logout-confirm"></div>
+
         <!-- footer -->
         <div id="footer"></div>
-         
-                    
-        
+
+
+
     </div>
 </body>
 <script>
-    $('#header').load('utils.html #header__nav', ()=>{
+    $('#header').load('utils.html #header__nav', () => {
         $.getScript('./assets/js/utilsCustomer.js')
     });
-    $('#footer').load('utils.html #footer__nav', ()=>{
+    $('#footer').load('utils.html #footer__nav', () => {
+        $.getScript('./assets/js/utilsCustomer.js')
+    });
+    $('#modal-logout-confirm').load('utils.html #modal-logout-confirm_nav', () => {
         $.getScript('./assets/js/utilsCustomer.js')
     });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 <script>
-     var swiper = new Swiper(".latest__news-card-wrapper", {
+    var swiper = new Swiper(".latest__news-card-wrapper", {
         spaceBetween: 20,
         loop: true,
         centeredSlides: true,
@@ -427,7 +431,7 @@
     var swiper2 = new Swiper(".intro__service-container-cart", {
         spaceBetween: 20,
         loop: true,
-        centeredSlides: true, 
+        centeredSlides: true,
         autoplay: {
             delay: 5500,
             disableOnineraction: false,
@@ -456,6 +460,6 @@
         },
     });
 </script>
-    
+
 
 </html>

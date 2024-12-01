@@ -59,7 +59,8 @@
                                             </div>
                                         </label>
                                         <label for="medium-btn">
-                                            <input id="medium-btn" type="radio" name="growth" value="medium" checked hidden> 
+                                            <input id="medium-btn" type="radio" name="growth" value="medium" checked
+                                                hidden>
                                             <div class="radio-item p-3">
                                                 <h2 class="text-center font-weight-bold">Medium</h2>
                                                 <p class="d-flex justify-content-center">
@@ -87,25 +88,29 @@
                                     <h3 class="mb-3">Desired Growth</h3>
                                     <div class="row_radio-btn d-flex justify-content-between ">
                                         <label for="temperature-level1">
-                                            <input id="temperature-level1" type="radio" name="temperature" value="9" hidden>
+                                            <input id="temperature-level1" type="radio" name="temperature" value="9"
+                                                hidden>
                                             <div class="radio-item p-3">
-                                                <h2 class="text-center font-weight-bold"><i class="fa-solid fa-less-than-equal"></i> 9°</h2>
+                                                <h2 class="text-center font-weight-bold"><i
+                                                        class="fa-solid fa-less-than-equal"></i> 9°</h2>
                                                 <p class=" d-flex justify-content-center">
                                                     <i class="fa fa-circle"></i>
                                                 </p>
                                             </div>
                                         </label>
                                         <label for="temperature-level2">
-                                            <input id="temperature-level2"  type="radio" name="temperature" value="10-15" hidden> 
+                                            <input id="temperature-level2" type="radio" name="temperature" value="10-15"
+                                                hidden>
                                             <div class="radio-item p-3">
                                                 <h2 class="text-center font-weight-bold">10°-15°</h2>
                                                 <p class="d-flex justify-content-center">
-                                                    <i class="fa fa-circle"></i> 
+                                                    <i class="fa fa-circle"></i>
                                                 </p>
                                             </div>
                                         </label>
                                         <label for="temperature-level3">
-                                            <input id="temperature-level3" type="radio" name="temperature" value="16-20" checked hidden> 
+                                            <input id="temperature-level3" type="radio" name="temperature" value="16-20"
+                                                checked hidden>
                                             <div class="radio-item p-3">
                                                 <h2 class="text-center font-weight-bold">16°-20°</h2>
                                                 <p class="d-flex justify-content-center">
@@ -115,7 +120,8 @@
                                             </div>
                                         </label>
                                         <label for="temperature-level4">
-                                            <input id="temperature-level4"  type="radio" name="temperature" value="21-28" hidden> 
+                                            <input id="temperature-level4" type="radio" name="temperature" value="21-28"
+                                                hidden>
                                             <div class="radio-item p-3">
                                                 <h2 class="text-center font-weight-bold">21°-28°</h2>
                                                 <p class="d-flex justify-content-center">
@@ -125,9 +131,11 @@
                                             </div>
                                         </label>
                                         <label for="temperature-level5">
-                                            <input id="temperature-level5" type="radio" name="temperature" value="29" hidden>
+                                            <input id="temperature-level5" type="radio" name="temperature" value="29"
+                                                hidden>
                                             <div class="radio-item p-3">
-                                                <h2 class="text-center font-weight-bold">29° <i class="fa-solid fa-less-than-equal"></i></h2>
+                                                <h2 class="text-center font-weight-bold">29° <i
+                                                        class="fa-solid fa-less-than-equal"></i></h2>
                                                 <p class="d-flex justify-content-center">
                                                     <i class="fa fa-circle"></i>
                                                     <i class="fa fa-circle"></i>
@@ -161,19 +169,20 @@
             </div>
             <div class="row row-recommened align-items-center justify-content-between">
                 <div class="item-recommened">
-                    <h2 class="m-0" >Recommended amount</h2>
+                    <h2 class="m-0">Recommended amount</h2>
                 </div>
                 <div class="item-recommened d-flex flex-column">
                     <h1 class="m-0 font-weight-bold">121g</h1>
                     <p class="m-0">per day</p>
                 </div>
-                
+
             </div>
 
         </div>
-    </div> 
+    </div>
+    <div id="modal-logout-confirm"></div>
 
-     
+
     <!-- footer -->
     <div id="footer"></div>
     <script>
@@ -181,6 +190,9 @@
             $.getScript('./assets/js/utilsCustomer.js')
         });
         $('#footer').load('utils.html #footer__nav', () => {
+            $.getScript('./assets/js/utilsCustomer.js')
+        });
+        $('#modal-logout-confirm').load('utils.html #modal-logout-confirm_nav', () => {
             $.getScript('./assets/js/utilsCustomer.js')
         });
     </script>

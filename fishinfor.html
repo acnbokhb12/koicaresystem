@@ -17,6 +17,8 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- echart js -->
   <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/navHeader-Footer.css">
@@ -25,7 +27,8 @@
 
 <body class=" body-fish">
   <!-- header -->
-  <script src="./assets/js/headernav.js"></script>
+  <div id="header"></div>
+
   <section class="container container_fish">
     <div class="tilte-fish">
       <h1>Fish Information</h1>
@@ -181,8 +184,20 @@
       </form>
     </div>
   </div>
+  <div id="modal-logout-confirm"></div>
 
-  <script src="./assets/js/footer.js"></script>
+  <div id="footer"></div>
+  <script>
+    $('#header').load('utils.html #header__nav', () => {
+      $.getScript('./assets/js/utilsCustomer.js')
+    });
+    $('#footer').load('utils.html #footer__nav', () => {
+      $.getScript('./assets/js/utilsCustomer.js')
+    });
+    $('#modal-logout-confirm').load('utils.html #modal-logout-confirm_nav', () => {
+      $.getScript('./assets/js/utilsCustomer.js')
+    });
+  </script>
 </body>
 <script>
   const btnClose = document.querySelector(".btn-close-fish");
@@ -247,7 +262,7 @@
           rotate: 45, // Xoay nhãn trục x 45 độ
           fontSize: 12, // Tùy chỉnh kích thước chữ nếu cần
           fontWeight: 'bold', // Làm đậm chữ nếu muốn
-          margin:20
+          margin: 20
         }
       }
     ],
@@ -332,5 +347,5 @@
   chart.setOption(option); 
 </script>
 <script src="./assets/js/utils.js"></script>
- 
+
 </html>

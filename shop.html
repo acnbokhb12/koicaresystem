@@ -14,13 +14,16 @@
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/base.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+    <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/navHeader-Footer.css">
   <link rel="stylesheet" href="./assets/css/shopPage.css">
 </head>
 
 <body class="body__shop">
-  <script src="./assets/js/headernav.js"></script>
+  <div id="header"></div>
+  
   <div id="content__shop">
     <header class="swiper shop__intro-container">
       <div class="swiper-wrapper shop__intro-list">
@@ -370,9 +373,7 @@
                 <ul class="pagination">
                   <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
                   <li class="page-item"><a class="page-link active__page" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li> 
                   <li class="page-item"><a class="page-link" href="#">...</a></li>
                   <li class="page-item"><a class="page-link" href="#">9</a></li>
                   <li class="page-item"><a class="page-link" href="#">10</a></li>
@@ -385,11 +386,22 @@
         <!-- finish row -->
       </div>
     </div>
-  </div>
+  </div> 
+  <div id="modal-logout-confirm"></div>
 
+  <div id="footer"></div>
 
-
-  <script src="./assets/js/footer.js"></script>
+  <script>
+    $('#header').load('utils.html #header__nav', ()=>{
+        $.getScript('./assets/js/utilsCustomer.js')
+    });
+    $('#footer').load('utils.html #footer__nav', ()=>{
+        $.getScript('./assets/js/utilsCustomer.js')
+    });
+    $('#modal-logout-confirm').load('utils.html #modal-logout-confirm_nav', () => {
+        $.getScript('./assets/js/utilsCustomer.js')
+    });
+</script>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 

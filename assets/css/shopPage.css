@@ -4,7 +4,7 @@
     background-color: #e3e3e3; 
 }
 #content__shop {
-    border-top: 11.4rem solid var(--bs-orange);
+    border-top: 11.4rem solid #000;
     /* margin-top: 11.4rem; */
 }
 
@@ -668,4 +668,13 @@ input[type=number]:focus {
     padding: 0.4rem 1.2rem;
     color: var(--white-color);
     border-radius: 8px;
+ }
+
+ @media screen and (max-width:480px) {
+    .shop_product-title{
+        flex-direction: column;
+    }
+    .col-cate{
+        padding-bottom: 2rem;
+    }
  }

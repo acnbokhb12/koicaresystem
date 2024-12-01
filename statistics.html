@@ -52,8 +52,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div style="height: 600px;"></div>
+    </div> 
+    <div id="modal-logout-confirm"></div>
+
     <!-- footer -->
     <div id="footer"></div>
     <script>
@@ -63,6 +64,9 @@
         $('#footer').load('utils.html #footer__nav', () => {
             $.getScript('./assets/js/utilsCustomer.js')
         });
+        $('#modal-logout-confirm').load('utils.html #modal-logout-confirm_nav', () => {
+        $.getScript('./assets/js/utilsCustomer.js')
+    });
     </script>
     <!-- Salt -->
     <script>
