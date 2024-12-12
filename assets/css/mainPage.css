@@ -345,15 +345,15 @@
 .intro__service-body-script p{
     font-size: 1.4rem;
     margin-bottom: 1rem;
-    color: var(--black-color);
+    color: #757575;
     font-weight: 600;
     line-height: 1.4rem;
-    height:4.36rem;
+    height:3rem;
     overflow: hidden;
     display: block;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;    
+    -webkit-line-clamp: 2;    
     text-overflow: ellipsis;
     margin-bottom: 0.3rem;
 }

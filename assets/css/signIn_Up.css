@@ -183,6 +183,28 @@
     margin: 0;
     justify-content: center;
 }
+.btn-google {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    gap: 10px;
+    border: 1px solid #cecece;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.btn-google:hover {
+    border: 1px solid #2d79f3;
+
+}
 @media screen and (max-width:1000px){
     .container__screen__img:first-child  {
         display: none;

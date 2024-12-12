@@ -1,13 +1,11 @@
 .body-fish{ 
     background: url(https://static.wikia.nocookie.net/0dfbc1cb-6311-45e0-8b74-fc965ca9afc7);
     background-color: #e3e3e3;
-    background-position: center;
- 
 }
 .container-growth,
 .container_fish {
     margin-top: 12.4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 .row-infor-fist-detail{
     margin-right: 0;
@@ -19,7 +17,7 @@
     padding-bottom: 1rem; 
     background-color: #fff;
     padding: 1rem 2rem;
-    border-radius: 8px;
+    margin-bottom: 1.6rem;
 }
 .tilte-fish h1 {
     text-align: center;
@@ -89,13 +87,13 @@
 }
 
 .link__to-fish-detail{
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--black-color);
     font-weight: 600;
     line-height: 1.8rem;
-    height: 1.8rem;
+    height: 2rem;
     overflow: hidden;
     display: block;
     display: -webkit-box;
@@ -105,7 +103,6 @@
 }
 .link__to-fish-detail:hover{
     color: #000;
-    text-decoration: underline;
 }
 .fish-info p {
     margin: 0 0 10px 0; 
@@ -114,7 +111,7 @@
     margin-bottom: 1rem;
     color: var(--black-color);
     font-weight: 600;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
     height: 3rem;
     overflow: hidden;
     display: block;
@@ -132,32 +129,34 @@
 .img-edit-submit {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     /* align-items: center; */
     padding: 1rem 2rem;
     height: 100%;
-
+    border-right: 1px solid #000;
 }
 
 .fish-img-info img {
-    width: 100%;
+    /* width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 8px; */
 }
 
 .fish-img-info-edit {
-    height: 80%;
+    /* height: 80%; */
+    /* margin: auto; */
 }
 
 .fish-img-info-edit img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 250px;
+    /* object-fit: cover; */
+    border-radius: 10px;
 }
 
 .pond-edit-img-detail {
-    height: 20%;
+    /* height: 20%; */
 }
 
 .form-edit-img-fish {
@@ -168,7 +167,7 @@
 }
 
 .fish-edit-img-detail {
-    height: 20%;
+    /* height: 20%; */
 }
 
 .fish-edit-img-detail input {
@@ -187,7 +186,7 @@
 .info {
     background-color: #f9f9f9;
     border-radius: 8px;
-    padding: 20px;
+    /* padding: 20px; */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     font-size: 1.8rem;
 }
@@ -246,7 +245,7 @@
     color: var(--white-color);
     border: none;
     border: 1px solid var(--bs-orange);
-  
+
 
 }
 .edit-btn-out:hover {
@@ -272,9 +271,9 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 11;
+    z-index: 5;
     position: fixed;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     transform: translateY(30px);
@@ -291,9 +290,10 @@
 }
 
 .edit-info {
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
     font-size: 1.5rem;
+    justify-content: center;    
 }
 
 .edit-info h2 {
@@ -339,49 +339,47 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
-    border-radius: 8px ;
+    padding: 1rem ; 
 }
 .tilte-fish-growth h1{
-    margin-bottom: 0;
-    margin-left: 2rem;
+    margin-bottom: 0; 
 }
 .back-btn.grow__detail-btn{
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
 }
 .item_grow_fish{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
- 
+
 .container-pond-fish {
     padding: 4rem 0;
 
 } 
 
- .container-pond-fish h1{ 
+.container-pond-fish h1{ 
     font-size: var(--font-title-main);
     color: #333; 
- }
-
+}
+ 
 .pond-item {
     display: block;
     width: 100%;
     padding: 0 1.5rem;
 } 
 .pond-item-img { 
-    width: 100%;  
-    display: flex;
+    width: 100%;   
 }
 
 .pond-item-img img {
     /* width: 300px; */
     width: 100%;
     height: auto;
-    object-fit: cover; 
+    /*object-fit: cover;*/
+    height: 400px;
 }
 
- 
+
 .pond-item-desc {
     padding: 2rem;
     background-color: #fff;
@@ -398,12 +396,12 @@
 }
 
 .button-container button{
-     font-size: 1.8rem;
-     font-weight: 600;
-     background-color: var(--bs-orange);
-     padding: 0.4rem 4rem;
-     color: var(--white-color);
-     border-radius: 99999px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    background-color: var(--bs-orange);
+    padding: 0.4rem 4rem;
+    color: var(--white-color);
+    border-radius: 99999px;
 }
 
 .btn-lg {
@@ -461,4 +459,282 @@
     background-color: var(--bs-orange);
     color: var(--white-color);
     margin-top: 0.4rem;
+}
+
+/*Fish Growth Delete Update*/
+.update-btn-out {
+    background-color: #2196F3;
+    color: #fff;
+    border: 2px solid #2196F3;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.update-btn-out:hover {
+    background-color: #1976D2;
+    border-color: #1976D2;
+    transform: scale(1.05);
+}
+
+.update-btn-out:active {
+    background-color: #1565C0;
+    transform: scale(0.95);
+}
+.delete-btn-out {
+    background-color: #f44336; /* Red for Delete */
+    color: #fff;
+    border: 2px solid #f44336;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem; 
+    cursor: pointer;
+}
+
+.delete-btn-out:hover {
+    background-color: #e53935; /* Darker red on hover */
+    border-color: #e53935;
+    transform: scale(1.05);
+}
+
+.delete-btn-out:active {
+    background-color: #c62828; /* Even darker red on active */
+    transform: scale(0.95);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 780px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    animation: smoothTable 0.4s ease-in;
+}
+
+.close {
+    color: #555;
+    float: right;
+    padding-left: 690px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.edit-item-detail {
+    display: flex;
+    flex-direction: column; 
+}
+
+.edit-item-detail span {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.edit-item-detail select,
+.edit-item-detail input {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    padding: 4px;
+    font-size: 1.6rem; 
+}
+
+.text-center {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.edit-btn.blue-btn {
+    background-color: var(--bs-orange);
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.edit-btn.blue-btn:hover {
+    background-color: var(--bs-orange);
+
+}
+.delete-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #2980b9;
+}
+
+.cancel-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+}
+.label-witdh{
+    width: 30%;
+    color: blue;
+}
+.span-witdh{
+    width: 70%;
+    display: block;
+    color: #000;
+}
+.sub_span-highlight{
+    color: red;
+    font-weight: 500;
+}
+.fish__img-infor{
+    width: 100%;
+    object-fit: unset;
+    height: 376px; 
+    border-radius: 8px;
+}
+.container-btn-fish{
+
+} 
+@media screen and (max-width:1000px) {
+    .tilte-fish{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container-btn-fish{
+        padding: 1rem 0 0rem;
+    }
+}
+@media screen and (max-width:992px) {
+    .fish__img-infor{
+        width: 250px;
+        height: 250px;
+    }
+}
+@media screen and (max-width:768px) {
+    .tilte-fish{
+        margin-bottom: 0;
+    }
+    .row-infor-fist-detail{
+        padding: 1.5rem;
+    }
+    .fish-img-info{
+        padding: 0;
+    }
+    .container-btn-fish{
+
+    }
+    .fish__img-infor{
+        /* width: 50%; */
+        /* height: auto; */
+    }
+    .tilte-fish-growth  {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tilte-fish > h1,
+    .tilte-fish-growth h1{
+        margin-bottom: 1rem;
+    }
+    .row-fish-detail{
+        overflow: auto;
+        height: 76vh;
+    }
+    .row-fish-detail::-webkit-scrollbar {
+        width: 8px;  
+        height: 8px;  
+    }
+    
+    .row-fish-detail::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px; 
+    }
+    
+    .row-fish-detail::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+    
+    .row-fish-detail::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+        border-radius: 4px;
+    }
+    
+    .row-fish-detail {
+        scrollbar-width: thin; 
+        scrollbar-color: #888 #f1f1f1; 
+    }
+    .img-edit-submit {
+        border: none;
+    }
+    .fish-edit-img-detail{
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width:500px) {
+    .tilte-fish-growth h1,
+    .tilte-fish>h1{
+        font-size: 2.5rem;
+    }
+    .info-item{
+        flex-direction: column;
+    }
+    .back-btn, .delete-btn-fish, .edit-btn-out{
+        font-size: 1.4rem;
+    }
+    .label-witdh{
+        width: 100%;
+    }
+    .fish__img-infor{
+        width: 200px;
+        height: 200px;
+    }
+    .tilte-fish > h1{
+        margin-bottom: 0;
+    }
+    .container-btn-fish{
+        padding: 0;
+    }
+}
+@media screen and (max-width:380px) {
+    .back-btn, .delete-btn-fish, .edit-btn-out{
+        padding: 0.4rem 0.8rem;
+        margin: 1rem;
+        display: block;
+    }
 }

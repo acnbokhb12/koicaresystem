@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pond Information</title>
+  <link rel="icon" href="./assets/img/logo/logoSignin.jpg" type="image/x-icon" />
+
     <!-- Font gg family -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
@@ -15,54 +17,88 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/navHeader-Footer.css">
     <link rel="stylesheet" href="./assets/css/news_blogs.css">
     <link rel="stylesheet" href="./assets/css/pondkoi.css">
+
+    <script type="module" src="./assets/js/filterlogin.js"></script>
+
 </head>
 
-<body class="pond-background">
+<body class="pond-background hidden">
     <div id="header"></div>
 
     <div class="container container_pond">
         <div class="tilte-ponds">
             <h1>Koi Fish Pond Information</h1>
-            <div class="text-right">
+            <div class="container-btn-pond">
                 <a href="pond.html" class="back-btn">Back to List</a>
-                <a href="#" class="delete-btn-fish">Delete</a>
+                <a href="#" class="delete-btn-fish delete-btn-pond">Delete</a>
                 <button class="edit-btn-out">
                     Edit Information
                 </button>
             </div>
         </div>
 
-        <div class="row mt-4">
-            <div class="col-4 pond-img-info">
-
-                <img src="https://www.thesprucepets.com/thmb/tucFN5e5O9-vbhr0jhbeL8zkFLY=/3572x0/filters:no_upscale():strip_icc()/GettyImages-1148621267-fbe7fcc9e0eb41078b0ee63bc3edc2b3.jpg"
+        <div class="row mt-4 m-0">
+            <div class="col-lg-4 pond-img-info">
+                <img class="pond-img-infor-detail" src="https://www.thesprucepets.com/thmb/tucFN5e5O9-vbhr0jhbeL8zkFLY=/3572x0/filters:no_upscale():strip_icc()/GettyImages-1148621267-fbe7fcc9e0eb41078b0ee63bc3edc2b3.jpg"
                     alt="Koi Pond">
             </div>
 
-            <div class="col-8 info">
+            <div class="col-lg-8 info">
                 <div class="info-item">
-                    <span class="label">Pond Name:</span> <span class="value">Tranquil Waters</span>
+                    <span class="label label-witdh">Pond Name:</span> 
+                    <span class=" span-witdh value-pond-name"> </span>
                 </div>
                 <div class="info-item">
-                    <span class="label">Size:</span> <span class="value">10m x 5m</span>
+                    <span class="label label-witdh">Depth:</span>                      
+                    <span class=" span-witdh">  
+                        <span class="value-depth"></span> 
+                        <span class="sub_span-highlight">(m)</span>
+                    </span>
                 </div>
                 <div class="info-item">
-                    <span class="label">Depth:</span> <span class="value">1.5m</span>
+                    <span class="label label-witdh">Volume:</span>  
+                    <span class=" span-witdh">
+                        <span class="value-volume"></span>
+                        <span class="sub_span-highlight"> (l)</span>
+                    </span>
                 </div>
                 <div class="info-item">
-                    <span class="label">Volume:</span> <span class="value">30,000 liters</span>
+                    <span class="label label-witdh">Drain Count:</span> 
+                    <span class="span-witdh">
+                        <span class="value-draincount"></span>
+                    </span>
                 </div>
                 <div class="info-item">
-                    <span class="label">Drain Count:</span> <span class="value">2</span>
+                    <span class="label label-witdh">Pump Power:</span>                     
+                    <span class=" span-witdh">
+                        <span class="value-pumpower"></span>                        
+                         <span class="sub_span-highlight">(l/h)</span>
+                    </span>
                 </div>
                 <div class="info-item">
-                    <span class="label">Pump Power:</span> <span class="value">5HP</span>
+                    <span class="label label-witdh">Quantity fish   :</span> 
+                    <span class=" span-witdh">
+                        <span class="value-quantity-fish"></span> 
+                    </span>
+                </div>
+                <div class="info-item">
+                    <span class="label label-witdh">Description:</span> 
+                    <span class="span-witdh">
+                        <span class="value-desc"></span> 
+                    </span>
+                </div>
+                <div class="info-item">
+                    <span class="label label-witdh">Skimmer:</span> 
+                    <span class=" span-witdh"> 
+                        <span class="value-skimmer"></span> 
+                    </span>
                 </div>
             </div>
         </div>
@@ -70,10 +106,9 @@
 
     <div class="container container-fish">
         <h1>List Of Koi Fishes</h1>
-        <div class="container-list-arrow">
-
-            <div class="swiper container__news">
-                <div class="swiper-wrapper container__news-list"> 
+        <div class="container-list-arrow"> 
+            <div class="swiper container__news"> 
+                <div class="swiper-wrapper container__news-list container__list-fish"> 
                     <div class="container__news-item swiper-slide">
                         <a href="#" class="container__news-item-desc">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdDqpFjCmAnD73k5CohVcHvCtjz9SOUZmTQ&s"
@@ -85,166 +120,20 @@
                             </div>
                         </a>
                     </div>
-                    <div class="container__news-item swiper-slide">
-                        <a href="#" class="container__news-item-desc">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdDqpFjCmAnD73k5CohVcHvCtjz9SOUZmTQ&s"
-                                alt="">
-                            <div class="container__news-item-cap">
-                                <div class="news-item-cap-detail">
-                                    <span>Kohaku</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="container__news-item swiper-slide">
-                        <a href="#" class="container__news-item-desc">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdDqpFjCmAnD73k5CohVcHvCtjz9SOUZmTQ&s"
-                                alt="">
-                            <div class="container__news-item-cap">
-                                <div class="news-item-cap-detail">
-                                    <span>Kohaku</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="container__news-item swiper-slide">
-                        <a href="#" class="container__news-item-desc">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdDqpFjCmAnD73k5CohVcHvCtjz9SOUZmTQ&s"
-                                alt="">
-                            <div class="container__news-item-cap">
-                                <div class="news-item-cap-detail">
-                                    <span>Kohaku</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="container__news-item swiper-slide">
-                        <a href="#" class="container__news-item-desc">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdDqpFjCmAnD73k5CohVcHvCtjz9SOUZmTQ&s"
-                                alt="">
-                            <div class="container__news-item-cap">
-                                <div class="news-item-cap-detail">
-                                    <span>Kohaku</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="container__news-item swiper-slide">
-                        <a href="#" class="container__news-item-desc">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdDqpFjCmAnD73k5CohVcHvCtjz9SOUZmTQ&s"
-                                alt="">
-                            <div class="container__news-item-cap">
-                                <div class="news-item-cap-detail">
-                                    <span>Kohaku</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="container__news-item swiper-slide">
-                        <a href="#" class="container__news-item-desc">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdDqpFjCmAnD73k5CohVcHvCtjz9SOUZmTQ&s"
-                                alt="">
-                            <div class="container__news-item-cap">
-                                <div class="news-item-cap-detail">
-                                    <span>Kohaku</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="container__news-item swiper-slide">
-                        <a href="#" class="container__news-item-desc">
-                            <img src="https://static.wixstatic.com/media/ce2aba_910a0a6942e348df9ae7ecb759a17e16~mv2.jpg/v1/fill/w_980,h_1470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ce2aba_910a0a6942e348df9ae7ecb759a17e16~mv2.jpg"
-                                alt="">
-                            <div class="container__news-item-cap">
-                                <div class="news-item-cap-detail">
-                                    <span>Kohaku</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
+                     
                 </div>
                 <div class="news-title-btn">
                     <button class="f_owl-prev"><i class="fa-solid fa-chevron-left"></i></button>
                     <button class="f_owl-next"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
-            </div>
-
+            </div> 
         </div>
     </div>
     <!-- TABLE EDIT -->
-    <div class="container__infor__pond">
-        <div class="infor__pond-detail">
-            <div class="row row-pond-detail">
-                <div class="col-4" style="padding: 0;">
-                    <div class="img-edit-submit">
-                        <div class="pond-img-info-edit">
-                            <img id="imagePreview" src="https://www.thesprucepets.com/thmb/tucFN5e5O9-vbhr0jhbeL8zkFLY=/3572x0/filters:no_upscale():strip_icc()/GettyImages-1148621267-fbe7fcc9e0eb41078b0ee63bc3edc2b3.jpg" alt="" > 
-                        </div>
-                        <div class="pond-edit-img-detail">
-                            <form action="MainController?action=pondimageupdate" class="form-edit-img-pond" method="post" enctype="multipart/form-data">
-                                <input type="hidden" name="pondID" >
-                                <input id="imageInput" name="fileimg" type="file" accept="image/*" >
-                                <button type="submit">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-8 edit-info">
-                    <div class="text-right">
-                        <button
-                            class="btn-close-pond"><i class="fa-solid fa-xmark close-navbar-icon-btn-pond"></i></button>
-
-                    </div>
-                    <h2>Edit card</h2>
-                    <form action="#" method="POST">
-                        <div class="row row-edit-info-detail"> 
-                            <input type="hidden" name="pondID" >
-
-                            <div class="col-md-6 edit-item-detail">
-                                <label for="pondName">Pond Name</label>
-                                <input type="text" id="pondName" name="pondName"  required>
-                            </div>
-                            <div class="col-md-6 edit-item-detail">
-                                <label for="depth">Depth (meters)</label> 
-                                <fmt:formatNumber  minFractionDigits="1" maxFractionDigits="1" var="formattedDepthV2"  /> 
-                                <input type="number" step="0.1" id="depth" name="depth"  required>
-                            </div>
-                            <div class="col-md-6 edit-item-detail">
-                                <label for="volume">Volume (liters)</label>
-                                <input type="number" step="0.1" id="volume" name="volume"  required>
-                            </div>                               
-                            <div class="col-md-6 edit-item-detail">
-                                <label for="drainCount">Number of Drains</label>
-                                <input type="number" id="drainCount" name="drainCount"  required>
-                            </div>
-                            <div class="col-md-6 edit-item-detail">
-                                <label for="pumpPower">Pump Power (l/h)</label>
-                                <input type="number" id="pumpPower" name="pumpPower"  required>
-                            </div>
-                            <div class="col-md-6 edit-item-detail">
-                                <label for="descriptionPond">Description</label>
-                                <input type="text" id="descriptionPond" name="descriptionPond"  required>
-                            </div>
-                            <div class="col-md-6 edit-item-detail">
-                                <label for="skimmer">Skimmer</label>
-                                <input type="number" id="skimmer" name="skimmer"  required>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <button class="edit-btn" style="margin-top: 10px; ">
-                                Confirm
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="pondFormUpdate"></div> 
     <div id="modal-logout-confirm"></div>
 
-    <div id="footer"></div>
+    <div id="footer"></div> 
     <script>
         $('#header').load('utils.html #header__nav', () => {
             $.getScript('./assets/js/utilsCustomer.js');
@@ -256,71 +145,8 @@
             $.getScript('./assets/js/utilsCustomer.js')
         });
     </script>
-    <style>
-        .container__news-item-desc img {
-            height: 150px;
-        }
-    </style>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-<script>
-    const btnClose = document.querySelector('.btn-close-pond');
-    const tableEdit = document.querySelector('.container__infor__pond');
-    const btnOutOpen = document.querySelector('.edit-btn-out');
-    const subTable = document.querySelector('.infor__pond-detail')
-
-    btnOutOpen.addEventListener('click', function (e) {
-        tableEdit.classList.add('open');
-        e.stopPropagation();
-    })
-    btnClose.addEventListener('click', () => {
-        tableEdit.classList.remove('open');
-    })
-    subTable.addEventListener('click', (e) => {
-        e.stopPropagation();
-    })
-    document.addEventListener('click', () => {
-
-        tableEdit.classList.remove('open');
-    });
-
-    const btnDelete = document.querySelector('.delete-btn-fish');
-    btnDelete.addEventListener('click', (e) => {
-        var isConfirm = confirm('Are you sure you want delete this pond ?');
-        if (!isConfirm) {
-            e.preventDefault();
-        }
-    })
-
-    var swiperNews = new Swiper(".container__news", {
-        spaceBetween: 30,
-        loop: true,
-        centeredSlides: true,
-        autoplay: {
-            delay: 5500,
-            disableOnineraction: false,
-        },
-        navigation: {
-            nextEl: ".f_owl-next",
-            prevEl: ".f_owl-prev",
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            450: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 4,
-            },
-
-        },
-    });
-</script>
-<script src="./assets/js/utils.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script type="module" src="./assets/js/pondinfor.js"></script>
+ 
+</body>  
 </html>

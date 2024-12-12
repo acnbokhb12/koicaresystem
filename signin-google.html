@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Lấy mã code từ URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get("code");
+
+            if (code) {
+                // Gửi mã code đến backend để nhận token
+                fetch(`https://localhost:7232/account/signin-google?code=${code}`, {
+                    method: 'GET',
+                })
+                    .then(res => res.json())  // Chắc chắn gọi res.json() để lấy dữ liệu trả về
+                    .then(data => {
+                        if (data.token) {
+                            // Lưu token vào sessionStorage
+                            sessionStorage.setItem("authToken", data.token);
+                            // Chuyển hướng đến trang Home sau khi login thành công
+                            window.location.href = "/home.html";
+                        } else {
+                            alert("Authentication failed. No token returned.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error during Google Login:", error);
+                        alert("Authentication failed. Please try again.");
+                    });
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -9,9 +9,9 @@
 .tilte-ponds{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1.6rem;
-    border-bottom: 1px solid #848484;   
+    align-items: center;   
+    background-color: #fff;
+    padding: 1rem 2rem;
 }
 .tilte-ponds h1 {
     text-align: center; 
@@ -84,13 +84,13 @@
 }
 
 .link__to-pond-detail{
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--black-color);
     font-weight: 600;
     line-height: 1.8rem;
-    height: 1.8rem;
+    height: 2rem;
     overflow: hidden;
     display: block;
     display: -webkit-box;
@@ -150,9 +150,9 @@
 }
 .pond-img-info img{
     width: 100%;
-    height: 421px; /* do thêm skimmer */
-    object-fit: cover;
-    /* padding: 1rem; */
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 8px;
 }
 .pond-img-info-edit {
     margin-bottom: 1rem;
@@ -172,7 +172,7 @@
 .pond-edit-img-detail input{
     font-size: 1.2rem;
     margin-bottom: 0.4rem;
-
+    width:100% ;
 }
 .pond-edit-img-detail button{
     font-size: 1.6rem; 
@@ -263,7 +263,7 @@
     right: 0;
     z-index: 5;
     position: fixed;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     transform: translateY(30px);
@@ -297,13 +297,18 @@
 .row-edit-info-detail input{
     width: 100%;
     padding: 0.4rem ;
-    border: 1px solid #8f8f8f ;
+    border: 2px solid #000 ;
     border-radius: 4px;
 }
 .edit-item-detail{
     padding: 1rem;
 }
-
+.edit-item-detail>span{
+    font-weight: 600;
+    display: block;
+    padding: 0.4rem;
+    font-size: 1.6rem;
+}
 .open{
     display: flex;
 }
@@ -396,105 +401,122 @@
     border: none;
     background-color: var(--bs-orange);
     color: var(--white-color);
+} 
+/* --------------fff */
+.label-witdh{
+    width: 30%;
+    color: blue;
 }
-.modal-confirm-delete{
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
+.span-witdh{
+    width: 70%;
+    display: block;
+    color: #000;
 }
-.modal-confirm-delete-open{
-    display: flex;
+.sub_span-highlight{
+    color: red;
+    font-weight: 500;
+}
+.container__news-item-cap{
+    background: none;
+    padding: 10px;
 }
 
-.modal-confirm {		
-    color: #636363;
-    width: 400px;
-    animation: expandCard 0.4s ease-in;
+.container__news-item:hover img{
+    transform: none;
 }
-.modal-confirm .modal-content {
-    padding: 20px;
-    border-radius: 5px;
-    border: none;
-    text-align: center;
-    font-size: 14px;
+.container__news-item-desc img{
+    height: 150px;
+    object-fit: unset;
 }
-.modal-confirm .modal-header {
-    border-bottom: none;   
-    position: relative;
+.news-title-btn button{
+    background-color: #fff;
 }
-.modal-confirm h4 {
-    text-align: center;
-    font-size: 26px;
-    margin: 30px 0 -10px;
+.container-list-arrow{
+    margin-top: 2rem;
 }
-.modal-confirm .close {
-    position: absolute;
-    top: -5px;
-    left: 330px;
-    /* right: -2px; */
+ 
+
+@media screen and (max-width:1000px) {
+    .tilte-ponds{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container-btn-pond{
+        padding: 1rem 0 0rem;
+    }
+    .pond-img-infor-detail{
+        padding: 1rem 0 2rem;
+    }
 }
-.modal-confirm .modal-body {
-    color: #999;
+@media screen and (max-width:768px) {
+    .row-pond-detail{
+        overflow: auto;
+        height: 76vh;
+    }
+    .row-pond-detail::-webkit-scrollbar {
+        width: 8px; /* Độ rộng của thanh kéo */
+        height: 8px; /* Độ cao của thanh kéo ngang nếu có */
+    }
+    
+    .row-pond-detail::-webkit-scrollbar-thumb {
+        background-color: #888; /* Màu của thanh kéo */
+        border-radius: 4px; /* Làm tròn thanh kéo */
+    }
+    
+    .row-pond-detail::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* Màu của thanh kéo khi hover */
+    }
+    
+    .row-pond-detail::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* Màu của track */
+        border-radius: 4px;
+    }
+    
+    /* Đối với các trình duyệt khác */
+    .row-pond-detail {
+        scrollbar-width: thin; /* Thanh kéo nhỏ */
+        scrollbar-color: #888 #f1f1f1; /* Màu của thanh kéo và track */
+    }
+    .pond-img-info-edit img{
+        height: 300px;
+    }
 }
-.modal-confirm .modal-footer {
-    border: none;
-    text-align: center;		
-    border-radius: 5px;
-    font-size: 13px;
-    padding: 10px 15px 25px;
+
+
+@media screen and (max-width:500px) {
+    .tilte-ponds > h1{
+        font-size: 2.5rem;
+    }
+    .back-btn, .delete-btn-fish, .edit-btn-out{
+        font-size: 1.4rem;
+    }
+    .info-item{
+        flex-direction: column;
+    }
+    .label-witdh{
+        width: 100%;
+    }
+    .pond-img-info img{
+        height: 350px;
+    }
 }
-.modal-confirm .modal-footer a {
-    color: #999;
-}		
-.modal-confirm .icon-box {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto;
-    border-radius: 50%;
-    z-index: 9;
-    text-align: center;
-    border: 3px solid #f15e5e;
+@media screen and (max-width:380px) {
+     
+    .container-btn-pond{
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+    .back-btn, .delete-btn-fish, .edit-btn-out{
+        padding: 0.4rem 0.8rem;
+        margin: 1rem;
+        display: block;
+    }
+    .container-list-arrow{
+        margin-top: 5rem;
+    }
+    .news-title-btn{
+        right: auto;
+        top: -4rem;
+    }
+     
 }
-.modal-confirm .icon-box i {
-    color: #f15e5e;
-    font-size: 46px;
-    display: inline-block;
-    margin-top: 13px;
-}
-.modal-confirm .btn, .modal-confirm .btn:active {
-    color: #fff;
-    border-radius: 4px;
-    background: #60c7c1;
-    text-decoration: none;
-    /* transition: all 0.4s; */
-    line-height: normal;
-    min-width: 120px;
-    border: none;
-    min-height: 40px;
-    border-radius: 3px;
-    margin: 0 5px;
-}
-.modal-confirm .btn-secondary {
-    background: #c1c1c1;
-}
-.modal-confirm .btn-secondary:hover, .modal-confirm .btn-secondary:focus {
-    background: #a8a8a8;
-}
-.modal-confirm .btn-danger {
-    background: #f15e5e;
-}
-.modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
-    background: #ee3535;
-}
-.trigger-btn {
-    display: inline-block;
-    margin: auto;
-}
-/* --------------fff */

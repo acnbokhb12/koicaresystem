@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/navHeader-Footer.css">
     <link rel="stylesheet" href="./assets/css/signIn_Up.css">
 </head>
 
@@ -45,62 +46,23 @@
         <div class="info__user-container-up  ">
             <div id="sign-in-form" class="container__sigup-form form-container">
                 <div class="user-re-container">
-                    <header class="header__screen-log">
-                        <!-- <h1 class="signin-header-title">Welcome back!</h1> -->
+                    <header class="header__screen-log"> 
                         <a href="home.html" class="header__img-log">
                             <img src="./assets/img/logo/logoSignin.jpg" alt="">
                         </a>
                         <p class="header-desc" style="font-size: 2.6rem; text-align: center;">Create an account</p>
                     </header>
                     <div class="signup-user-body">
-                        <form action="#" class="form" id="form-1" method="post">
-                            <div class="row row__form"> 
-                            <!-- Email -->
-                            <div class="form-group col-md-6 ">
-                                <label for="email" class="form-label"> <i class="fa-solid fa-envelope  icon-signup"></i>
-                                    KoiCareId</label> 
-                                <input type="email" id="email" name="txtemail" class="input__form"
-                                    placeholder="email@domain.com">
-                                <span class="form-message"></span>
-                                <span class="form-message-error-bk">Email is exist</span>
-                            </div> 
-                            <!-- UserName -->
-                            <div class="form-group col-md-6 ">
-                                <label for="fullname" class="form-label"><i class="fa-solid fa-user icon-signup"></i>
-                                    Name</label>
-
-                                <input type="text" id="fullname" name="txtusername" class="input__form"
-                                    placeholder="UserName" />
-                                <span class="form-message"></span>
-                            </div> 
-                            <!-- password -->
-                            <div class="form-group col-md-6   "> 
-                                <label for="password" class="form-label"><i
-                                        class="fa-solid fa-lock icon-signup"></i> Password</label>
-                                <input type="password" id="password" name="txtpassword"
-                                    class="input__form " placeholder="Password" />
-                                <span class="form-message"></span>
-                            </div> 
-                            <!-- pass wordd again -->
-                            <div class="form-group col-md-6 ">
-                                <label for="password_confirmation" class="form-label"><i class="fa-solid fa-lock icon-signup"></i> Confirm
-                                    password</label>
-                                <input type="password" id="password_confirmation" name="txtconfirmpassword" class="input__form"
-                                    placeholder="Confirm password" />
-                                <span class="form-message"></span>
-                            </div> 
-                            <button class="btn btn-info btn-signin-acc" type="submit">Sign Up</button><br>
-                          </div>
-                            <!-- Submit -->
-
-                        </form>
+                        <div id="form__register-acc-container"> 
+                             
+                        </div>
                         <p class="footer__screen__acc_according">
                             Already have an account?<a href="login.html" class="signup-btn-link" id="come-signup">Sign
                                 In</a>
                         </p>
                         <p class="text-center" style="font-size: 16px;">Or With</p>
                         <div class="flex-row">
-                            <a href="" class="btn google btn-google">
+                            <a href="" class="btn google btn-google" id="google-login-btn">
                               <svg version="1.1" width="20" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                       <path style="fill:#FBBB00;" d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
                           c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
@@ -130,48 +92,8 @@
 
 
     </div>
-
-</body>
-<style>
-    .btn-google {
-        margin-top: 10px;
-        width: 100%;
-        height: 50px;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 500;
-        gap: 10px;
-        border: 1px solid #cecece;
-        background-color: white;
-        cursor: pointer;
-        transition: 0.2s ease-in-out;
-        margin-bottom: 2rem;
-        margin-top: 2rem;
-    }
-
-.btn-google:hover {
-border: 1px solid #2d79f3;
-;
-}
-</style>
-<script src="./assets/js/validator.js"></script>
-<script>
-    Validator({
-        form: '#form-1',
-        errorSelector:'.form-message',
-        rules: [ 
-            Validator.minLength('#password', 6),
-            Validator.isRequired('#password_confirmation'),
-            Validator.isConfirmed('#password_confirmation',()=>{
-                return document.querySelector('#form-1 #password').value;
-            },'Password confirm not exactly')
-        ],
-        // onSubmit: (data)=>{
-        //     console.log(data)
-        // }
-    });
-</script>
+    <script src="./assets/js/validator.js"></script>
+    <script type="module" src="./assets/js/register.js"></script>
+</body>  
 
 </html>

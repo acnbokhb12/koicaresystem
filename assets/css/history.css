@@ -319,3 +319,16 @@
   text-overflow: ellipsis;
   margin-bottom: 0.3rem;
 }
+
+.desc-all-infor{
+  font-size: 1.6rem;
+  width: 100%; 
+  padding: 0 1.5rem;
+}
+.desc-all-infor img{
+  width: 80%;
+  height: auto; 
+}
+.desc-all-infor iframe{
+  width: 100%;
+}
