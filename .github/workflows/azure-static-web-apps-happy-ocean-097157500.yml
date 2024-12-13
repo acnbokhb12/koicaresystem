@@ -26,6 +26,7 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: "deploy" # Sửa thành "deploy"
           app_location: "/" # App source code path
           output_location: "/" # Built app content directory - optional
 
