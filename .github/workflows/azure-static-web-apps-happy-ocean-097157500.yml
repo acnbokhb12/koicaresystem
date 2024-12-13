@@ -29,6 +29,7 @@ jobs:
           action: "deploy" # Sửa thành "deploy"
           app_location: "/" # App source code path
           output_location: "/" # Built app content directory - optional
+          skip_deploy_on_missing_secrets: true
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
