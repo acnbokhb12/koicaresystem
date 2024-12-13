@@ -75,7 +75,8 @@ modalContainerConfirmLogout.addEventListener('click', (e) => {
 });
 btnLogoutConfirm.addEventListener('click', function () {
     sessionStorage.clear();
-    window.location.href = '/home.html';
+    window.location.href =  `./koicaresystem/Home.html`;
+
 })
 
 

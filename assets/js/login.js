@@ -1,4 +1,6 @@
 import API_URL from './config.js';
+import SUB_DOMAIN from './config.js';
+
 import { loading } from './confirm.js';
 import { removeLoading } from './confirm.js';
 
@@ -19,7 +21,7 @@ document.getElementById('form1').addEventListener('submit', async function (e) {
             const data = await response.json();
             sessionStorage.setItem('authToken', data.token);
             // sessionStorage.removeItem('authToken');
-            window.location.href = '/Home.html';
+            window.location.href =  `./${SUB_DOMAIN}/Home.html`;
 
         } else {
             const error = await response.json();
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const token = new URLSearchParams(window.location.search).get('token');
     if(token){ 
         sessionStorage.setItem('authToken', token);
-        window.location.href = '/Home.html'; 
+        window.location.href = `./${SUB_DOMAIN}/Home.html`; 
     }
  
     const googleLoginBtn = document.getElementById("google-login-btn");
