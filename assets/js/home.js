@@ -59,7 +59,7 @@ fetch(`${API_URL}/news/latestnews?quantity=${quantity}`)
         });
     });
 
-fetch(`${API_URL}/product/newproduct`)
+fetch(`https://localhost:7232/product/newproduct`)
     .then(function(res){
         return res.json();
     })
