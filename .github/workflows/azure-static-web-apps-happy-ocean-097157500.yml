@@ -26,7 +26,9 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: "upload"
           app_location: "/" # App source code path
+          api_location: ""
           output_location: "/" # Built app content directory - optional
 
   close_pull_request_job:
