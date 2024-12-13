@@ -1,5 +1,4 @@
-import API_URL from './config.js'
-import SUB_DOMAIN from './utils.js';
+import API_URL from './config.js' 
 
 
 // Đảm bảo token được gửi kèm theo trong các yêu cầu

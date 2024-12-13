@@ -1,5 +1,4 @@
-import API_URL from './config.js';
-// import SUB_DOMAIN from './config.js';
+import API_URL from './config.js'; 
 
 import { loading } from './confirm.js';
 import { removeLoading } from './confirm.js';
@@ -19,8 +18,7 @@ document.getElementById('form1').addEventListener('submit', async function (e) {
 
         if (response.ok) {
             const data = await response.json();
-            sessionStorage.setItem('authToken', data.token);
-            // sessionStorage.removeItem('authToken');
+            sessionStorage.setItem('authToken', data.token); 
             window.location.href =  `../Home.html`;
 
         } else {
