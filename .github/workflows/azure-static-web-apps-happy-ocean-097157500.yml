@@ -11,31 +11,28 @@ on:
 
 jobs:
   build_and_deploy_job:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
+    permissions: 
+       id-token: write 
+       contents: read
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false  
-
       - name: 'Deploy Static Web App'
-        id: deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-          action: "upload"  # Đây là tham số cần thiết để xác định hành động upload
-          app_location: "/"  # Đường dẫn đến mã nguồn ứng dụng
-          api_location: ""  # Nếu có API, chỉ định đường dẫn
-          output_location: "/"  # Đường dẫn đến các tệp đã build
+          app_location: "/" # App source code path
+          output_location: "/" # Built app content directory - optional
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     name: Close Pull Request Job
     steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          action: "close"
+      - name: Echo Closing PR
+        run: echo "Pull request closed, no deployment required."
