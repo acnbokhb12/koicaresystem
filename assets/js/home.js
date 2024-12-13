@@ -13,7 +13,7 @@ fetch(`${API_URL}/news/latestnews?quantity=${quantity}`,{
             var formattedDate = new Date(n.newsDate).toLocaleDateString('en-CA');
             return `
                 <div class="swiper-slide news-card-item">
-                            <a href="#" class="news-card-link">
+                            <a href="newsDetail.html?id=${n.newsId}" class="news-card-link">
                                 <img src="${n.newsImage}"
                                     alt="" class="news-card-img">
                                 <div class="news-card-more-info mr-0">
