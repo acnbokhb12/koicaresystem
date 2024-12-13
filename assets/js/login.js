@@ -19,7 +19,7 @@ document.getElementById('form1').addEventListener('submit', async function (e) {
         if (response.ok) {
             const data = await response.json();
             sessionStorage.setItem('authToken', data.token); 
-            window.location.href =  `Home.html`;
+            window.location.href =  `https://acnbokhb12.github.io/koicaresystem/Home.html`;
 
         } else {
             const error = await response.json();
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const token = new URLSearchParams(window.location.search).get('token');
     if(token){ 
         sessionStorage.setItem('authToken', token);
-        window.location.href = `../Home.html`; 
+        window.location.href = `https://acnbokhb12.github.io/koicaresystem/Home.html`; 
     }
  
     const googleLoginBtn = document.getElementById("google-login-btn");
