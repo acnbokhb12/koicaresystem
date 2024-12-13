@@ -1,5 +1,5 @@
 import API_URL from './config.js'
-import { callToast } from './confirm.js';
+import { callToast } from './utils.js';
 
 let message = null;
 let sameKoiCare = "";
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const token = new URLSearchParams(window.location.search).get('token');
     if(token){ 
         sessionStorage.setItem('authToken', token);
-        window.location.href = '/home.html'; 
+        window.location.href = '/Home.html'; 
     }
  
     const googleLoginBtn = document.getElementById("google-login-btn");

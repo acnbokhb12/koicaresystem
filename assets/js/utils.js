@@ -55,4 +55,4 @@ formNews.addEventListener('submit',(e)=>{
     
 }
 
- 
+export const SUB_DOMAIN = "koicaresystem";
