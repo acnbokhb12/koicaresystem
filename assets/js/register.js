@@ -64,7 +64,7 @@ async function createNewAccount(formValues) {
         const data = await response.json();
         if(response.ok){
             sessionStorage.setItem('authToken', data.token);
-            window.location.href = 'home.html';
+            window.location.href = './Home.html';
         }else{
             sameKoiCare = data.koiCareId;
             if(!sameKoiCare){
