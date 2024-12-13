@@ -48,7 +48,7 @@ function renderCartItems(cart) {
     const htmlItems = `
         <div class="cart__container__title">
             <div class="cart__title-description row">
-                <div class="cart__title-img col-md-3">Dishes</div>
+                <div class="cart__title-img col-md-3">Item</div>
                 <div class="cart__title-description-information col-md-9">
                     <div class="row">
                         <div class="cart__title-infor-desc col-md-6">Description</div>
@@ -84,7 +84,11 @@ function renderCartItems(cart) {
                                 <h3>Category: <span>${c.product.category.categoryName}</span></h3>
                             </div>
                             <div class="cart__about__property-update-delete">
-                                <button type="button" class="cart__property-update">Edit</button>
+                                <button type="button" class="cart__property-update btn__update-item" 
+                                        data-img="${c.product.image}" 
+                                        data-id="${c.productId}"
+                                        data-quantity="${c.quantity}"
+                                        data-name="${c.product.name}">Edit</button>
                                 <!-- delete -->
                                 <button class="cart__property-delete btn__remove-product"  data-id=${c.product.productId} data-name=${c.product.name} >
                                     Delete
@@ -171,15 +175,7 @@ function renderCartItems(cart) {
         }
     });
     rendetTotalCart(totalAmount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' }), quantityALLCateProduct);
-
-    // document.getElementById('btn__remove-product').addEventListener('click', async function(e) {
-    //     e.preventDefault();
-    //     const proID = this.getAttribute('data-id');
-    //     const name = this.getAttribute('data-name');
-    //     console.log(proID, name)
-
-
-    // })
+ 
     const btnDeletes = document.querySelectorAll('.btn__remove-product');
     btnDeletes.forEach(function (tick, index) {
         tick.addEventListener('click', function (e) {
@@ -192,6 +188,17 @@ function renderCartItems(cart) {
             });
         });
     });
+    const btnUpdates = document.querySelectorAll('.btn__update-item');
+    btnUpdates.forEach(function(tick, index){
+        tick.addEventListener('click', function(e){
+            e.preventDefault();
+            const img = this.getAttribute('data-img'); 
+            const id = this.getAttribute('data-id'); 
+            const quantity = this.getAttribute('data-quantity'); 
+            const name = this.getAttribute('data-name');  
+            renderTableUpdateItem(id, img, name, quantity, index);
+        })
+    })
 }
 
 async function removeItemFromCard(productID,index) {
@@ -247,6 +254,134 @@ function rendetTotalCart(totalMoney, quantityALLCateProduct) {
     document.querySelector('.cart__about__check-subtotal').innerHTML = htmlTotal;
 }
 
+function renderTableUpdateItem(id, img, name, quantity, index){
+    const htmlModalUpdatee = `
+         <div class="modal__cart__product">
+            <div class="modal__cart__product-container">
+                <div class="modal__cart__product-grid">
+
+                    <div class="modal__cart__product-body ">
+                        <div class="modal__product-body-img  ">
+                            <img src="${img}"
+                                alt="">
+                        </div>
+                        <div class="modal__product-body-desc  ">
+                            <div class="modal__cart__product-header">
+                                <i class="fa-solid fa-xmark btn__close-table-update"></i>
+                            </div>
+                            <h1 class="modal__product-body-name">
+                                ${name}
+                            </h1>
+                            <div class="modal__product-body-update-quantity">
+                                <form id="form__update-quantity" method="post">
+                                    <input id="product_Id" type="hidden" value="${id}" />
+                                    <div class="product__detail-form-desc">
+                                        <h1>Quantity</h1>
+                                        <div class="product__detail-quantity-btn">
+                                            <button type="button" class="minus-btn-quantity"><i
+                                                    class="fa-solid fa-minus"></i></button>
+                                            <input type="number" min="1" id="quantity-input" value="${quantity}">
+                                            <button type="button" class="plus-btn-quantity"><i
+                                                    class="fa-solid fa-plus"></i></button>
+                                        </div>
+                                        <!-- submit buy product -->
+                                        <div class="product__btnbuy-ing-pro">
+                                            <button type="submit" name="acction" value="buyProduct"
+                                                class="product__detail-buybtn ">
+                                                <i class="fa-solid fa-circle-check"></i> Update
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+    `; 
+    document.body.insertAdjacentHTML('afterbegin', htmlModalUpdatee); 
+    const minusBtn = document.querySelector('.minus-btn-quantity');
+        const plusBtn = document.querySelector('.plus-btn-quantity');
+        const quantityInput = document.getElementById('quantity-input'); 
+        minusBtn.addEventListener('click', function () {
+            let currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
+
+        plusBtn.addEventListener('click', function () {
+            let currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+
+        });
+    const modalConatainerCart = document.querySelector('.modal__cart__product');
+    const btnClose = document.querySelector('.btn__close-table-update');
+    const miniModal = document.querySelector('.modal__cart__product-container');
+    const closeModal = () => {
+        modalConatainerCart.remove();
+    };
+
+    btnClose.addEventListener('click', closeModal);
+    modalConatainerCart.addEventListener('click', closeModal);
+    miniModal.addEventListener('click',(e)=>{
+        e.stopPropagation();
+    })
+    document.getElementById('form__update-quantity').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        loading(); 
+        const pId = document.getElementById('product_Id').value;
+        const quantity = document.getElementById('quantity-input').value;
+        const requestBody = {
+            productId: parseInt(pId),
+            quantity: parseInt(quantity)
+        };
+        const result = await updateQuantityItemAPi(requestBody);
+        if(result){
+            updateQuantityAtIndex(index, quantity);
+            renderCartItems(listCartItem);
+        }
+        closeModal();
+        removeLoading();
+        callToast(result, message); 
+    })
+}
+
+async function updateQuantityItemAPi(requestBody) {
+    const token = sessionStorage.getItem('authToken');
+    if(!token){
+        window.location.href = 'login.html';
+    }
+    try {
+        const response = await fetch(`${API_URL}/cart/updateitem`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+            body: JSON.stringify(requestBody),
+        });
+        const result = await response.json();
+        message = result.message;
+        if (response.ok) {
+            return true;
+        }
+        return false;
+    } catch (error) {
+        return false; 
+    }
+}
+
+function updateQuantityAtIndex(index, newQuantity) {
+    if (index >= 0 && index < listCartItem.length) { // Kiểm tra index hợp lệ
+        listCartItem[index].quantity = newQuantity
+    } else {
+        console.error("Index không hợp lệ!");
+    }
+}
+
 function rendertNoProductInCart() {
     const htmlNoProduct = `
         <section class="section-cart-empty" style="display: flex;">
@@ -282,8 +417,9 @@ function rendertNoProductInCart() {
                 </div>
             </div>
         </section>
-    `;
+    `; 
     document.getElementById('cart__empty').innerHTML = htmlNoProduct;
+     
 }
 
 async function fetchAndRenderCartItem() {
