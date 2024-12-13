@@ -19,7 +19,7 @@ document.getElementById('form1').addEventListener('submit', async function (e) {
         if (response.ok) {
             const data = await response.json();
             sessionStorage.setItem('authToken', data.token); 
-            window.location.href =  `../Home.html`;
+            window.location.href =  `Home.html`;
 
         } else {
             const error = await response.json();
