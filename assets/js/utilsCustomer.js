@@ -50,6 +50,7 @@ btnCloseNavBar.onclick = function () {
 document.addEventListener('click', function () {
     navBarMobile.classList.remove('open_navbar');
     btnHambuger.classList.remove('close-btn-hambuger');
+    console.log('aa')
     boardInforAcc.classList.remove('open__boardAcc-detail'); // DUNG CHUNG CHO KHI CLICK NGOAI AVATA THI SE CLOSE
 
 });
