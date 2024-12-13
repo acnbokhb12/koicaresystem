@@ -1,7 +1,10 @@
 import API_URL from './config.js'
 
 let quantity = 8;
-fetch(`${API_URL}/news/latestnews?quantity=${quantity}`)
+fetch(`${API_URL}/news/latestnews?quantity=${quantity}`,{
+    method: 'GET',
+    credentials: 'include',
+})
     .then(function(res){
         return res.json();
     })
