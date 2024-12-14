@@ -518,7 +518,8 @@
 }
 .sidebar { 
     background-color: #EDEFF4;
-    padding-left: 4rem;
+    /* padding-left: 4rem; */
+    width: 100%;
 }
 .post {
     border-bottom: 1px solid #e0e0e0;
@@ -724,6 +725,13 @@
     
 }
 @media screen and (max-width:768px) {
+    .sidebar {
+        background-color: #fff;
+        margin-top: 2rem;
+    }
+    .create-sidebar{
+        box-shadow: none;
+    }
     .shop__intro-item-text h1{
         font-size: 3rem;
     }

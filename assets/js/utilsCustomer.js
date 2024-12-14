@@ -134,7 +134,7 @@ window.addEventListener('load', handleResize);
 async function loadMyAccount() {
     const token = sessionStorage.getItem('authToken');
      try {
-        const response = await fetch(`https://localhost:7232/account/myaccount`, {
+        const response = await fetch(`https://koicaresystemapikhanh-bhddfwefgsa2gddq.southeastasia-01.azurewebsites.net/account/myaccount`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`, // Gửi token qua header
