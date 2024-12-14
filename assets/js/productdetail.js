@@ -139,7 +139,8 @@ async function addProductToCart(requestBody) {
     }
     try {
         const response = await fetch(`${API_URL}/cart/addtocart`, {
-            method: 'POST',
+            method: 'POST', 
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`,

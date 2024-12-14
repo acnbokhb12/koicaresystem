@@ -12,6 +12,7 @@ async function fetchMyCart() {
     try {
         const response = await fetch(`${API_URL}/cart/getcart`, {
             method: 'GET',
+            credentials: 'include',
             headers: {
                 'Authorization': `Bearer ${token}`, // Gửi token qua header
             }
@@ -206,6 +207,7 @@ async function removeItemFromCard(productID,index) {
         const token = sessionStorage.getItem('authToken');
         const response = await fetch(`${API_URL}/cart/deleteitem?productId=${productID}`, {
             method: 'DELETE',
+            credentials: 'include',
             headers: {
                 'Authorization': `Bearer ${token}`, // Gửi token qua header
             }
@@ -357,6 +359,7 @@ async function updateQuantityItemAPi(requestBody) {
     try {
         const response = await fetch(`${API_URL}/cart/updateitem`, {
             method: 'PUT',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`,
