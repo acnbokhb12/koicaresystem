@@ -86,7 +86,15 @@ async function fetchCategoryProduct() {
             const categoryLinks = document.querySelectorAll('.category-item__link');
             categoryLinks.forEach(function (link) {
                 link.addEventListener('click', function (e) {
-                    e.preventDefault(); 
+                    if (window.innerWidth >= 576) {  
+                        e.preventDefault(); 
+                    }else{
+                        e.preventDefault();  
+                        window.scrollTo({
+                            top: 900,  
+                            behavior: 'smooth'   
+                        });
+                    }
                     document.querySelectorAll('.category-item').forEach(function (item) {
                         item.classList.remove('category-item--active');
                     });
@@ -196,7 +204,19 @@ fetch(`${API_URL}/product/countproduct`)
         
         pageLinks.forEach((link) => {
             link.addEventListener('click', (e) => {
-                // e.preventDefault();
+                e.preventDefault();
+                if (window.innerWidth >= 576) {  
+                    window.scrollTo({
+                        top: 280,  
+                        behavior: 'smooth'   
+                    });
+                }else{
+                    e.preventDefault();  
+                    window.scrollTo({
+                        top: 900,  
+                        behavior: 'smooth'   
+                    });
+                }
                 if (link.classList.contains('page__dot-dot') || link.classList.contains('disabled')) {
                     e.preventDefault(); // Ngăn chặn hành động mặc định
                     return; // Không làm gì thêm

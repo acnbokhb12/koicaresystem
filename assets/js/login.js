@@ -9,6 +9,7 @@ document.getElementById('form1').addEventListener('submit', async function (e) {
     try {
         const response = await fetch(apiFetchLogin, {
             method: 'POST',
+            credentials: 'include',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 koiCareId: document.getElementById('email-log').value,
@@ -44,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     googleLoginBtn.addEventListener('click', (e) => {
         e.preventDefault();
         console.log('a') 
-        const googleOAuthURL = "https://accounts.google.com/o/oauth2/auth?scope=email profile openid&redirect_uri=https://localhost:7232/account/signin-google&response_type=code&client_id=519009830527-gcfie0931da89oufr9s747de2uu9854j.apps.googleusercontent.com&approval_prompt=force";     
+        const googleOAuthURL = "https://accounts.google.com/o/oauth2/auth?scope=email profile openid&redirect_uri=https://koicaresystemapikhanh-bhddfwefgsa2gddq.southeastasia-01.azurewebsites.net/account/signin-google&response_type=code&client_id=519009830527-gcfie0931da89oufr9s747de2uu9854j.apps.googleusercontent.com&approval_prompt=force";     
         window.location.href = googleOAuthURL;
     })
 })
