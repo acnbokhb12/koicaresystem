@@ -12,6 +12,7 @@
     align-items: center;   
     background-color: #fff;
     padding: 1rem 2rem;
+    border-radius: 8px;
 }
 .tilte-ponds h1 {
     text-align: center; 
@@ -480,6 +481,9 @@
     .pond-img-info-edit img{
         height: 300px;
     }
+    .tilte-ponds h1{
+        margin-bottom: 0.6rem;
+    }
 }
 
 
@@ -498,6 +502,12 @@
     }
     .pond-img-info img{
         height: 350px;
+    }
+    .tilte-ponds{
+        padding: 1rem 1rem;
+    }
+    .button-container button{
+        margin: 0;
     }
 }
 @media screen and (max-width:380px) {
@@ -519,4 +529,9 @@
         top: -4rem;
     }
      
+}
+@media screen and (max-width:360px) {
+    .container_pond{
+        margin-top: 9.4rem;
+    }
 }
