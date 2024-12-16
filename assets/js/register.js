@@ -1,6 +1,8 @@
 import API_URL from './config.js'
 import { callToast } from './confirm.js';
-
+import DOMAIN_URL from './domain.js'; 
+import { loading } from './confirm.js';
+import { removeLoading } from './confirm.js';
 let message = null;
 let sameKoiCare = "";
 
@@ -53,6 +55,7 @@ function renderRegister(){
 }
 
 async function createNewAccount(formValues) {
+    loading();
     try {
         const response = await fetch(`${API_URL}/account/register`, {
             method: 'POST',
@@ -64,7 +67,7 @@ async function createNewAccount(formValues) {
         const data = await response.json();
         if(response.ok){
             sessionStorage.setItem('authToken', data.token);
-            window.location.href = './Home.html';
+            window.location.href = `${DOMAIN_URL}/Home.html`;
         }else{
             sameKoiCare = data.koiCareId;
             if(!sameKoiCare){
@@ -75,6 +78,7 @@ async function createNewAccount(formValues) {
             if(message){
                 callToast(false, message);
             }
+            removeLoading();
         } 
     } catch (error) {
         
@@ -106,14 +110,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const token = new URLSearchParams(window.location.search).get('token');
     if(token){ 
         sessionStorage.setItem('authToken', token);
-        window.location.href = '/Home.html'; 
+        window.location.href = `${DOMAIN_URL}/Home.html`; 
     }
  
     const googleLoginBtn = document.getElementById("google-login-btn");
     googleLoginBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        console.log('a') 
-        const googleOAuthURL = "https://accounts.google.com/o/oauth2/auth?scope=email profile openid&redirect_uri=https://localhost:7232/account/signin-google&response_type=code&client_id=519009830527-gcfie0931da89oufr9s747de2uu9854j.apps.googleusercontent.com&approval_prompt=force";     
+        e.preventDefault(); 
+        const googleOAuthURL = "https://accounts.google.com/o/oauth2/auth?scope=email profile openid&redirect_uri=https://koicaresystemapikhanh-bhddfwefgsa2gddq.southeastasia-01.azurewebsites.net/account/signin-google&response_type=code&client_id=519009830527-gcfie0931da89oufr9s747de2uu9854j.apps.googleusercontent.com&approval_prompt=force";             
         window.location.href = googleOAuthURL;
     })
 })

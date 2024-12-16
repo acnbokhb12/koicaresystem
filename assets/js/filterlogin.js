@@ -14,8 +14,7 @@ async function checkToken() {
         });
 
         if (response.ok) {
-            const data = await response.json();
-            console.log("Token is valid:", data);
+            // const data = await response.json(); 
             document.body.classList.remove('hidden');              
         } else {
             const error = await response.json();

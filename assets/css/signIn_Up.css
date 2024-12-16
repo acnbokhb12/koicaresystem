@@ -220,6 +220,7 @@
    
 }
 @media screen and (max-width:576px){
+     
     .container__screen__img_signup{
         display: none;
     }
@@ -229,8 +230,13 @@
     .img-right-login{
         display: none;
     }
-    
+    .container__screen__img:last-child  {
+        display: none;
+
+    }
 }
 @media screen and (max-width:500px){
-   
+    .container__sigin-form{
+        width: 100%;
+    }
 }
