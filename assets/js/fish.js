@@ -1,4 +1,5 @@
-import API_URL from './config.js'
+import API_URL from './config.js';
+import DOMAIN_URL from './domain.js'; 
 import { changeImgShow } from './utils.js';
 import { createDeleteModal } from './confirm.js';
 import { toastMessage } from './confirm.js';

@@ -332,3 +332,29 @@
 .desc-all-infor iframe{
   width: 100%;
 }
+@media screen and (max-width:992px) {
+  .trend-right-single{
+    flex-direction: column;
+  }
+  .tren-right-img img{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .trend-rigth-cap{
+    padding: 0;
+  }
+}
+@media screen and (max-width:768px) {
+  .trend-right-single{ 
+    flex-direction: row;
+  }
+  .tren-right-img img{
+    width: 12rem;
+  }
+  .trend-rigth-cap{
+    padding-left: 1.5rem;
+  }
+  .item__trens-new-latest{
+     
+  }
+}

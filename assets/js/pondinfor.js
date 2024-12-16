@@ -1,4 +1,5 @@
-import API_URL from './config.js'
+import API_URL from './config.js';
+import DOMAIN_URL from './domain.js';
 import { createDeleteModal } from './confirm.js';
 import { callToast } from './pond.js';
 import { changeImgShow } from './utils.js';
@@ -17,7 +18,7 @@ async function fetchPondInfor() {
     const pondId = urlParams.get('id');
     if (!pondId) {
         // Không có ID trong URL
-        window.location.href = 'pond.html';
+        window.location.href = `${DOMAIN_URL}/pond.html`;
         return;
     }
     try {
@@ -29,7 +30,7 @@ async function fetchPondInfor() {
             }
         });
         if (!response.ok) {
-            window.location.href = 'pond.html';
+            window.location.href = `${DOMAIN_URL}/pond.html`;
         }
         const pond = await response.json();
         if (pond) {
@@ -49,11 +50,11 @@ async function fetchPondInfor() {
             idPond = pond.pondId;
             name = pond.pondName;
         } else {
-            window.location.href = '/pond.html';
+            window.location.href = `${DOMAIN_URL}/pond.html`;
         }
 
     } catch (error) {
-        window.location.href = '/pond.html';
+        window.location.href = `${DOMAIN_URL}/pond.html`;
 
     }
 }
@@ -72,7 +73,7 @@ async function deletePond(pondId) {
         if (response.ok) {
             // callToast(true, message);
             sessionStorage.setItem('toastData', JSON.stringify({ resultDelete: true, messageDelete: message }));
-            window.location.href = 'pond.html';
+            window.location.href = `${DOMAIN_URL}/pond.html`;
         } else {
             callToast(false, message);
         }
@@ -95,7 +96,7 @@ function renderFishInPond(listFish, numberOfFish) {
         const htmlFishInPondMap = listFish.map(function (f) {
             return `
               <div class="container__news-item swiper-slide">
-                        <a href="fishinfor.html?id=${f.fishId}" class="container__news-item-desc">
+                        <a href="${DOMAIN_URL}/fishinfor.html?id=${f.fishId}" class="container__news-item-desc">
                             <img src="${f.fishImage}"
                                 alt="">
                             <div class="container__news-item-cap">

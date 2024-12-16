@@ -1,4 +1,5 @@
 import API_URL from './config.js' 
+import DOMAIN_URL from './domain.js';
 
 
 // Đảm bảo token được gửi kèm theo trong các yêu cầu
@@ -19,11 +20,11 @@ async function checkToken() {
         } else {
             const error = await response.json();
             console.log("Token is invalid:", error.message);
-            window.location.href = `../login.html` ;  // Chuyển hướng đến trang login nếu token không hợp lệ
+            window.location.href = `${DOMAIN_URL}/login.html` ;  // Chuyển hướng đến trang login nếu token không hợp lệ
         }
     } catch (error) {
         console.error("Error:", error); 
-        window.location.href = `../login.html` ;  // Chuyển hướng đến trang login nếu có lỗi
+        window.location.href = `${DOMAIN_URL}/login.html` ;  // Chuyển hướng đến trang login nếu có lỗi
     }
 }
 

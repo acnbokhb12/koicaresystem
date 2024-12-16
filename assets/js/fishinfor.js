@@ -4,6 +4,8 @@ import { callToast } from './confirm.js';
 import { changeImgShow } from './utils.js';
 import { loading } from './confirm.js';
 import { removeLoading } from './confirm.js';
+import DOMAIN_URL from './domain.js';
+
 // import * as echarts from 'https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js';
 
 
@@ -29,13 +31,13 @@ async function fetchFishInfor(id) {
             }
         });
         if (!response.ok) {
-            window.location.href = 'fish.html';
+            window.location.href = `${DOMAIN_URL}/fish.html`;
 
         }
         const fish = await response.json();
         return fish;
     } catch (error) {
-        window.location.href = 'fish.html';
+        window.location.href = `${DOMAIN_URL}/fish.html`;
     }
 }
 
@@ -85,7 +87,7 @@ async function deleteFish(fishID) {
         message = result.message;
         if (response.ok) {
             sessionStorage.setItem('toastData', JSON.stringify({ resultDelete: true, messageDelete: message }));
-            window.location.href = 'fish.html';
+            window.location.href = `${DOMAIN_URL}/fish.html`; 
         } else {
             callToast(false, message);
         }
@@ -167,7 +169,7 @@ async function renderFishInfor(fish) {
         if (fish.pondId !== null) {
             document.querySelector('.img_pond-fish').src = fish.pond.pondImage;
             document.querySelector('.name_pond-fish').innerText = fish.pond.pondName;
-            document.querySelector('.viewpondfish').href = `pondinfor.html?id=${fish.pondId}`;
+            document.querySelector('.viewpondfish').href = `${DOMAIN_URL}/pondinfor.html?id=${fish.pondId}`;
 
         } else {
             document.querySelector('.img_pond-fish').src = 'https://img.freepik.com/premium-photo/question-mark-wooden-cube-grey-background-faq-concept-ask-questions-find-answers-online-customer-support_29488-10170.jpg';
@@ -316,7 +318,7 @@ async function fetchAndRenderFish() {
     const fId = urlParams.get('id');
     if (!fId) {
         // Không có ID trong URL
-        window.location.href = 'fish.html';
+        window.location.href = `${DOMAIN_URL}/fish.html`;  
         return;
     }
     const fish = await fetchFishInfor(fId);

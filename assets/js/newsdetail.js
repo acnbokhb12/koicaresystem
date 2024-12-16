@@ -1,5 +1,5 @@
 import API_URL from './config.js'
-let quantityNews = 10;
+let quantityNews = 7;
 async function fetchNewsApi(id) {
     try {
         const response = await fetch(`${API_URL}/news/getnews/${id}`);
