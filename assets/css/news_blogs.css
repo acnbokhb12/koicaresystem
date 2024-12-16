@@ -739,4 +739,16 @@
         font-size: 1.4rem;
     }
 }
+@media screen and (max-width:360px) { 
+    .container-blog,
+    #content-blogs, #content-news{
+        margin-top: 7.8rem;
+    } 
+    .shop__intro-item-text h1{
+        font-size: 2.6rem;
+    }    
+    .shop__intro-item-text p{
+        font-size: 1.2rem;
+    } 
+}
  

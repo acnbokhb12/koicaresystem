@@ -332,6 +332,7 @@
 .desc-all-infor iframe{
   width: 100%;
 }
+ 
 @media screen and (max-width:992px) {
   .trend-right-single{
     flex-direction: column;
@@ -342,6 +343,13 @@
   }
   .trend-rigth-cap{
     padding: 0;
+  }
+  .content_desc_all-news >h1{
+    font-size: 4rem ;
+  }
+  .cate_news,
+  .user_post{
+    font-size: 1.8rem;
   }
 }
 @media screen and (max-width:768px) {
@@ -357,4 +365,25 @@
   .item__trens-new-latest{
      
   }
+  .desc-all-infor img{
+    width: 100%;
+  }
+  .desc-all-infor{
+    font-size: 1.4rem;
+  }
+  .content_desc_all-news >h1{
+    font-size: 3.6rem ;
+  }
+  .desc-all-infor .row{
+    margin: 0;
+  }
+  .desc_img-news-c img{
+    height: 30rem;
+  }
+}
+@media screen and (max-width:360px) { 
+  .content_desc_all-news >h1{
+    font-size: 2.6rem;
+  }
+   
 }
