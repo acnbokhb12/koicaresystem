@@ -431,9 +431,11 @@ async function fetchAndRenderCartItem() {
     if (cartItems && cartItems.length > 0) {
         listCartItem = cartItems;
         renderCartItems(cartItems);
+        removeLoading();
     } else {
         rendertNoProductInCart();
+        removeLoading();
     }
-    removeLoading();
+    
 }
 fetchAndRenderCartItem()
