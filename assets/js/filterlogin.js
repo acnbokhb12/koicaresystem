@@ -1,9 +1,11 @@
 import API_URL from './config.js' 
 import DOMAIN_URL from './domain.js';
+import { loading } from './confirm.js';
 
 
 // Đảm bảo token được gửi kèm theo trong các yêu cầu
 async function checkToken() {
+    loading();
     const token = sessionStorage.getItem('authToken');
     try {
         const response = await fetch(`${API_URL}/token/validate-token`, {
@@ -13,8 +15,7 @@ async function checkToken() {
             },  
         });
 
-        if (response.ok) {
-            // const data = await response.json(); 
+        if (response.ok) {  
             document.body.classList.remove('hidden');              
         } else {
             const error = await response.json();

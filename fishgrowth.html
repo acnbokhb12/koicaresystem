@@ -23,16 +23,17 @@
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/navHeader-Footer.css">
   <link rel="stylesheet" href="./assets/css/fishE.css">
+  <script type="module" src="./assets/js/filterlogin.js"></script> 
 </head>
 
-<body class="body-fish">
+<body class="body-fish hidden">
   <div id="header"></div>
 
   <div id="main-growth">
     <section class="growth_deatiail-main">
       <div class="container container-growth">
         <div class="tilte-fish">
-          <h1>Fish Growth Chart</h1>
+          <h1 class="mb-2">Fish Growth Chart</h1>
           <div class="text-right">
             <a href="fishinfor.html" class="back-btn" style="margin-right: 10px;">Back to Koi</a>
             <button class="edit-btn-out btn__add-develop">Add Development</button>
@@ -62,113 +63,5 @@
     });
 </script>
 <script type="module" src="./assets/js/fishdevelop.js"></script>
-</body>
-<style>
-  .infor__fish-detail {
-    /* width: auto; */
-  } 
-  .fish-img-info-edit {
-    height: 100%;
-  }
-</style>
- 
-<!-- weight -->
-<!-- <script>
-  var chart = echarts.init(document.getElementById('koiGrowthChart_weight'));
-  option = {
-    title: {
-      text: 'Weight of fish 2024',
-    },
-    tooltip: {
-      trigger: 'axis',
-      axisPointer: {
-        type: 'shadow'
-      }
-    },
-    legend: {
-      itemWidth: 50,
-      itemHeight: 12,
-      itemStyle: {
-        color: '#d29763',
-      },
-      textStyle: {
-        color: '#000',
-        fontSize: 16, // Tăng kích thước chữ
-        fontWeight: 'bold' // Làm đậm chữ nếu muốn
-      }
-    },
-    grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
-      containLabel: true
-    },
-    xAxis: [
-      {
-        type: 'category',
-        data: ['01/09', '02/09', '03/09', '04/09', '05/09', '06/09', '07/09'],
-        axisTick: {
-          alignWithLabel: true
-        }
-      }
-    ],
-    yAxis: [
-      {
-        type: 'value',
-        axisLabel: {
-          formatter: '{value} Gram'
-        }
-      }
-    ],
-    series: [
-      {
-        name: 'Gram',
-        type: 'bar',
-        barWidth: '60%',
-        data: [10, 52, 200, 334, 390, 330, 320]
-        ,
-        itemStyle: {
-          color: function (param) {
-            return '#d29763';
-          }
-        }
-      }
-    ]
-  };
-
-  chart.setOption(option); 
-</script> -->
-<script>
-  // const formNews = document.getElementById('fomr_fill-news');
-  // formNews.addEventListener('submit', (e) => {
-  //   const isConfirmed = confirm('Are you sure you want to submit this news?');
-  //   if (!isConfirmed) {
-  //     e.preventDefault();
-  //   }
-  // // }) 
-
-   
-   
-   
-  // const btnAddNew = document.querySelector(".edit-btn-out");
-  // const subTable = document.querySelector(".infor__fish-detail");
-
-  // btnAddNew.addEventListener("click", function (e) {
-  //   tableEdit.classList.toggle("open");
-  //   e.stopPropagation();
-  // });
-
-  // btnClose.addEventListener("click", () => {
-  //   tableEdit.classList.remove("open");
-  // });
-
-  // subTable.addEventListener("click", (e) => {
-  //   e.stopPropagation();
-  // });
-
-  // document.addEventListener("click", () => {
-  //   tableEdit.classList.remove("open");
-  // });
-</script>
-
+</body> 
 </html>

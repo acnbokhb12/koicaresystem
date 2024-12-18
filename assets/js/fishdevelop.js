@@ -287,7 +287,7 @@ function renderTableAddDevelelop(fishEntity){
               <h3>${fishEntity.fishName}</h3>
             </div>
             <div>
-              <p class="mb-0 text-title-deve ">Length: <span class="text-value-deve">${fishEntity.length}</span> <span class="text-danger">(m)</span> </p>
+              <p class="mb-0 text-title-deve ">Length: <span class="text-value-deve">${fishEntity.length}</span> <span class="text-danger">(Cm)</span> </p>
                <p class="mb-0 text-title-deve">Weight: <span class="text-value-deve">${fishEntity.weight}</span> <span class="text-danger">(kg)</span> </p>
             </div>
           </div>
