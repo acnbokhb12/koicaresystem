@@ -426,15 +426,29 @@ function rendertNoProductInCart() {
 }
 
 async function fetchAndRenderCartItem() {
-    loading();
-    const cartItems = await fetchMyCart();
-    if (cartItems && cartItems.length > 0) {
-        listCartItem = cartItems;
-        renderCartItems(cartItems);
-        removeLoading();
-    } else {
-        rendertNoProductInCart();
-        removeLoading();
+    // loading();
+    // const cartItems = await fetchMyCart();
+    // if (cartItems && cartItems.length > 0) {
+    //     listCartItem = cartItems;
+    //     renderCartItems(cartItems);
+    //     removeLoading();    
+    // } else {
+    //     rendertNoProductInCart();
+    //     removeLoading();
+    // }
+    try {
+        loading();
+        const cartItems = await fetchMyCart(); 
+        if (cartItems && cartItems.length > 0) {
+            listCartItem = cartItems;
+            renderCartItems(cartItems);
+        } else {
+            rendertNoProductInCart();
+        }
+    } catch (error) {
+        console.error('Error fetching cart items:', error);
+    } finally {
+        removeLoading(); // Luôn gọi trong `finally` để đảm bảo thực thi
     }
     
 }
