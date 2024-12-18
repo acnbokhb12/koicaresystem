@@ -10,7 +10,7 @@ import DOMAIN_URL from './domain.js';
 
 
 
-
+let fishID = null;
 let message = null;
 let fishInformation = null;
 let name = null;
@@ -188,7 +188,11 @@ async function renderFishDevelopment(fishDevelop) {
     const lengths = fishDevelop.map(dev => dev.updateLength);
     const weights = fishDevelop.map(dev => dev.updateWeight);
     const days = fishDevelop.map(dev => dev.updateDate);
-    console.log(weights)
+    
+    const htmlBtnDevelop = `
+        <a href="fishgrowth.html?id=${fishID}" class="back-btn grow__detail-btn">View Growth Detail</a>
+    `;
+    document.querySelector('.btn__contain-develop').innerHTML = htmlBtnDevelop;
     
     const htmlLength = `
     <div id="koiGrowthChart_length" style="width: 100%; height: 400px;"></div>
@@ -321,6 +325,7 @@ async function fetchAndRenderFish() {
         window.location.href = `${DOMAIN_URL}/fish.html`;  
         return;
     }
+    fishID = fId;
     const fish = await fetchFishInfor(fId);
     name = fish.fishName;
     idFishInfor = fish.fishId;

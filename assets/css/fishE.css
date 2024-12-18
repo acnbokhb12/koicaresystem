@@ -5,7 +5,7 @@
 .container-growth,
 .container_fish {
     margin-top: 12.4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2.6rem;
 }
 .row-infor-fist-detail{
     margin-right: 0;
@@ -352,10 +352,11 @@
 .item_grow_fish{
     padding-top: 2rem;
     padding-bottom: 2rem;
+    border-radius: 8px; 
 }
 
 .container-pond-fish {
-    padding: 4rem 0;
+    padding: 2.6rem 0;
 
 } 
 
@@ -431,6 +432,8 @@
     background-color: #fff;
     margin: 0;
     margin-bottom: 3rem;
+    border-radius: 8px;
+
 }
 .item_grow_fish-detail{
     padding-top: 2rem;
@@ -633,7 +636,21 @@
 }
 .container-btn-fish{
 
+}
+.minitab__fish-develop{
+    width: 60%;
 } 
+.img-edit-submit-vst{
+    height: auto;
+}
+.text-value-deve{
+    color: blue;
+}
+.text-title-deve{
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
 @media screen and (max-width:1000px) {
     .tilte-fish{
         flex-direction: column;
@@ -654,7 +671,7 @@
         margin-bottom: 0;
     }
     .row-infor-fist-detail{
-        padding: 1.5rem;
+        /* padding: 1.5rem; */
     }
     .fish-img-info{
         padding: 0;
@@ -735,6 +752,10 @@
     .container-btn-fish{
         padding: 0;
     }
+    .minitab__fish-develop{
+        width: 80%;
+    }
+
 }
 @media screen and (max-width:380px) {
     .back-btn, .delete-btn-fish, .edit-btn-out{
@@ -745,6 +766,7 @@
 }
 
 @media screen and (max-width:360px) {
+    .container-growth,  
     .container_fish{
         margin-top: 9.4rem;
     }
