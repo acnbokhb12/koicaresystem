@@ -425,17 +425,7 @@ function rendertNoProductInCart() {
      
 }
 
-async function fetchAndRenderCartItem() {
-    // loading();
-    // const cartItems = await fetchMyCart();
-    // if (cartItems && cartItems.length > 0) {
-    //     listCartItem = cartItems;
-    //     renderCartItems(cartItems);
-    //     removeLoading();    
-    // } else {
-    //     rendertNoProductInCart();
-    //     removeLoading();
-    // }
+async function fetchAndRenderCartItem() { 
     try {
         loading();
         const cartItems = await fetchMyCart(); 
@@ -452,4 +442,4 @@ async function fetchAndRenderCartItem() {
     }
     
 }
-fetchAndRenderCartItem()
+fetchAndRenderCartItem();

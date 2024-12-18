@@ -1,13 +1,15 @@
 import API_URL from './config.js' 
 import DOMAIN_URL from './domain.js';
 import { loading } from './confirm.js';
+import { removeLoading } from './confirm.js';
+
 
 
 // Đảm bảo token được gửi kèm theo trong các yêu cầu
 async function checkToken() {
-    loading();
     const token = sessionStorage.getItem('authToken');
     try {
+        loading();
         const response = await fetch(`${API_URL}/token/validate-token`, {
             method: 'GET',
             headers: {
@@ -25,6 +27,8 @@ async function checkToken() {
     } catch (error) {
         console.error("Error:", error); 
         window.location.href = `${DOMAIN_URL}/login.html` ;  // Chuyển hướng đến trang login nếu có lỗi
+    }finally{
+        removeLoading();
     }
 }
 
