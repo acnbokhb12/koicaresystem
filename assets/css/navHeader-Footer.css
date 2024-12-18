@@ -1450,6 +1450,10 @@
     .right__content-icon-item > a > i{
         font-size: 1rem;
     }
+    .left__content-infor-item {
+
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (max-width:360px) {
